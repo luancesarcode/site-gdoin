@@ -1,0 +1,105 @@
+/* LPR: identidade tipográfica, fotografias do acervo e conteúdo de serviços.
+   Paleta do mosaico da página inicial; sem efeitos sobre outras páginas.
+   Composição: sigla + mosaico / navegação / destaque + lista de serviços. */
+.pagina-lpr {
+  --lpr-verde: #174f3d;
+  --lpr-claro: #e7efe9;
+  --lpr-texto: #4d6357;
+  --lpr-linha: #cad8ce;
+  --lpr-amarelo: #f2c200;
+}
+.pagina-lpr [hidden] { display: none !important; }
+.lpr-abertura { background: var(--lpr-claro); padding: 2rem 0 2.75rem; }
+.lpr-trilha { margin-bottom: 2rem; font-size: .85rem; color: var(--lpr-texto); }
+.lpr-trilha a { text-underline-offset: .2em; }
+.lpr-abertura__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.lpr-categoria { display: inline-block; background: var(--lpr-verde); color: #fff; font-size: .8rem; font-weight: 600; padding: .25rem .65rem; border-radius: 2px; margin-bottom: .6rem; }
+.lpr-abertura h1 { color: var(--lpr-verde); font-size: clamp(5.2rem, 9vw, 7.5rem); line-height: 1; letter-spacing: -.055em; font-weight: 750; margin: 0 0 .65rem; }
+.lpr-abertura__titulo { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; font-weight: 500; color: var(--lpr-verde); max-width: 24ch; margin: 0 0 .8rem; }
+.lpr-abertura__resumo { color: var(--lpr-texto); max-width: 45ch; font-size: 1rem; margin: 0; }
+.lpr-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin-top: 1.5rem; }
+.lpr-botao { display: inline-block; background: var(--lpr-verde); border: 1px solid var(--lpr-verde); color: #fff; padding: .65rem 1.1rem; font-size: .95rem; font-weight: 600; border-radius: 3px; text-decoration: none; transition: background-color .15s; }
+.lpr-botao:hover { background: #006647; }
+.lpr-link { color: var(--lpr-verde); text-underline-offset: .3em; font-size: .95rem; font-weight: 500; padding-block: .5rem; }
+.lpr-acervo { margin: 0; width: 100%; max-width: 420px; justify-self: end; }
+.lpr-acervo__mosaico { display: grid; grid-template-columns: .95fr 1fr; grid-template-rows: 142px 142px; gap: 8px; }
+.lpr-acervo img { display: block; height: 100%; width: 100%; object-fit: cover; min-height: 0; min-width: 0; }
+.lpr-acervo__principal { grid-row: span 2; }
+.lpr-acervo figcaption { font-size: .75rem; line-height: 1.5; color: var(--lpr-texto); margin-top: .75rem; }
+.lpr-corpo { background: var(--lpr-claro); padding: 0 0 clamp(2.5rem, 5vw, 4rem); }
+.lpr-paineis { background: #fff; border: 1px solid var(--lpr-linha); border-radius: 4px; padding: 0 clamp(1.25rem, 3vw, 2.5rem) 2.5rem; }
+.pagina-lpr .abas__lista { border-bottom: 1px solid var(--lpr-linha); gap: 1.5rem; margin: 0 0 2.25rem; padding-top: .5rem; scroll-margin-top: 95px; }
+.pagina-lpr .abas__lista button { margin-bottom: -1px; padding: 1rem .25rem; border-bottom-width: 3px; color: var(--lpr-texto); }
+.pagina-lpr .abas__lista button[aria-selected="true"] { color: var(--lpr-verde); font-weight: 650; border-color: var(--lpr-verde); }
+.pagina-lpr .aba { scroll-margin-top: 200px; }
+.pagina-lpr .aba > h2 { color: var(--lpr-verde); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 650; letter-spacing: -.025em; margin-bottom: .8rem; }
+.lpr-introducao { max-width: 62ch; font-size: 1.05rem; color: var(--lpr-texto); margin-bottom: 1.5rem; }
+.lpr-aviso { border-left: 2px solid var(--lpr-amarelo); color: #52655a; padding: .25rem 0 .25rem 1rem; max-width: 80ch; font-size: .85rem; line-height: 1.6; margin-bottom: 2rem; }
+.lpr-aviso strong { font-weight: 600; color: #304e3e; }
+.lpr-servicos { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: stretch; }
+.lpr-servico-destaque { background: var(--lpr-verde); color: #fff; padding: clamp(1.5rem, 3vw, 2.25rem); display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; }
+.lpr-servico-destaque h3 { font-size: clamp(1.55rem, 2.6vw, 2rem); font-weight: 550; line-height: 1.2; max-width: 18ch; margin: 0 0 1rem; }
+.lpr-servico-destaque p { font-size: 1rem; max-width: 36ch; color: #e7efe9; margin: 0; }
+.lpr-servico-destaque figure { display: flex; gap: 1rem; align-items: flex-end; margin: 0; }
+.lpr-servico-destaque img { width: 135px; height: 152px; object-fit: cover; }
+.lpr-servico-destaque figcaption { font-size: .72rem; line-height: 1.6; max-width: 18ch; color: #d3e1d8; }
+.lpr-servicos__lista { display: flex; flex-direction: column; justify-content: space-between; }
+.lpr-servico { padding: 1.4rem 0; border-bottom: 1px solid var(--lpr-linha); }
+.lpr-servico:first-child { padding-top: .25rem; }
+.lpr-servico:last-child { padding-bottom: .25rem; border: 0; }
+.lpr-servico h3 { color: var(--lpr-verde); font-size: 1.3rem; font-weight: 600; margin-bottom: .6rem; }
+.lpr-servico p { color: var(--lpr-texto); font-size: 1rem; max-width: 46ch; margin: 0; }
+.lpr-consulta { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--lpr-linha); }
+.lpr-consulta h3 { font-size: 1.15rem; color: var(--lpr-verde); margin-bottom: .3rem; }
+.lpr-consulta p { margin: 0; color: var(--lpr-texto); font-size: .9rem; max-width: 57ch; }
+.lpr-consulta .lpr-botao { flex-shrink: 0; }
+.lpr-sobre { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.lpr-sobre__marca { border-left: 1px solid var(--lpr-linha); padding-left: clamp(1.5rem, 4vw, 3rem); }
+.lpr-sobre__marca img { width: 300px; margin-bottom: 1.5rem; }
+.lpr-sobre__marca p { font-size: .9rem; color: var(--lpr-texto); max-width: 35ch; }
+.lpr-sobre .lpr-aviso { margin: 1.5rem 0 0; }
+.lpr-contato { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 5rem); margin-top: 2rem; }
+.lpr-contato h3 { color: var(--lpr-verde); font-size: 1rem; margin-bottom: 1rem; }
+.lpr-contato__telefone { display: inline-block; color: var(--lpr-verde); font-size: clamp(1.5rem, 3.2vw, 2.3rem); line-height: 1.2; font-weight: 600; text-decoration: none; margin-bottom: .8rem; }
+.lpr-contato__telefone:hover { text-decoration: underline; text-underline-offset: .2em; }
+.lpr-contato p { font-size: .95rem; color: var(--lpr-texto); }
+.lpr-contato address { font-style: normal; font-size: 1rem; color: var(--lpr-texto); }
+.lpr-contato__local { border-left: 1px solid var(--lpr-linha); padding-left: 2rem; }
+.lpr-contato + .lpr-aviso { margin-top: 2rem; margin-bottom: 0; }
+.pagina-lpr .aba { padding-top: 2rem; }
+.js .pagina-lpr .aba { padding-top: 0; }
+
+@media (max-width: 960px) {
+  .lpr-abertura__grade { grid-template-columns: 1fr 340px; gap: 2rem; }
+  .lpr-acervo__mosaico { grid-template-rows: 124px 124px; }
+  .lpr-abertura h1 { font-size: 5.5rem; }
+}
+@media (max-width: 720px) {
+  .lpr-abertura { padding-top: 1.5rem; padding-bottom: 2rem; }
+  .lpr-trilha { margin-bottom: 1.5rem; }
+  .lpr-abertura__grade { grid-template-columns: 1fr; gap: 2rem; }
+  .lpr-abertura h1 { font-size: 5.5rem; }
+  .lpr-acervo { justify-self: start; max-width: 420px; }
+  .lpr-acervo__mosaico { grid-template-rows: 128px 128px; }
+  .lpr-servicos { grid-template-columns: 1fr; gap: 1.5rem; }
+  .lpr-servico-destaque { gap: 1.5rem; }
+  .lpr-servico-destaque figure { align-items: center; }
+  .lpr-servico-destaque img { width: 110px; height: 124px; }
+  .lpr-servico { padding: 1.4rem 0; }
+  .lpr-servico:first-child { padding-top: .25rem; }
+  .lpr-servico:last-child { padding-bottom: .25rem; }
+  .lpr-consulta { flex-direction: column; align-items: flex-start; margin-top: 2rem; }
+  .lpr-sobre { grid-template-columns: 1fr; gap: 2rem; }
+  .lpr-sobre__marca { padding: 2rem 0 0; border-left: 0; border-top: 1px solid var(--lpr-linha); }
+  .lpr-contato { grid-template-columns: 1fr; gap: 2rem; }
+  .lpr-contato__local { padding: 1.5rem 0 0; border-left: 0; border-top: 1px solid var(--lpr-linha); }
+  .pagina-lpr .abas__lista { gap: 1.25rem; margin-bottom: 1.75rem; }
+}
+@media (max-width: 380px) {
+  .lpr-paineis { padding-inline: 1rem; }
+  .lpr-acervo__mosaico { grid-template-rows: 112px 112px; }
+  .lpr-servico-destaque { padding: 1.25rem; }
+  .lpr-servico-destaque figure { gap: .75rem; }
+  .lpr-servico-destaque img { width: 95px; height: 107px; }
+  .lpr-servico-destaque figcaption { font-size: .7rem; }
+}

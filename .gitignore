@@ -1,0 +1,41 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+env.local
+**/env.local
+
+# Access files and password stores
+**/acesso*.txt
+**/Acesso*.txt
+**/*senha*
+**/*senhas*
+**/*password*
+**/*credential*
+**/*secret*
+**/.htpasswd
+
+# Private keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*.ppk
+*.kdbx
+
+# Local MCP configuration and browser authentication
+**/.mcp.json
+**/auth-cookies.php
+**/tests-e2e/.auth/
+
+# Local/editor/system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# GitHub Pages build output
+/_site/

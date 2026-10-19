@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 199 67" width="199" height="67" role="img" aria-label="LMRI">
+  <defs>
+    <radialGradient id="lmri-sphere" cx="0.45" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#f1f2f2"/>
+      <stop offset="1" stop-color="#d9dcdb"/>
+    </radialGradient>
+    <radialGradient id="lmri-green" cx="40" cy="5" r="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e4eee8"/>
+      <stop offset="0.3" stop-color="#8fbfa4"/>
+      <stop offset="0.7" stop-color="#1f7d48"/>
+      <stop offset="1" stop-color="#056333"/>
+    </radialGradient>
+    <radialGradient id="lmri-yellow" cx="40" cy="7" r="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff5cc"/>
+      <stop offset="0.35" stop-color="#ffe27a"/>
+      <stop offset="0.75" stop-color="#ffd31f"/>
+      <stop offset="1" stop-color="#ffca00"/>
+    </radialGradient>
+    <path id="lmri-swoosh" d="M0.3,39 A40,40 0 0 1 66,11.5 C70.5,16 71,24 67,29 C64.5,31.8 60.5,31.5 57.5,28.5 C51,21.5 44,13 32,12.5 C20,12.5 10,20 4.5,29 C2.5,32.5 1.2,36 0.3,39 Z"/>
+  </defs>
+
+  <!-- icon (desenhado em 80x81, escalado para o círculo de r=24.5) -->
+  <circle cx="25" cy="25.5" r="24.5" fill="url(#lmri-sphere)"/>
+  <g transform="translate(0.5 0.69) scale(0.6125)">
+    <use href="#lmri-swoosh" fill="url(#lmri-green)"/>
+    <use href="#lmri-swoosh" fill="url(#lmri-yellow)" transform="rotate(180 40 40.5)"/>
+    <g fill="#4d4d4d" transform="translate(39.5 41.5)">
+      <circle r="3.5"/>
+      <path id="lmri-blade" d="M-2.75,-4.76 L-8.75,-15.16 A17.5,17.5 0 0 1 8.75,-15.16 L2.75,-4.76 A5.5,5.5 0 0 0 -2.75,-4.76 Z"/>
+      <use href="#lmri-blade" transform="rotate(120)"/>
+      <use href="#lmri-blade" transform="rotate(240)"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g fill="#18483a">
+    <path d="M55,7 H66 V34 H81 V42 H55 Z"/>
+    <path d="M86,7 H100 L105.5,24 L111,7 H125 V42 H114 V21 L109,42 H102 L97,21 V42 H86 Z"/>
+    <path fill-rule="evenodd" d="M133,7 H155 C161,7 164,10 164,15 V19 C164,22 162,24 159,25 C162,26 164,28 164,31 V42 H153 V33 C153,31 152,30 150,30 H144 V42 H133 Z M144,15 H151 C152.5,15 153,16 153,17.5 V18.5 C153,20 152.5,21 151,21 H144 Z"/>
+    <rect x="171" y="7" width="11" height="35"/>
+  </g>
+  <rect x="55" y="44.4" width="128" height="1.5" fill="#1f4644"/>
+</svg>

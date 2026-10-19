@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LPR, Serviços laboratoriais</title>
+	<meta name="description" content="Serviços laboratoriais: Serviços prestados pelo grupo.">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/lpr.css">
+</head>
+<body class="pagina-lpr">
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+	<header class="topo">
+		<div class="container topo__barra">
+			<a class="topo__logo" href="index.html"><img src="img/logo_gdoin.png" width="300" height="81" alt="GDOIN, Grupo de Dosimetria e Instrumentação Nuclear, página inicial"></a>
+			<button class="menu-botao" type="button" aria-expanded="false" aria-controls="navegacao">Menu</button>
+			<nav class="navegacao" id="navegacao" aria-label="Principal">
+				<ul class="menu">
+				<li><details><summary>O grupo</summary><ul class="submenu"><li><a href="sobre.html">Sobre o GDOIN</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="ensino.html">Ensino</a></li><li><a href="pesquisa.html">Pesquisa</a></li><li><a href="publicacoes.html">Publicações</a></li></ul></details></li>
+				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri.html">LMRI</a></li><li><a href="lpr.html" aria-current="page">LPR</a></li></ul></details></li>
+				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
+				<li><details><summary>Extensão</summary><ul class="submenu"><li><a href="extensao.html">Serviços e consultoria</a></li><li><a href="http://museunuclear.com/" rel="noopener">Museu de Ciências Nucleares</a></li><li><a href="rad.html">RAD</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></details></li>
+				<li><a href="noticias.html">Notícias</a></li>
+				<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="conteudo">
+		<section class="lpr-abertura" aria-labelledby="lpr-titulo">
+			<div class="container">
+				<p class="lpr-trilha"><a href="index.html">Início</a> / <a href="index.html#estrutura">Laboratórios do grupo</a> / LPR</p>
+				<div class="lpr-abertura__grade">
+					<div>
+						<span class="lpr-categoria">Laboratório de serviços</span>
+						<h1 id="lpr-titulo">LPR</h1>
+						<p class="lpr-abertura__titulo">Serviços laboratoriais do GDOIN.</p>
+						<p class="lpr-abertura__resumo">Informações sobre serviços e atendimento no Departamento de Energia Nuclear da UFPE.</p>
+						<div class="lpr-acoes"><a class="lpr-botao" href="#servicos" data-lpr-aba="servicos">Ver serviços</a><a class="lpr-link" href="#contato" data-lpr-aba="contato">Contato do grupo</a></div>
+					</div>
+					<figure class="lpr-acervo">
+						<div class="lpr-acervo__mosaico">
+							<img class="lpr-acervo__principal" src="img/c_xray.png" width="182" height="272" alt="Equipamento de raios X em bancada de calibração, no acervo do GDOIN" fetchpriority="high">
+							<img src="img/c_tc.png" width="196" height="138" alt="Tomógrafo computadorizado registrado no acervo do grupo">
+							<img src="img/c_sim.png" width="196" height="130" alt="Simulador com dosímetros posicionados, no acervo do grupo">
+						</div>
+						<figcaption>Instrumentação e radiodiagnóstico. Fotografias do acervo GDOIN.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<div class="lpr-corpo">
+			<div class="container">
+				<div class="lpr-paineis" data-abas>
+					<section class="aba" id="sobre" data-titulo="Sobre">
+						<h2>Sobre o LPR</h2>
+						<div class="lpr-sobre">
+							<div>
+								<p class="lpr-introducao">O LPR integra a frente de serviços laboratoriais do Grupo de Dosimetria e Instrumentação Nuclear, vinculado ao Departamento de Energia Nuclear da UFPE.</p>
+								<p class="lpr-introducao">Consulte o grupo para informações sobre os serviços, sua disponibilidade e o atendimento.</p>
+								<a class="lpr-link" href="#servicos" data-lpr-aba="servicos">Consultar os serviços</a>
+
+							</div>
+							<div class="lpr-sobre__marca">
+								<img src="img/logo_gdoin.png" width="300" height="81" alt="Grupo de Dosimetria e Instrumentação Nuclear, Departamento de Energia Nuclear, UFPE">
+								<p>Pesquisa, ensino e prestação de serviços relacionados às radiações ionizantes.</p>
+								<a class="lpr-link" href="sobre.html">Conhecer o GDOIN</a>
+							</div>
+						</div>
+					</section>
+
+					<section class="aba" id="servicos" data-titulo="Serviços">
+						<h2>Serviços e consultoria</h2>
+						<p class="lpr-introducao">Proteção radiológica, cálculo de blindagem e formação de pessoal estão entre as atividades de consultoria registradas no acervo do grupo.</p>
+
+						<div class="lpr-servicos">
+							<article class="lpr-servico-destaque">
+								<div><h3>Levantamento radiométrico</h3><p>Medida dos níveis de radiação no ambiente de trabalho.</p></div>
+								<figure><img src="img/c_mamo.png" width="196" height="220" alt="Mamógrafo com dosímetro no suporte, fotografado em atividade do grupo" loading="lazy"><figcaption>Equipamento de mamografia.<br>Acervo GDOIN.</figcaption></figure>
+							</article>
+							<div class="lpr-servicos__lista">
+								<article class="lpr-servico"><h3>Planos de proteção radiológica</h3><p>Elaboração de planos de proteção radiológica para instalações médicas e industriais.</p></article>
+								<article class="lpr-servico"><h3>Cálculo de blindagem</h3><p>Cálculos de blindagem para instalações médicas e industriais.</p></article>
+								<article class="lpr-servico"><h3>Formação de pessoal</h3><p>Cursos em proteção radiológica e dosimetria.</p></article>
+							</div>
+						</div>
+						<aside class="lpr-consulta" aria-label="Informações sobre atendimento"><div><h3>Consultar os serviços</h3><p>Fale com o grupo sobre os serviços e o atendimento.</p></div><a class="lpr-botao" href="#contato" data-lpr-aba="contato">Entrar em contato</a></aside>
+					</section>
+
+					<section class="aba" id="contato" data-titulo="Contato">
+						<h2>Fale com o grupo</h2>
+						<p class="lpr-introducao">Consulte o GDOIN para informações sobre os serviços do LPR.</p>
+						<div class="lpr-contato">
+							<div><h3>Telefone do grupo</h3><a class="lpr-contato__telefone" href="tel:+558121268708">(81) 2126-8708</a><p>Departamento de Energia Nuclear, UFPE</p></div>
+							<div class="lpr-contato__local"><h3>Endereço</h3><address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000<br>Recife, PE</address></div>
+						</div>
+
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="rodape">
+		<div class="container">
+			<div class="rodape__grade">
+				<div class="rodape__apresentacao">
+					<div class="rodape__den"><img src="img/marcas/den-ufpe-completo.svg" width="935" height="559" alt="Departamento de Energia Nuclear, UFPE" loading="lazy"></div>
+					<p>Grupo de Dosimetria e Instrumentação Nuclear do Departamento de Energia Nuclear da Universidade Federal de Pernambuco.</p>
+				</div>
+				<div>
+					<p class="rodape__titulo">Localização</p>
+					<address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000<br>Cidade Universitária, Recife, PE</address>
+					<a class="rodape__localizacao" href="https://www.google.com/maps/search/?api=1&amp;query=Departamento+de+Energia+Nuclear+UFPE" target="_blank" rel="noopener">Ver localização no mapa</a>
+				</div>
+				<div>
+					<p class="rodape__titulo">Fale com o grupo</p>
+					<a class="rodape__telefone" href="tel:+558121268708">(81) 2126-8708</a>
+					<ul class="rodape__canais"><li><a href="contato.html">Contatos dos laboratórios</a></li><li><a href="https://instagram.com/gdoindenufpe" target="_blank" rel="noopener">Instagram @gdoindenufpe</a></li></ul>
+				</div>
+			</div>
+			<div class="rodape__base">
+				<div class="rodape__vinculo"><p>Departamento de Energia Nuclear<br>Universidade Federal de Pernambuco</p></div>
+				<nav aria-label="Navegação do rodapé"><ul class="rodape__links"><li><a href="sobre.html">Sobre o grupo</a></li><li><a href="index.html#estrutura">Laboratórios</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/site.js"></script>
+	<script src="js/lpr.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* LMRI: marca, fotografia de calibração e catálogo técnico. Estilos locais. */
+@font-face {
+  font-family: "LMRI Roboto";
+  src: url("../fonts/lmri-roboto-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.pagina-lmri { --lmri-verde: #18483a; --lmri-papel: #eef3ef; --lmri-texto: #4b6357; --lmri-linha: #cbd8cf; --fonte: "LMRI Roboto", "Segoe UI", sans-serif; }
+.pagina-lmri main { overflow: clip; }
+.pagina-lmri main h2 { color: var(--lmri-verde); font-size: clamp(1.9rem, 3.2vw, 2.8rem); line-height: 1.15; letter-spacing: -.035em; font-weight: 550; }
+.pagina-lmri main h3 { color: var(--lmri-verde); }
+.pagina-lmri main figure { margin: 0; min-width: 0; }
+.pagina-lmri main figcaption { font-size: .78rem; line-height: 1.5; }
+.pagina-lmri main p { max-width: 62ch; }
+.lmri-hero { background: var(--lmri-papel); border-bottom: 1px solid var(--lmri-linha); }
+.lmri-hero__grade { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); padding-block: 2rem 3rem; align-items: stretch; }
+.lmri-hero__texto { padding-block: .25rem; min-width: 0; }
+.lmri-trilha { color: var(--lmri-texto); font-size: .8rem; margin-bottom: 2rem; }
+.lmri-trilha a { color: inherit; text-underline-offset: .2em; }
+.lmri-marca { width: clamp(230px, 24vw, 300px); height: auto; margin: 0 0 1.7rem -8px; }
+.pagina-lmri .lmri-hero h1 { color: var(--lmri-verde); font-size: clamp(2rem, 3.5vw, 3.1rem); font-weight: 550; line-height: 1.08; letter-spacing: -.045em; max-width: 19ch; margin-bottom: 1.3rem; }
+.lmri-hero__descricao { color: var(--lmri-texto); font-size: 1.05rem; line-height: 1.7; max-width: 46ch !important; }
+.lmri-acoes { display: flex; align-items: center; gap: .75rem 1.5rem; flex-wrap: wrap; }
+.lmri-botao { display: inline-block; color: white; background: var(--lmri-verde); border: 1px solid var(--lmri-verde); border-radius: 3px; padding: .85rem 1.15rem; font-size: .95rem; line-height: 1.5; font-weight: 600; text-decoration: none; text-align: center; transition: background-color .15s; }
+.lmri-botao:hover { background: #006647; }
+.lmri-link { display: inline-block; color: var(--lmri-verde); font-size: .92rem; font-weight: 550; text-underline-offset: .3em; text-decoration-thickness: 1px; padding-block: .35rem; }
+.lmri-hero__vinculo { color: var(--lmri-texto); border-top: 1px solid var(--lmri-linha); padding-top: 1.2rem; margin: 1.8rem 0 0; font-size: .8rem; line-height: 1.6; }
+.lmri-hero__foto { position: relative; display: flex; flex-direction: column; background: var(--lmri-verde); }
+.lmri-hero__foto > img { width: 100%; flex: 1 1 auto; min-height: 0; height: 530px; object-fit: cover; object-position: 60% center; }
+.lmri-hero__foto figcaption { color: #fff; padding: 1rem 1.3rem 1.1rem; font-size: 1.1rem !important; font-weight: 500; border-bottom: 4px solid #f2c200; }
+.lmri-hero__foto figcaption span { display: block; color: #d4e3da; font-size: .8rem; font-weight: 400; margin-top: .2rem; }
+.lmri-indice { position: sticky; top: 76px; z-index: 15; background: #fff; border-bottom: 1px solid var(--lmri-linha); }
+.lmri-indice__conteudo { display: flex; align-items: center; gap: 2rem; }
+.lmri-indice__conteudo > span { font-size: .75rem; color: var(--lmri-texto); flex-shrink: 0; }
+.lmri-indice ul { display: flex; align-items: stretch; gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.lmri-indice a { display: block; padding: 1.1rem .1rem .9rem; color: var(--lmri-verde); border-bottom: 3px solid transparent; text-decoration: none; font-size: .9rem; white-space: nowrap; }
+.lmri-indice a:hover, .lmri-indice a[aria-current="location"] { border-bottom-color: #006647; }
+.pagina-lmri [data-lmri-secao] { scroll-margin-top: 165px; }
+.lmri-secao { padding-block: clamp(3rem, 6vw, 5.5rem); }
+.lmri-abertura { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
+.lmri-abertura h2 { margin-bottom: 0; }
+.lmri-abertura > p { color: var(--lmri-texto); margin-bottom: 0; max-width: 45ch !important; }
+.lmri-catalogo { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 7vw, 6rem); align-items: start; }
+.lmri-catalogo__contexto h3 { font-size: 1.55rem; font-weight: 550; letter-spacing: -.025em; }
+.lmri-catalogo__contexto > p { color: var(--lmri-texto); font-size: .98rem; max-width: 41ch !important; }
+.lmri-catalogo__contexto figure { margin-top: 1.4rem !important; max-width: 360px; }
+.lmri-catalogo__contexto figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.lmri-catalogo__contexto figcaption { margin-top: .65rem; color: var(--lmri-texto); }
+.lmri-detalhes { border-top: 1px solid var(--lmri-linha); min-width: 0; }
+.lmri-detalhes details { border-bottom: 1px solid var(--lmri-linha); }
+.lmri-detalhes summary { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; cursor: pointer; padding: 1.2rem 0; font-size: 1.1rem; line-height: 1.4; font-weight: 550; color: var(--lmri-verde); list-style: none; }
+.lmri-detalhes summary::-webkit-details-marker { display: none; }
+.lmri-detalhes summary::after { content: "+"; font-size: 1.5rem; font-weight: 350; line-height: 1; flex-shrink: 0; }
+.lmri-detalhes details[open] summary::after { content: "−"; }
+.lmri-detalhes summary:hover { color: #006647; }
+.lmri-detalhes summary small { display: inline-block; color: var(--lmri-texto); font-weight: 400; font-size: .8rem; margin-left: .4rem; }
+.lmri-detalhes details > div { padding: 0 2rem 1.4rem 0; }
+.lmri-detalhes details p { font-size: .95rem; color: var(--lmri-texto); margin-bottom: .5rem; }
+.lmri-detalhes details .lmri-link { font-size: .85rem; }
+.lmri-catalogo--diagnostico { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--lmri-linha); }
+.lmri-sobre { padding-block: clamp(3rem, 6vw, 5.5rem); background: var(--lmri-papel); }
+.lmri-sobre__grade { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.lmri-sobre__texto > p { color: var(--lmri-texto); font-size: .98rem; }
+.lmri-sobre__foto img { width: 100%; height: auto; }
+.lmri-sobre__foto figcaption { color: var(--lmri-texto); margin-top: .7rem; }
+.lmri-marcos { display: flex; gap: 2rem; border-top: 1px solid var(--lmri-linha); padding-top: 1.5rem; margin: 1.8rem 0 0; }
+.lmri-marcos > div { flex: 1; }
+.lmri-marcos dt { font-size: 1.7rem; line-height: 1.1; color: var(--lmri-verde); letter-spacing: -.035em; font-weight: 550; }
+.lmri-marcos dd { margin: .65rem 0 0; color: var(--lmri-texto); font-size: .8rem; line-height: 1.6; }
+.lmri-equipe { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; margin-top: 4rem; }
+.lmri-equipe figure img { width: 100%; height: auto; }
+.lmri-equipe figcaption { color: var(--lmri-texto); margin-top: .7rem; }
+.lmri-equipe h3 { font-size: 1.75rem; font-weight: 550; letter-spacing: -.03em; max-width: 23ch; }
+.lmri-equipe p { color: var(--lmri-texto); font-size: .98rem; }
+.lmri-qualidade__grade { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2rem, 7vw, 6rem); }
+.lmri-qualidade__grade > div > p { color: var(--lmri-texto); font-size: .98rem; max-width: 42ch; }
+.lmri-credenciais { margin: 0; }
+.lmri-credenciais > div { border-top: 1px solid var(--lmri-linha); padding: 1.4rem 0; }
+.lmri-credenciais > div:first-child { border-top: 3px solid #f2c200; }
+.lmri-credenciais dt { color: var(--lmri-verde); font-size: 1.2rem; font-weight: 550; margin-bottom: .6rem; }
+.lmri-credenciais dd { margin: 0; color: var(--lmri-texto); font-size: .95rem; }
+.lmri-credenciais dd p { margin-bottom: .5rem; }
+.lmri-contato { background: var(--lmri-verde); color: #fff; padding-block: clamp(3rem, 5vw, 4.5rem); }
+.lmri-contato__grade { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(2rem, 5vw, 4rem); }
+.pagina-lmri .lmri-contato h2 { color: #fff; }
+.lmri-contato__principal { min-width: 0; }
+.lmri-contato__principal > p { color: #d6e4dc; max-width: 50ch !important; font-size: 1rem; }
+.lmri-contato__email { display: inline-block; max-width: 100%; overflow-wrap: anywhere; color: #fff; font-size: clamp(1.2rem, 2.2vw, 1.75rem); text-underline-offset: .3em; margin: .25rem 0 1.8rem; }
+.lmri-botao--amarelo { background: #f2c200; border-color: #f2c200; color: #143c2e; }
+.lmri-botao--amarelo:hover { background: #ffda43; }
+.lmri-contato__telefone { color: #fff; font-size: 1rem; text-underline-offset: .3em; }
+.lmri-contato__endereco { border-left: 1px solid #66897a; padding-left: 2.5rem; align-self: stretch; padding-top: .25rem; }
+.pagina-lmri .lmri-contato h3 { color: #fff; font-size: 1.1rem; }
+.lmri-contato address { font-size: .9rem; font-style: normal; color: #d6e4dc; line-height: 1.9; margin: 1rem 0; }
+.lmri-contato .lmri-link { color: #fff; font-size: .85rem; }
+
+@media (max-width: 1000px) {
+  .lmri-hero__grade { gap: 2rem; }
+  .lmri-hero__foto > img { height: 500px; object-position: 62% center; }
+  .lmri-indice__conteudo { gap: 1.2rem; }
+  .lmri-indice ul { gap: 1rem; }
+  .lmri-contato__grade { grid-template-columns: 1.4fr 1fr; }
+  .lmri-contato__endereco { padding-left: 1.5rem; }
+}
+@media (max-width: 800px) {
+  .lmri-hero__grade { grid-template-columns: 1fr; padding-block: 1.5rem 2rem; gap: 2rem; }
+  .lmri-trilha { margin-bottom: 1.5rem; }
+  .lmri-marca { width: 260px; margin-bottom: 1.4rem; }
+  .pagina-lmri .lmri-hero h1 { max-width: 24ch; font-size: clamp(2rem, 5vw, 2.75rem); }
+  .lmri-hero__descricao { max-width: 58ch !important; }
+  .lmri-hero__vinculo { margin-top: 1.4rem; }
+  .lmri-hero__foto > img { flex: none; height: auto; max-height: none; aspect-ratio: 4 / 3; object-position: center; }
+  .lmri-indice { top: 76px; }
+  .lmri-indice__conteudo > span { display: none; }
+  .lmri-indice__conteudo { overflow-x: auto; scrollbar-width: thin; }
+  .lmri-indice ul { gap: 1.2rem; }
+  .lmri-indice a { font-size: .83rem; padding-block: .95rem .75rem; }
+  .lmri-abertura { grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 2.2rem; }
+  .lmri-catalogo { grid-template-columns: .8fr 1.2fr; gap: 2rem; }
+  .lmri-sobre__grade, .lmri-equipe { grid-template-columns: 1fr; gap: 2rem; }
+  .lmri-sobre__foto, .lmri-equipe figure { max-width: 620px; }
+  .lmri-equipe { margin-top: 3rem; }
+  .lmri-equipe > div { max-width: 58ch; }
+  .lmri-qualidade__grade { grid-template-columns: 1fr; gap: 1.5rem; }
+  .lmri-contato__grade { grid-template-columns: 1fr; gap: 2.5rem; }
+  .lmri-contato__endereco { border-left: 0; border-top: 1px solid #66897a; padding: 1.5rem 0 0; }
+}
+@media (max-width: 540px) {
+  .lmri-marca { width: 240px; }
+  .pagina-lmri .lmri-hero h1 { font-size: 2.05rem; max-width: 19ch; }
+  .lmri-hero__descricao { font-size: .98rem; }
+  .lmri-hero__foto figcaption { padding: .9rem 1rem; }
+  .lmri-acoes { gap: .8rem 1.2rem; }
+  .lmri-acoes > .lmri-botao { width: 100%; }
+  .lmri-catalogo { grid-template-columns: 1fr; gap: 1.7rem; }
+  .lmri-catalogo__contexto figure { max-width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: end; }
+  .lmri-catalogo__contexto figcaption { margin-top: 0; }
+  .lmri-catalogo--diagnostico { margin-top: 2.5rem; padding-top: 2.5rem; }
+  .lmri-detalhes summary { font-size: 1.05rem; }
+  .lmri-detalhes details > div { padding-right: 1rem; }
+  .lmri-marcos { gap: 1.5rem; }
+  .lmri-equipe h3 { font-size: 1.6rem; }
+  .lmri-contato__email { font-size: 1.12rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pagina-lmri { scroll-behavior: auto; }
+  html:has(.pagina-lmri) { scroll-behavior: auto; }
+  .pagina-lmri .lmri-botao { transition: none; }
+}

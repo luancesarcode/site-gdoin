@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LDRD, Laboratório de Dosimetria Retrospectiva e Datação</title>
+	<meta name="description" content="Laboratório de Dosimetria Retrospectiva e Datação: Datação, dosimetria retrospectiva e caracterização de materiais.">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/ldrd-instalacoes.css">
+	<link rel="stylesheet" href="css/ldrd.css">
+</head>
+<body class="pagina-ldrd">
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+	<header class="topo">
+		<div class="container topo__barra">
+			<a class="topo__logo" href="index.html"><img src="img/logo_gdoin.png" width="300" height="81" alt="GDOIN, Grupo de Dosimetria e Instrumentação Nuclear, página inicial"></a>
+			<button class="menu-botao" type="button" aria-expanded="false" aria-controls="navegacao">Menu</button>
+			<nav class="navegacao" id="navegacao" aria-label="Principal">
+				<ul class="menu">
+				<li><details><summary>O grupo</summary><ul class="submenu"><li><a href="sobre.html">Sobre o GDOIN</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="ensino.html">Ensino</a></li><li><a href="pesquisa.html">Pesquisa</a></li><li><a href="publicacoes.html">Publicações</a></li></ul></details></li>
+				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri.html">LMRI</a></li><li><a href="lpr.html">LPR</a></li></ul></details></li>
+				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd.html" aria-current="page">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
+				<li><details><summary>Extensão</summary><ul class="submenu"><li><a href="extensao.html">Serviços e consultoria</a></li><li><a href="http://museunuclear.com/" rel="noopener">Museu de Ciências Nucleares</a></li><li><a href="rad.html">RAD</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></details></li>
+				<li><a href="noticias.html">Notícias</a></li>
+				<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="conteudo">
+		<section class="ldrd-hero" aria-labelledby="ldrd-titulo">
+			<canvas class="ldrd-hero__rede" data-ldrd-rede aria-hidden="true"></canvas>
+			<div class="container ldrd-hero__conteudo">
+				<div class="ldrd-hero__barra">
+					<p class="ldrd-trilha"><a href="index.html">Início</a> / <a href="cidin.html">CIDIN</a> / LDRD</p>
+					<button class="ldrd-hero__movimento" type="button" data-ldrd-movimento aria-pressed="false" hidden>Pausar animação</button>
+				</div>
+				<h1 id="ldrd-titulo" class="ldrd-hero__titulo">
+					<img class="ldrd-hero__assinatura" src="img/ldrd/ldrd-assinatura-clara.svg" width="1080" height="353" alt="LDRD, Laboratório de Dosimetria Retrospectiva e Datação" fetchpriority="high">
+					<span class="ldrd-hero__compacto"><img src="img/ldrd/ldrd-simbolo.svg" width="337" height="337" alt=""><span class="ldrd-hero__sigla">LDRD</span><span class="ldrd-hero__nome">Laboratório de Dosimetria Retrospectiva e Datação</span></span>
+				</h1>
+				<p class="ldrd-hero__resumo">Dosimetria, datação e caracterização de materiais.<br>Infraestrutura multiusuária do CIDIN, DEN/UFPE.</p>
+				<div class="ldrd-hero__acoes">
+					<a class="ldrd-botao ldrd-botao--claro" href="#sobre" data-ldrd-aba="sobre">Conheça o LDRD</a>
+					<a class="ldrd-botao ldrd-botao--amarelo" href="#instalacoes" data-ldrd-aba="instalacoes">Instalações e equipamentos</a>
+					<a class="ldrd-botao ldrd-botao--claro" href="#multiusuario" data-ldrd-aba="multiusuario">Solicitar uso</a>
+				</div>
+			</div>
+		</section>
+		<div class="ldrd-corpo">
+			<div class="container ldrd-paineis" data-abas>
+				<section class="aba" id="sobre" data-titulo="Sobre">
+					<h2>Pesquisa em dosimetria e datação</h2>
+					<div class="ldrd-sobre">
+						<div>
+							<p class="ldrd-lead">O LDRD integra o GDOIN, no Departamento de Energia Nuclear da UFPE, e reúne infraestrutura para a preparação de amostras e a análise de materiais de interesse arqueométrico, geológico e geomorfológico.</p>
+							<p>O laboratório desenvolve e apoia pesquisas em dosimetria retrospectiva, datação por luminescência e ressonância paramagnética eletrônica (EPR), além da caracterização de materiais.</p>
+							<p>As atividades incluem análises por fluorescência de raios X, o desenvolvimento de metodologias de datação e aplicações de termoluminescência (TL) e luminescência opticamente estimulada (OSL).</p>
+							<a class="ldrd-link" href="#instalacoes" data-ldrd-aba="instalacoes">Conhecer a instrumentação</a>
+						</div>
+						<figure><img src="img/ldrd/micro-XRF.jpg" width="756" height="689" alt="Espectrômetro ARTAX junto à bancada do LDRD" loading="lazy"><figcaption>Análise elementar de materiais com o espectrômetro µXRF ARTAX.</figcaption></figure>
+					</div>
+					<div class="ldrd-equipe">
+						<div><h3>Coordenação e equipe</h3><p>Docentes, pesquisadores, técnicos e estudantes atuam no preparo de amostras, na aquisição de dados e na interpretação dos resultados.</p></div>
+						<dl><div><dt>Coordenação</dt><dd><a href="http://lattes.cnpq.br/9326896569841844" target="_blank" rel="noopener">Profa. Dra. Viviane Khoury Asfora</a></dd></div><div><dt>Vice-coordenação</dt><dd><a href="https://lattes.cnpq.br/8995737879915191" target="_blank" rel="noopener">Dra. Arícia Ravane Pereira da Cruz</a></dd></div></dl>
+					</div>
+				</section>
+				<section class="aba instalacoes" id="instalacoes" data-titulo="Instalações e equipamentos">
+					<header class="inst-intro">
+						<h2>Instalações<br>e equipamentos</h2>
+						<p>Preparação de amostras, dosimetria e datação. Conheça os ambientes e a instrumentação do Laboratório de Dosimetria Retrospectiva e Datação.</p>
+					</header>
+
+					<div class="inst-ambientes">
+						<figure class="inst-ambientes__foto">
+							<a class="inst-foto" href="img/ldrd/micro-XRF.jpg" data-inst-foto aria-label="Ampliar fotografia do espectrômetro ARTAX">
+								<img src="img/ldrd/micro-XRF.jpg" width="756" height="689" alt="Espectrômetro de microfluorescência de raios X ARTAX montado em tripé junto à bancada do laboratório" fetchpriority="high">
+								<span class="inst-foto__acao">Ampliar foto <span aria-hidden="true">↗</span></span>
+							</a>
+							<figcaption>Espectrômetro µXRF ARTAX, Bruker. Análise elementar de materiais.</figcaption>
+						</figure>
+						<div class="inst-ambientes__texto">
+							<h3>Da preparação <br>à medida.</h3>
+							<p>Em aproximadamente 30 m², o LDRD reúne três salas destinadas à recepção, ao armazenamento e à preparação de amostras, à aquisição de dados e à realização de medidas.</p>
+							<h4>Estrutura de preparação</h4>
+							<p>Bancadas, peneiras, estufa e forno para tratamento térmico dão suporte ao preparo das amostras antes das análises.</p>
+						</div>
+					</div>
+
+					<section class="inst-luminescencia" aria-labelledby="inst-lum-titulo">
+						<header class="inst-capitulo">
+							<h3 id="inst-lum-titulo">Medidas de <br>luminescência</h3>
+							<p>Leitoras para dosimetria por termoluminescência (TL) e luminescência opticamente estimulada (OSL), utilizadas em estudos de doses absorvidas e datação.</p>
+						</header>
+						<div class="inst-leitoras">
+							<figure>
+								<a class="inst-foto inst-foto--equipamento" href="img/ldrd/Leitora-TL-HW-3500.jpg" data-inst-foto aria-label="Ampliar fotografia da leitora TL Harshaw 3500">
+									<img src="img/ldrd/Leitora-TL-HW-3500.jpg" width="522" height="488" alt="Leitora de termoluminescência Harshaw 3500, da Thermo Fisher Scientific" loading="lazy">
+									<span class="inst-foto__acao">Ampliar foto <span aria-hidden="true">↗</span></span>
+								</a>
+								<figcaption><h4>Harshaw 3500</h4><p class="inst-fabricante">Thermo Fisher Scientific</p><p>Medidas dosimétricas por termoluminescência (TL).</p></figcaption>
+							</figure>
+							<figure>
+								<a class="inst-foto inst-foto--equipamento" href="img/ldrd/Leitora-OSL-RAD.jpg" data-inst-foto aria-label="Ampliar fotografia da leitora OSL Lumideteck 3000">
+									<img src="img/ldrd/Leitora-OSL-RAD.jpg" width="422" height="443" alt="Leitora OSL Lumideteck 3000, com tampa azul e painel frontal de controle" loading="lazy">
+									<span class="inst-foto__acao">Ampliar foto <span aria-hidden="true">↗</span></span>
+								</a>
+								<figcaption><h4>Lumideteck 3000</h4><p class="inst-fabricante">Leitora OSL</p><p>Determinação de doses absorvidas e estudos de datação por luminescência opticamente estimulada.</p></figcaption>
+							</figure>
+						</div>
+						<div class="inst-lexy">
+							<img src="img/ldrd/LExsmart.jpg" width="221" height="136" alt="Leitora combinada TL e OSL Lexyg Smart, de gabinete verde" loading="lazy">
+							<div><h4>Lexyg Smart</h4><p class="inst-fabricante">Freiberg Instruments</p><p>Um sistema de leitura para as duas técnicas: termoluminescência e luminescência opticamente estimulada.</p></div>
+						</div>
+					</section>
+
+					<section class="inst-elementar" aria-labelledby="inst-xrf-titulo">
+						<div class="inst-elementar__texto">
+							<h3 id="inst-xrf-titulo">A composição<br>dos materiais</h3>
+							<p>A fluorescência de raios X (XRF) permite a caracterização química elementar de materiais. O laboratório dispõe de instrumentação de bancada e portátil.</p>
+							<dl class="inst-modelos">
+								<div><dt>µXRF ARTAX <span>Bruker</span></dt><dd>Análise química elementar rápida e não destrutiva, com aplicações em estudos geológicos, ambientais e de materiais.</dd></div>
+								<div><dt>ProSpector LE <span>Elvatech</span></dt><dd>Analisador portátil para medidas in situ e identificação de elementos químicos em aplicações de campo.</dd></div>
+							</dl>
+						</div>
+						<figure>
+							<a class="inst-foto" href="img/ldrd/XRF.jpg" data-inst-foto aria-label="Ampliar fotografia do analisador portátil ProSpector LE">
+								<img src="img/ldrd/XRF.jpg" width="425" height="590" alt="Analisador portátil de fluorescência de raios X ProSpector LE, da Elvatech, em seu estojo" loading="lazy">
+								<span class="inst-foto__acao">Ampliar foto <span aria-hidden="true">↗</span></span>
+							</a>
+							<figcaption>ProSpector LE. Instrumentação portátil para análise por XRF.</figcaption>
+						</figure>
+					</section>
+
+					<section class="inst-gama" aria-labelledby="inst-gama-titulo">
+						<figure>
+							<a class="inst-foto" href="img/ldrd/Detector-GeHP.jpg" data-inst-foto aria-label="Ampliar fotografia do detector de germânio hiperpuro">
+								<img src="img/ldrd/Detector-GeHP.jpg" width="522" height="689" alt="Detector de germânio hiperpuro Canberra instalado no laboratório, com sistema de blindagem e acessórios" loading="lazy">
+								<span class="inst-foto__acao">Ampliar foto <span aria-hidden="true">↗</span></span>
+							</a>
+						</figure>
+						<div>
+							<h3 id="inst-gama-titulo">Radiação ambiental<br>e espectrometria gama</h3>
+							<p>O detector de germânio hiperpuro (HPGe) é empregado na estimativa da radiação ambiental associada às amostras de datação.</p>
+							<p>O sistema Canberra, com multicanal e acessórios, permite a identificação e a quantificação de radionuclídeos por espectrometria gama de alta resolução.</p>
+							<p class="inst-gama__legenda">Detector HPGe <span>Canberra</span></p>
+						</div>
+					</section>
+
+					<aside class="inst-acesso" aria-label="Acesso ao laboratório">
+						<div><h3>Infraestrutura multiusuária</h3><p>O LDRD integra o CIDIN e recebe pesquisadores da UFPE e de outras instituições.</p></div>
+						<a href="#multiusuario" data-inst-aba="multiusuario">Como solicitar o uso</a>
+					</aside>
+				</section>
+				<section class="aba" id="multiusuario" data-titulo="Multiusuário">
+					<h2>Uso multiusuário</h2>
+					<p class="ldrd-lead">O LDRD integra o CIDIN e recebe pesquisadores da UFPE e de outras instituições, mediante solicitação e aprovação da coordenação.</p>
+					<div class="ldrd-uso">
+						<ol class="ldrd-fluxo">
+							<li><div><h3>Solicitação</h3><p>Preencha o formulário com as informações do projeto e das análises pretendidas.</p></div></li>
+							<li><div><h3>Avaliação técnica</h3><p>A coordenação analisa a metodologia, a viabilidade, o cronograma e a demanda existente.</p></div></li>
+							<li><div><h3>Confirmação e agendamento</h3><p>Após a aprovação, a equipe informa a data, o horário e os procedimentos necessários.</p></div></li>
+							<li><div><h3>Execução das análises</h3><p>Os ensaios são realizados pela equipe capacitada do laboratório, com possibilidade de acompanhamento pelo solicitante.</p></div></li>
+						</ol>
+						<aside class="ldrd-orientacoes"><h3>Antes de solicitar</h3><p>Recomenda-se enviar o pedido com pelo menos duas semanas de antecedência, especialmente quando houver preparo de amostras ou múltiplas etapas.</p><p>A operação dos equipamentos é restrita à equipe capacitada do laboratório. O acesso às instalações depende de autorização e agendamento.</p><p>Cancelamentos devem ser comunicados com pelo menos 48 horas de antecedência.</p><a href="multiusuario.html">Orientações gerais do CIDIN</a></aside>
+					</div>
+					<div class="ldrd-solicitar"><a class="ldrd-botao" href="https://docs.google.com/forms/d/e/1FAIpQLSdO9FIgQDgjzuXRr3foNMpXG-ONFdJp0-XmJns1pk_3UJNtiw/viewform" target="_blank" rel="noopener">Abrir formulário de solicitação</a><a class="ldrd-link" href="#contato" data-ldrd-aba="contato">Tirar dúvidas com a equipe</a></div>
+				</section>
+				<section class="aba" id="contato" data-titulo="Contato">
+					<h2>Fale com o LDRD</h2>
+					<p class="ldrd-lead">Entre em contato para informações sobre análises, preparo de amostras e solicitações de uso.</p>
+					<div class="ldrd-contatos">
+						<div><h3>Contato institucional</h3><a class="ldrd-email" href="mailto:ldrd@ufpe.br">ldrd@ufpe.br</a><p>Informações sobre o laboratório.</p></div>
+						<div><h3>Solicitações e análises</h3><a class="ldrd-email" href="mailto:ladat.ufpe@gmail.com">ladat.ufpe@gmail.com</a><p>Avaliação preliminar da viabilidade técnica.</p></div>
+					</div>
+					<div class="ldrd-endereco"><div><h3>Localização</h3><address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000, Recife, PE</address></div><div><h3>Telefone</h3><a href="tel:+558121268708">(81) 2126-8708</a><a class="ldrd-link" href="https://www.google.com/maps/search/?api=1&amp;query=Departamento+de+Energia+Nuclear+UFPE" target="_blank" rel="noopener">Ver localização no mapa</a></div></div>
+				</section>
+			</div>
+		</div>
+	</main>
+
+	<footer class="rodape">
+		<div class="container">
+			<div class="rodape__grade">
+				<div class="rodape__apresentacao">
+					<div class="rodape__den"><img src="img/marcas/den-ufpe-completo.svg" width="935" height="559" alt="Departamento de Energia Nuclear, UFPE" loading="lazy"></div>
+					<p>Grupo de Dosimetria e Instrumentação Nuclear do Departamento de Energia Nuclear da Universidade Federal de Pernambuco.</p>
+				</div>
+				<div>
+					<p class="rodape__titulo">Localização</p>
+					<address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000<br>Cidade Universitária, Recife, PE</address>
+					<a class="rodape__localizacao" href="https://www.google.com/maps/search/?api=1&amp;query=Departamento+de+Energia+Nuclear+UFPE" target="_blank" rel="noopener">Ver localização no mapa</a>
+				</div>
+				<div>
+					<p class="rodape__titulo">Fale com o grupo</p>
+					<a class="rodape__telefone" href="tel:+558121268708">(81) 2126-8708</a>
+					<ul class="rodape__canais"><li><a href="contato.html">Contatos dos laboratórios</a></li><li><a href="https://instagram.com/gdoindenufpe" target="_blank" rel="noopener">Instagram @gdoindenufpe</a></li></ul>
+				</div>
+			</div>
+			<div class="rodape__base">
+				<div class="rodape__vinculo"><p>Departamento de Energia Nuclear<br>Universidade Federal de Pernambuco</p></div>
+				<nav aria-label="Navegação do rodapé"><ul class="rodape__links"><li><a href="sobre.html">Sobre o grupo</a></li><li><a href="index.html#estrutura">Laboratórios</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/site.js"></script>
+	<script src="js/ldrd-instalacoes.js"></script>
+	<script src="js/ldrd.js"></script>
+</body>
+</html>

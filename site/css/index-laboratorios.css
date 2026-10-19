@@ -1,0 +1,105 @@
+/* Mosaico de laboratórios da página inicial. Estilos isolados da navegação,
+   das páginas dos laboratórios e das demais seções do site. */
+.rede-labs { background: #e7efe9; scroll-margin-top: 90px; }
+.rede-labs [hidden] { display: none !important; }
+.rede-labs__abertura { display: flex; justify-content: space-between; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+.rede-labs__abertura h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; color: #174f3d; margin-bottom: .4rem; }
+.rede-labs__abertura p { max-width: 52ch; margin: 0; color: #4d6357; }
+.rede-labs__marca { width: 260px; height: auto; flex-shrink: 0; }
+.rede-labs__filtros { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 2rem; }
+.rede-labs__filtros button { font: inherit; font-size: .95rem; font-weight: 500; border: 1px solid #bdcec2; border-radius: 3px; padding: .6rem 1rem; color: #174f3d; background: transparent; cursor: pointer; transition: background-color .15s, color .15s; }
+.rede-labs__filtros button[aria-pressed="true"] { background: #174f3d; border-color: #174f3d; color: white; }
+.rede-labs__filtros button:hover { border-color: #006647; }
+.rede-labs__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.lab-grupo + .lab-grupo { margin-top: 2.75rem; }
+.lab-grupo__cabecalho { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem 2rem; margin-bottom: 1rem; }
+.lab-grupo__cabecalho h3 { color: #174f3d; font-size: 1.35rem; margin: 0; }
+.lab-grupo__cabecalho p { margin: 0; color: #4d6357; font-size: .92rem; }
+.lab-mosaico { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; }
+.lab-tile { grid-column: span 6; display: flex; position: relative; min-width: 0; min-height: 310px; background: white; border: 1px solid #cad8ce; border-radius: 4px; overflow: hidden; transition: border-color .18s; }
+.lab-tile:hover { border-color: #006647; }
+.lab-tile:focus-within { outline: 3px solid #f2c200; outline-offset: 3px; }
+.lab-tile--lmri { grid-column: span 7; }
+.lab-tile--lpr { grid-column: span 5; }
+.lab-tile--gamalab { grid-column: span 5; }
+.lab-tile--ldrd { grid-column: span 7; }
+.lab-tile--lpn { grid-column: span 4; min-height: 260px; }
+.lab-tile--acesso { grid-column: span 8; min-height: 260px; }
+.lab-tile__conteudo { min-width: 0; flex: 1; padding: clamp(1.25rem, 2.5vw, 2rem); display: flex; flex-direction: column; align-items: flex-start; }
+.lab-tile__tipo { font-size: .73rem; font-weight: 600; line-height: 1.4; border-radius: 2px; padding: .3rem .55rem; background: #174f3d; color: #fff; margin-bottom: 1.25rem; }
+.lab-tile__tipo--multi { background: #f2c200; color: #183b2c; }
+.lab-tile__logo { height: 98px; width: auto; max-width: 100%; object-fit: contain; object-position: left center; margin-bottom: 1.2rem; }
+.lab-tile__logo--lmri { width: 250px; height: 70px; margin-bottom: 1.3rem; }
+.lab-tile__logo--gama { width: 150px; height: 139px; margin-top: -.3rem; margin-bottom: .8rem; }
+.lab-tile h4.lab-tile__sigla { font-weight: 750; font-size: clamp(2.6rem, 4vw, 3.7rem); line-height: 1; letter-spacing: -.04em; color: #174f3d; margin: .15rem 0 1.2rem; }
+.lab-tile h4 { font-size: 1.1rem; line-height: 1.35; margin: 0 0 .6rem; color: #193b2d; }
+.lab-tile h4.lab-tile__marca { margin: 0 0 1.2rem; max-width: 100%; line-height: 1; }
+.lab-tile__marca a { display: block; }
+.lab-tile__marca .lab-tile__logo { margin: 0; }
+.lab-tile h4 a { text-decoration: none; color: inherit; }
+.lab-tile h4 a::after { content: ""; position: absolute; inset: 0; z-index: 2; }
+.lab-tile p { font-size: .92rem; line-height: 1.65; color: #4d6357; max-width: 42ch; margin-bottom: 1rem; }
+.lab-tile__acao { color: #006647; font-size: .85rem; font-weight: 600; margin-top: auto; padding-top: .8rem; text-decoration: underline; text-underline-offset: .3em; }
+.lab-tile__foto { flex: 0 0 34%; min-width: 0; margin: 0; overflow: hidden; position: relative; background: #d5e0d8; }
+.lab-tile__foto img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .4s ease; }
+.lab-tile__foto-recorte { width: 100%; height: 100%; position: absolute; inset: 0; display: block; transition: transform .4s ease; }
+.lab-tile:hover .lab-tile__foto img { transform: scale(1.035); }
+.lab-tile:hover .lab-tile__foto-recorte { transform: scale(1.035); }
+.lab-tile--gamalab .lab-tile__foto { flex-basis: 37%; }
+.lab-tile--ldrd .lab-tile__foto { flex-basis: 44%; }
+.lab-tile--ldrd .lab-tile__foto img { object-position: 60% center; }
+.lab-tile .lab-tile__nota { font-size: .8rem; line-height: 1.5; color: #647167; border-left: 2px solid #f2c200; padding-left: .6rem; margin-bottom: .5rem; }
+.lab-tile--lpr .lab-tile__conteudo { padding-right: 3rem; }
+.lab-tile--acesso { background: #174f3d; border-color: #174f3d; }
+.lab-tile--acesso h4 { color: #fff; font-size: 1.65rem; max-width: 18ch; }
+.lab-tile--acesso p { color: #d9e7dd; }
+.lab-tile--acesso .lab-tile__acao { color: #fff; }
+.lab-tile--acesso .lab-tile__foto { flex-basis: 36%; }
+.lab-tile--acesso figcaption { position: absolute; bottom: 0; right: 0; left: 0; background: #174f3d; color: #fff; font-size: .7rem; padding: .35rem .6rem; }
+.lab-tile__centro { font-size: .85rem; font-weight: 600; color: #f2c200; margin-bottom: 1.5rem; }
+.rede-labs__extensao { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid #bdcec2; }
+.lab-tile--extensao { min-height: 230px; }
+.lab-tile--extensao .lab-tile__conteudo { flex-direction: row; gap: 2rem; align-items: center; }
+.lab-tile--extensao .lab-tile__conteudo > div { flex: 1; min-width: 0; }
+.lab-tile--extensao .lab-tile__logo { width: 160px; height: 100px; margin: 0; }
+.lab-tile--extensao h4.lab-tile__marca { margin: 0; flex-shrink: 0; }
+.lab-tile--rad .lab-tile__conteudo { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.lab-tile--rad .lab-tile__logo { width: 260px; height: auto; }
+.lab-tile--rad .lab-tile__conteudo > div { width: 100%; }
+.lab-tile--extensao p { margin-bottom: .4rem; font-size: .87rem; }
+.lab-tile--extensao .lab-tile__nome-museu { color: #193b2d; font-size: 1.1rem; font-weight: 600; line-height: 1.35; margin-bottom: .6rem; }
+.lab-tile--extensao .lab-tile__acao { display: inline-block; }
+.rede-labs__nota { color: #53695b; font-size: .78rem; margin: 1.5rem 0 0; }
+
+@media (max-width: 1050px) {
+  .lab-tile--lmri, .lab-tile--lpr, .lab-tile--gamalab, .lab-tile--ldrd { grid-column: span 6; }
+  .lab-tile__conteudo { padding: 1.3rem; }
+  .lab-tile__foto { flex-basis: 30%; }
+  .lab-tile--gamalab .lab-tile__foto { flex-basis: 30%; }
+  .lab-tile--ldrd .lab-tile__foto { flex-basis: 35%; }
+  .lab-tile--extensao .lab-tile__conteudo { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+@media (max-width: 720px) {
+  .rede-labs__abertura { align-items: flex-start; flex-direction: column-reverse; gap: 1.5rem; }
+  .rede-labs__marca { width: 225px; }
+  .rede-labs__filtros { gap: .4rem; }
+  .rede-labs__filtros button { font-size: .85rem; padding: .55rem .7rem; }
+  .lab-mosaico { grid-template-columns: 1fr; }
+  .lab-tile { grid-column: 1; min-height: 280px; }
+  .lab-tile--lpr, .lab-tile--lpn { min-height: 240px; }
+  .lab-tile__foto { flex-basis: 32%; }
+  .lab-tile--gamalab .lab-tile__foto { flex-basis: 36%; }
+  .lab-tile--ldrd .lab-tile__foto { flex-basis: 40%; }
+  .lab-tile--extensao { min-height: 230px; }
+  .lab-tile--extensao .lab-tile__conteudo { flex-direction: row; align-items: center; gap: 1.25rem; }
+  .lab-tile--extensao .lab-tile__logo { width: 110px; height: auto; }
+  .lab-tile--rad .lab-tile__conteudo { flex-direction: column; align-items: flex-start; }
+  .lab-tile--rad .lab-tile__logo { width: 240px; }
+}
+@media (max-width: 380px) {
+  .lab-tile--lmri .lab-tile__foto { flex-basis: 27%; }
+  .lab-tile--gamalab .lab-tile__foto, .lab-tile--ldrd .lab-tile__foto { flex-basis: 30%; }
+  .lab-tile--acesso { flex-direction: column; }
+  .lab-tile--acesso .lab-tile__foto { min-height: 160px; flex-basis: auto; }
+  .lab-tile--extensao .lab-tile__conteudo { flex-direction: column; align-items: flex-start; }
+}

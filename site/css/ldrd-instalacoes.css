@@ -1,0 +1,153 @@
+/* Direção editorial exclusiva da aba Instalações do LDRD.
+   Verde e amarelo da identidade GDOIN; fotografias e fonte do acervo antigo.
+   Estrutura: título + introdução / foto + ambientes / leitoras / XRF / HPGe.
+   Todos os estilos visuais ficam restritos à seção e ao seu visualizador. */
+@font-face {
+  font-family: "LDRD Slab";
+  src: url("../fonts/ldrd-roboto-slab-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.instalacoes {
+  --inst-verde: #006647;
+  --inst-escuro: #0f3d26;
+  --inst-papel: #edf3ef;
+  --inst-cinza: #56645c;
+  --inst-acento: #f2c200;
+  scroll-margin-top: 100px;
+}
+.instalacoes figure { margin: 0; min-width: 0; }
+.instalacoes h2, .instalacoes h3 {
+  font-family: "LDRD Slab", Georgia, serif;
+  font-weight: 400;
+  color: var(--inst-escuro);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.instalacoes h3 { font-size: clamp(1.7rem, 3.1vw, 2.5rem); line-height: 1.18; }
+.instalacoes h4 { font-size: 1.15rem; font-weight: 600; }
+.instalacoes p { max-width: 62ch; }
+.inst-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: end;
+  margin: 3rem 0 2.5rem;
+}
+.inst-intro h2 { font-size: clamp(2.4rem, 4.6vw, 3.9rem); line-height: 1.08; margin: 0; }
+.inst-intro p { color: var(--inst-cinza); font-size: 1.1rem; margin: 0 0 .2rem; max-width: 41ch; }
+.inst-ambientes { display: grid; grid-template-columns: 1.15fr 1fr; align-items: stretch; }
+.inst-ambientes__foto { background: var(--inst-papel); }
+.inst-ambientes__foto .inst-foto { height: calc(100% - 3.6rem); min-height: 360px; }
+.inst-ambientes__foto img { width: 100%; height: 100%; object-fit: cover; }
+.inst-ambientes__foto figcaption { padding: .85rem 1.25rem; }
+.inst-ambientes__texto {
+  padding: clamp(2rem, 4vw, 3.75rem);
+  background: var(--inst-escuro);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inst-ambientes__texto h3 { color: #fff; margin-bottom: 1.1rem; font-size: clamp(2rem, 3.4vw, 2.8rem); }
+.inst-ambientes__texto h4 { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 2px solid var(--inst-acento); width: fit-content; }
+.inst-ambientes__texto p { font-size: 1rem; line-height: 1.75; color: #e6eee9; }
+.inst-ambientes__texto p:last-child { margin-bottom: 0; }
+.inst-foto { display: block; position: relative; color: #fff; }
+.inst-foto__acao {
+  display: flex; align-items: center; gap: .8rem;
+  position: absolute; bottom: 0; right: 0;
+  padding: .55rem .8rem; background: var(--inst-escuro);
+  color: #fff; font-size: .78rem; line-height: 1.5;
+  transition: background-color .15s;
+}
+.inst-foto:hover .inst-foto__acao { background: var(--inst-verde); }
+.inst-foto:focus-visible { outline-offset: 4px; z-index: 1; }
+.instalacoes figcaption { font-size: .82rem; line-height: 1.55; color: var(--inst-cinza); }
+.inst-luminescencia { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.inst-capitulo { display: grid; grid-template-columns: 1fr 1.15fr; gap: 3rem; align-items: start; margin-bottom: 2rem; }
+.inst-capitulo h3 { margin: 0; }
+.inst-capitulo > p { color: var(--inst-cinza); margin: 0; max-width: 46ch; }
+.inst-leitoras { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 5rem); }
+.inst-foto--equipamento { height: 335px; padding: 1.5rem 2rem; }
+.inst-foto--equipamento img { width: 100%; height: 100%; object-fit: contain; }
+.inst-leitoras figcaption { border-top: 1px solid var(--linha); padding-top: 1.2rem; margin-top: 1rem; }
+.inst-leitoras h4 { color: var(--inst-escuro); margin-bottom: .2rem; font-size: 1.35rem; }
+.instalacoes .inst-fabricante { color: var(--inst-cinza); font-size: .85rem; margin: 0 0 .8rem; }
+.inst-leitoras figcaption > p:last-child { font-size: 1rem; color: var(--tinta); max-width: 40ch; margin-bottom: 0; }
+.inst-lexy {
+  margin-top: 2.5rem; padding: 1.75rem 0 0;
+  display: grid; grid-template-columns: 221px 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem); align-items: center;
+  border-top: 1px solid var(--linha);
+}
+.inst-lexy img { width: 221px; height: 136px; object-fit: contain; }
+.inst-lexy h4 { margin-bottom: .2rem; }
+.inst-lexy p:last-child { font-size: 1rem; margin-bottom: 0; }
+.inst-elementar { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 7vw, 6rem); align-items: center; padding-bottom: clamp(3.5rem, 7vw, 6rem); }
+.inst-elementar__texto > p { color: var(--inst-cinza); margin-bottom: 2rem; }
+.inst-modelos { margin: 0; }
+.inst-modelos > div { margin-top: 1.25rem; }
+.inst-modelos dt { font-weight: 600; font-size: 1.1rem; color: var(--inst-escuro); }
+.inst-modelos dt span { display: inline-block; margin-left: .5rem; font-size: .85rem; font-weight: 400; color: var(--inst-cinza); }
+.inst-modelos dd { margin: .3rem 0 0; font-size: .95rem; max-width: 46ch; }
+.inst-elementar figure { justify-self: center; width: min(100%, 340px); }
+.inst-elementar img { width: 100%; }
+.inst-elementar figcaption { margin-top: .8rem; }
+.inst-gama { display: grid; grid-template-columns: .8fr 1.2fr; background: var(--inst-papel); align-items: center; }
+.inst-gama figure { width: 100%; max-width: 330px; justify-self: center; padding: 2rem; }
+.inst-gama img { width: 100%; }
+.inst-gama > div { padding: 3rem clamp(1.5rem, 4vw, 3.5rem) 3rem 1.5rem; }
+.inst-gama p { font-size: 1rem; max-width: 48ch; }
+.inst-gama__legenda { margin: 1.5rem 0 0; font-weight: 600; color: var(--inst-escuro); }
+.inst-gama__legenda span { font-weight: 400; display: block; font-size: .85rem; }
+.inst-acesso { margin-top: 3.5rem; padding: 1.5rem 0 .5rem; border-top: 2px solid var(--inst-verde); display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.inst-acesso h3 { font: 600 1.25rem var(--fonte); letter-spacing: 0; margin-bottom: .4rem; }
+.inst-acesso p { font-size: .95rem; color: var(--inst-cinza); margin: 0; }
+.inst-acesso > a { flex-shrink: 0; text-underline-offset: .3em; font-size: 1rem; font-weight: 600; padding: .75rem 0; }
+
+/* Visualizador nativo: Esc fecha; o navegador gerencia foco e fundo inerte. */
+.inst-visualizador { border: 0; padding: 1.25rem; width: fit-content; max-width: calc(100vw - 2rem); max-height: calc(100dvh - 2rem); color: #1c2620; background: #fff; }
+.inst-visualizador::backdrop { background: rgba(15, 35, 26, .85); }
+.inst-visualizador figure { margin: 0; }
+.inst-visualizador img { max-width: 100%; max-height: 72dvh; width: auto; height: auto; object-fit: contain; margin: auto; }
+.inst-visualizador figcaption { font-size: .9rem; max-width: 65ch; padding-top: 1rem; }
+.inst-visualizador form { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
+.inst-visualizador button { font: inherit; font-size: .9rem; border: 1px solid #006647; background: #fff; color: #006647; padding: .45rem .8rem; cursor: pointer; }
+html:has(.inst-visualizador[open]) { overflow: hidden; }
+
+@media (max-width: 960px) {
+  .inst-intro { grid-template-columns: 1.2fr 1fr; gap: 1.5rem; }
+  .inst-intro p { font-size: 1rem; }
+  .inst-ambientes { grid-template-columns: 1fr 1fr; }
+  .inst-ambientes__texto { padding: 2rem; }
+  .inst-ambientes__foto .inst-foto { min-height: 400px; }
+  .inst-ambientes__foto img { object-fit: contain; }
+  .inst-ambientes__foto figcaption { min-height: 3.6rem; }
+  .inst-foto--equipamento { height: 290px; padding: 1rem; }
+  .inst-gama > div { padding: 2rem 1.5rem 2rem 0; }
+}
+@media (max-width: 640px) {
+  .inst-intro { display: block; margin-top: 2rem; }
+  .inst-intro h2 { font-size: clamp(2.1rem, 8.5vw, 3rem); margin-bottom: 1.25rem; }
+  .inst-intro p { max-width: 40ch; }
+  .inst-ambientes { display: flex; flex-direction: column; }
+  .inst-ambientes__foto .inst-foto { min-height: 0; height: auto; }
+  .inst-ambientes__foto img { height: auto; }
+  .inst-ambientes__texto { padding: 2rem 1.5rem; }
+  .inst-ambientes__texto h3 br, .inst-capitulo h3 br { display: none; }
+  .inst-capitulo { grid-template-columns: 1fr; gap: 1rem; }
+  .inst-leitoras { grid-template-columns: 1fr; gap: 2.5rem; }
+  .inst-foto--equipamento { height: 290px; }
+  .inst-leitoras figure { max-width: 430px; width: 100%; margin-inline: auto; }
+  .inst-lexy { grid-template-columns: 1fr; gap: 1.25rem; }
+  .inst-lexy img { justify-self: start; }
+  .inst-elementar { grid-template-columns: 1fr; gap: 2rem; }
+  .inst-elementar figure { width: min(100%, 280px); }
+  .inst-gama { grid-template-columns: 1fr; }
+  .inst-gama figure { max-width: 280px; padding: 1.5rem 1.5rem 0; }
+  .inst-gama > div { padding: 2rem 1.5rem; }
+  .inst-acesso { flex-direction: column; align-items: flex-start; gap: .5rem; margin-top: 2.5rem; }
+}
