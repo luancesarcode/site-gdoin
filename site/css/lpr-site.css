@@ -1,0 +1,70 @@
+/* LPR como site próprio. A planta do hero (lpr.css) é o elemento de destaque;
+   aqui ficam a marca tipográfica, as fichas de serviço e as etapas.
+   As fotos do acervo têm ~190 px: aparecem no tamanho real, nunca ampliadas. */
+
+.lab-lpr { --lab-cor: #174f3d; --lab-papel: #e7efe9; --lab-texto: #4d6357; --lab-linha: #cad8ce; }
+
+/* Marca: o laboratório ainda não tem logo, então a sigla é a marca */
+.lpr-marca { display: inline-flex; align-items: center; gap: .7rem; color: var(--lpr-verde); text-decoration: none; }
+.lpr-marca strong { font-size: 2.1rem; font-weight: 750; letter-spacing: -.05em; line-height: 1; padding-right: .7rem; border-right: 3px solid var(--lpr-amarelo); }
+.lpr-marca > span { font-size: .74rem; line-height: 1.3; color: var(--lpr-texto); font-weight: 500; }
+.topo__logo--lab:hover .lpr-marca strong { color: #006647; }
+.lab-rodape .lpr-marca { margin-bottom: 1rem; }
+
+.lpr-secao { padding-block: clamp(3rem, 6vw, 5rem); }
+.lpr-secao__cabeca { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 3rem; align-items: end; margin-bottom: 2.5rem; }
+.pagina-lpr .lpr-secao__cabeca h2 { color: var(--lpr-verde); font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 650; letter-spacing: -.035em; line-height: 1.1; margin: 0; }
+.lpr-secao__cabeca p { color: var(--lpr-texto); margin: 0; max-width: 46ch; }
+
+/* Fichas de serviço: foto pequena do acervo + texto */
+.lpr-fichas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(1.5rem, 4vw, 3.5rem); }
+.lpr-ficha { display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 1.3rem; align-items: start; padding: 1.5rem 0; border-top: 1px solid var(--lpr-linha); scroll-margin-top: 140px; }
+.lpr-ficha figure { margin: 0; }
+.lpr-ficha img { width: 124px; height: 124px; object-fit: cover; display: block; border-bottom: 3px solid var(--lpr-verde); }
+.lpr-ficha figcaption { font-size: .72rem; line-height: 1.4; color: var(--lpr-texto); margin-top: .4rem; }
+.pagina-lpr .lpr-ficha h2,
+.pagina-lpr .lpr-ficha h3 { color: var(--lpr-verde); font-size: 1.2rem; font-weight: 600; letter-spacing: -.015em; margin: 0 0 .5rem; }
+.lpr-ficha p { color: var(--lpr-texto); font-size: .95rem; margin: 0; max-width: 48ch; }
+.lpr-ficha:target { background: linear-gradient(90deg, var(--lpr-claro), transparent 70%); }
+
+.lpr-fichas--lista { grid-template-columns: 1fr; }
+.lpr-fichas--lista .lpr-ficha { grid-template-columns: 196px minmax(0, 1fr); gap: 2rem; padding: 2rem 0; }
+.lpr-fichas--lista .lpr-ficha img { width: 196px; height: 128px; }
+.pagina-lpr .lpr-fichas--lista .lpr-ficha h2 { font-size: 1.5rem; }
+.lpr-fichas--lista .lpr-ficha p { font-size: 1.02rem; }
+
+/* Etapas de um levantamento: é uma sequência, por isso numerada */
+.lpr-secao--verde { background: var(--lpr-verde); color: #fff; }
+.lpr-etapas { display: grid; grid-template-columns: .8fr 2fr; gap: 1.5rem 3rem; align-items: start; }
+.pagina-lpr .lpr-etapas h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 650; letter-spacing: -.035em; line-height: 1.1; margin: 0; max-width: 12ch; }
+.lpr-etapas ol { list-style: none; counter-reset: etapa; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.lpr-etapas li { counter-increment: etapa; border-top: 2px solid #5f8f7b; padding-top: 1rem; }
+.lpr-etapas li::before { content: counter(etapa); display: block; font-size: 2.4rem; font-weight: 700; line-height: 1; color: var(--lpr-amarelo); margin-bottom: .6rem; font-variant-numeric: tabular-nums; }
+.pagina-lpr .lpr-etapas h3 { color: #fff; font-size: 1.1rem; margin: 0 0 .4rem; }
+.lpr-etapas p { color: #dbe8e0; font-size: .92rem; margin: 0; }
+.lpr-etapas .lpr-botao { grid-column: 2; justify-self: start; }
+.lpr-botao--amarelo { background: var(--lpr-amarelo); border-color: var(--lpr-amarelo); color: #143c2e; }
+.lpr-botao--amarelo:hover { background: #ffda43; color: #143c2e; }
+
+.pagina-lpr .lpr-contato__titulo { color: var(--lpr-verde); font-size: 1rem; margin-bottom: 1rem; }
+.lab-lpr .lpr-consulta { margin-top: 1rem; }
+.lab-lpr .lpr-aviso { margin-top: 2rem; }
+
+.lab-lpr .lpr-hero__servicos a { color: inherit; text-decoration: none; }
+.lab-lpr .lpr-hero__servicos a:hover { text-decoration: underline; text-underline-offset: .25em; }
+.lab-lpr .lpr-hero { padding-top: clamp(2.5rem, 5vw, 4rem); }
+
+@media (max-width: 900px) {
+  .lpr-secao__cabeca { grid-template-columns: 1fr; }
+  .lpr-fichas { grid-template-columns: 1fr; }
+  .lpr-etapas { grid-template-columns: 1fr; }
+  .lpr-etapas .lpr-botao { grid-column: auto; }
+}
+@media (max-width: 600px) {
+  .lpr-etapas ol { grid-template-columns: 1fr; }
+  .lpr-fichas--lista .lpr-ficha { grid-template-columns: 1fr; gap: 1rem; }
+  .lpr-ficha { grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; }
+  .lpr-ficha img { width: 96px; height: 96px; }
+  .lpr-fichas--lista .lpr-ficha img { width: 196px; height: 128px; }
+  .lpr-marca strong { font-size: 1.8rem; }
+}

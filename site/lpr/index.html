@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LPR, proteção radiológica do GDOIN</title>
+	<meta name="description" content="Levantamento radiométrico, controle de qualidade em radiodiagnóstico, cálculo de blindagem e planos de proteção radiológica. DEN/UFPE.">
+	<link rel="icon" href="../img/c_xray.png">
+	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="stylesheet" href="../css/lab-site.css">
+	<link rel="stylesheet" href="../css/lpr.css">
+	<link rel="stylesheet" href="../css/lpr-site.css">
+</head>
+<body class="pagina-lpr lab-lpr">
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div class="lab-vinculo">
+		<div class="container lab-vinculo__barra">
+			<p>Laboratório do Grupo de Dosimetria e Instrumentação Nuclear, DEN/UFPE</p>
+			<a href="../index.html">Site do GDOIN</a>
+		</div>
+	</div>
+	<header class="topo topo--lab">
+		<div class="container topo__barra">
+			<a class="topo__logo topo__logo--lab" href="index.html"><span class="lpr-marca" aria-label="LPR, proteção radiológica, página inicial"><strong>LPR</strong><span>Proteção radiológica<br>GDOIN, DEN/UFPE</span></span></a>
+			<button class="menu-botao" type="button" aria-expanded="false" aria-controls="navegacao">Menu</button>
+			<nav class="navegacao" id="navegacao" aria-label="LPR">
+				<ul class="menu"><li><a href="index.html" aria-current="page">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li><li class="menu__acao"><a class="lab-acao" href="contato.html">Pedir um serviço</a></li></ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="conteudo">
+		<section class="lpr-hero" aria-labelledby="lpr-titulo">
+			<div class="container">
+				<div class="lpr-hero__grade">
+					<div class="lpr-hero__texto">
+						<h1 id="lpr-titulo">Medimos a radiação onde as pessoas trabalham.</h1>
+						<p class="lpr-hero__resumo">Levantamento radiométrico, controle de qualidade em radiodiagnóstico, cálculo de blindagem e planos de proteção radiológica para hospitais, clínicas e indústrias de todo o país, em especial do Norte e do Nordeste.</p>
+						<div class="lpr-acoes"><a class="lpr-botao" href="contato.html">Pedir um levantamento</a><a class="lpr-link" href="servicos.html">Ver todos os serviços</a></div>
+						<ul class="lpr-hero__servicos" aria-label="Serviços do LPR"><li><a href="servicos.html#levantamento">Levantamento radiométrico</a></li><li><a href="servicos.html#controle-de-qualidade">Controle de qualidade em radiodiagnóstico</a></li><li><a href="servicos.html#esfregaco">Teste de esfregaço</a></li><li><a href="servicos.html#planos">Planos de proteção radiológica</a></li></ul>
+					</div>
+					<figure class="lpr-hero__planta">
+						<div class="lpr-hero__prancha">
+							<svg class="lpr-planta" viewBox="0 0 550 390" role="img" aria-labelledby="lpr-planta-titulo lpr-planta-desc">
+								<title id="lpr-planta-titulo">Planta de uma sala de raios X com seis pontos de medida</title>
+								<desc id="lpr-planta-desc">Ilustração de um levantamento radiométrico. Os pontos ficam fora da sala de exame: no comando, no visor, na porta, no corredor e na sala de laudos, com taxas de dose entre 0,2 e 1,2 microsievert por hora. Valores ilustrativos.</desc>
+								<defs><clipPath id="lpr-sala"><rect x="34" y="34" width="292" height="232"/></clipPath></defs>
+								<rect class="lpr-planta__vizinho" x="30" y="270" width="490" height="100"/>
+								<rect class="lpr-planta__vizinho" x="330" y="30" width="190" height="240"/>
+								<rect class="lpr-planta__sala" x="30" y="30" width="300" height="240"/>
+								<g clip-path="url(#lpr-sala)" class="lpr-planta__campo">
+									<circle cx="175" cy="150" r="55"/><circle cx="175" cy="150" r="100"/><circle cx="175" cy="150" r="150"/><circle cx="175" cy="150" r="200"/>
+								</g>
+								<rect class="lpr-planta__mesa" x="92" y="124" width="166" height="52" rx="3"/>
+								<circle class="lpr-planta__tubo" cx="175" cy="150" r="13"/>
+								<rect class="lpr-planta__mesa" x="40" y="196" width="10" height="52"/>
+								<path class="lpr-planta__blindagem" d="M30 30 H330 V270 H290 M230 270 H30 Z" />
+								<path class="lpr-planta__parede" d="M330 150 H520 V30 H330 M520 150 V370 H30 V270 M330 270 H520"/>
+								<line class="lpr-planta__visor" x1="330" y1="74" x2="330" y2="112"/>
+								<path class="lpr-planta__porta" d="M230 270 A60 60 0 0 1 290 270" />
+								<text class="lpr-planta__sala-nome" x="44" y="56">Sala de raios X</text>
+								<text class="lpr-planta__nome" x="175" y="196" text-anchor="middle">mesa e tubo</text>
+								<text class="lpr-planta__nome" x="344" y="140">Comando</text>
+								<text class="lpr-planta__nome" x="344" y="258">Laudos</text>
+								<text class="lpr-planta__nome" x="44" y="358">Corredor</text>
+								<g class="lpr-ponto" style="--ordem:0">
+									<circle cx="440" cy="60" r="9"/>
+									<text class="lpr-ponto__id" x="440" y="63.5" text-anchor="middle">1</text>
+									<text class="lpr-ponto__valor" x="454" y="58" text-anchor="start">0,8 <tspan>µSv/h</tspan></text>
+									<title>P1, Comando, atrás da barreira: 0,8 µSv/h</title>
+								</g>
+								<g class="lpr-ponto" style="--ordem:1">
+									<circle cx="352" cy="92" r="9"/>
+									<text class="lpr-ponto__id" x="352" y="95.5" text-anchor="middle">2</text>
+									<text class="lpr-ponto__valor" x="366" y="90" text-anchor="start">1,2 <tspan>µSv/h</tspan></text>
+									<title>P2, Visor da sala de comando: 1,2 µSv/h</title>
+								</g>
+								<g class="lpr-ponto" style="--ordem:2">
+									<circle cx="260" cy="302" r="9"/>
+									<text class="lpr-ponto__id" x="260" y="305.5" text-anchor="middle">3</text>
+									<text class="lpr-ponto__valor" x="274" y="300" text-anchor="start">1,1 <tspan>µSv/h</tspan></text>
+									<title>P3, Porta da sala: 1,1 µSv/h</title>
+								</g>
+								<g class="lpr-ponto" style="--ordem:3">
+									<circle cx="118" cy="322" r="9"/>
+									<text class="lpr-ponto__id" x="118" y="325.5" text-anchor="middle">4</text>
+									<text class="lpr-ponto__valor" x="132" y="320" text-anchor="start">0,4 <tspan>µSv/h</tspan></text>
+									<title>P4, Corredor, lado da mesa: 0,4 µSv/h</title>
+								</g>
+								<g class="lpr-ponto" style="--ordem:4">
+									<circle cx="425" cy="212" r="9"/>
+									<text class="lpr-ponto__id" x="425" y="215.5" text-anchor="middle">5</text>
+									<text class="lpr-ponto__valor" x="439" y="210" text-anchor="start">0,3 <tspan>µSv/h</tspan></text>
+									<title>P5, Sala de laudos: 0,3 µSv/h</title>
+								</g>
+								<g class="lpr-ponto" style="--ordem:5">
+									<circle cx="455" cy="330" r="9"/>
+									<text class="lpr-ponto__id" x="455" y="333.5" text-anchor="middle">6</text>
+									<text class="lpr-ponto__valor" x="469" y="328" text-anchor="start">0,2 <tspan>µSv/h</tspan></text>
+									<title>P6, Corredor, fim: 0,2 µSv/h</title>
+								</g>
+							</svg>
+							<ul class="lpr-legenda" aria-hidden="true">
+								<li><span class="lpr-legenda__ponto"></span>Ponto de medida</li>
+								<li><span class="lpr-legenda__blindagem"></span>Parede com blindagem</li>
+								<li><span class="lpr-legenda__campo"></span>Radiação espalhada</li>
+							</ul>
+						</div>
+						<figcaption>Como é um levantamento radiométrico: a taxa de dose é medida em cada ponto ao redor da sala, com o equipamento ligado. Valores ilustrativos.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="lpr-secao" aria-labelledby="t-servicos">
+			<div class="container">
+				<header class="lpr-secao__cabeca"><h2 id="t-servicos">O que o LPR faz</h2><p>Consultoria em proteção radiológica nas áreas médica e industrial, do levantamento à formação das equipes.</p></header>
+				<div class="lpr-fichas"><article class="lpr-ficha" id="levantamento">
+						<figure><img src="../img/c_xray.png" alt="Tubo de raios X sobre bancada, com a mesa de exame abaixo" loading="lazy"><figcaption>Sala de raios X</figcaption></figure>
+						<div><h3>Levantamento radiométrico</h3><p>Medida dos níveis de radiação no ambiente de trabalho com monitores de radiação, para garantir que as condições são adequadas do ponto de vista da proteção radiológica.</p></div>
+					</article><article class="lpr-ficha" id="controle-de-qualidade">
+						<figure><img src="../img/c_mamo.png" alt="Mamógrafo com um dosímetro posicionado no suporte de compressão" loading="lazy"><figcaption>Teste em mamógrafo</figcaption></figure>
+						<div><h3>Controle de qualidade em radiodiagnóstico</h3><p>Testes de controle de qualidade de equipamentos de raios X diagnóstico, tomógrafos, mamógrafos e de radiologia odontológica, conforme a Portaria 453 do Ministério da Saúde.</p></div>
+					</article><article class="lpr-ficha" id="esfregaco">
+						<figure><img src="../img/c_roda.png" alt="Roda de amostras com dosímetros dispostos em círculo, em bancada de laboratório" loading="lazy"><figcaption>Bancada de laboratório</figcaption></figure>
+						<div><h3>Teste de esfregaço</h3><p>Avalia as condições das fontes de radiação seladas, verificando se há vazamento de material radioativo.</p></div>
+					</article><article class="lpr-ficha" id="planos">
+						<figure><img src="../img/c_tomo2.png" alt="Console de comando de um tomógrafo, com monitores e o gantry ao fundo pelo visor" loading="lazy"><figcaption>Sala de comando</figcaption></figure>
+						<div><h3>Planos de proteção radiológica</h3><p>Elaboração de planos de proteção radiológica para indústrias, hospitais e clínicas, em atendimento aos requisitos da CNEN e da Vigilância Sanitária.</p></div>
+					</article><article class="lpr-ficha" id="blindagem">
+						<figure><img src="../img/c_tc.png" alt="Gantry de um tomógrafo computadorizado, com o painel de controle ao lado" loading="lazy"><figcaption>Sala de tomografia</figcaption></figure>
+						<div><h3>Cálculo de blindagem</h3><p>Cálculo das barreiras de proteção de salas e instalações médicas e industriais que usam radiação ionizante.</p></div>
+					</article><article class="lpr-ficha" id="formacao">
+						<figure><img src="../img/c_comp.png" alt="Estudantes em computadores durante uma aula em laboratório de informática" loading="lazy"><figcaption>Curso no GDOIN</figcaption></figure>
+						<div><h3>Formação de pessoal</h3><p>Cursos de proteção radiológica para técnicos e profissionais, e preparação para o exame de supervisor de proteção radiológica da CNEN.</p></div>
+					</article></div>
+			</div>
+		</section>
+
+		<section class="lpr-secao lpr-secao--verde" aria-labelledby="t-etapas">
+			<div class="container lpr-etapas">
+				<h2 id="t-etapas">Como funciona um levantamento</h2>
+				<ol><li><h3>Conte sobre a instalação</h3><p>Tipo de equipamento, uso da sala e a exigência que precisa atender (CNEN ou Vigilância Sanitária).</p></li><li><h3>Medição no local</h3><p>A equipe mede a taxa de dose nos pontos ao redor da sala, com o equipamento em operação.</p></li><li><h3>Resultado e orientação</h3><p>Você recebe os resultados das medidas e as orientações de proteção radiológica para a instalação.</p></li></ol>
+				<a class="lpr-botao lpr-botao--amarelo" href="contato.html">Pedir um levantamento</a>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="lab-rodape lab-rodape--lpr">
+		<div class="container">
+			<div class="lab-rodape__grade">
+				<div class="lab-rodape__marca">
+					<span class="lpr-marca"><strong>LPR</strong><span>Proteção radiológica<br>GDOIN, DEN/UFPE</span></span>
+					<p>Serviços de proteção radiológica do Grupo de Dosimetria e Instrumentação Nuclear, no Departamento de Energia Nuclear da UFPE.</p>
+				</div>
+				<div>
+					<p class="lab-rodape__titulo">Fale com o LPR</p>
+					<a class="lab-rodape__destaque" href="tel:+558121268708">(81) 2126-8708</a>
+					<a href="contato.html">Outras formas de contato</a>
+				</div>
+				<div>
+					<p class="lab-rodape__titulo">Endereço</p>
+					<address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000<br>Cidade Universitária, Recife, PE</address>
+				</div>
+				<nav aria-label="Rodapé do LPR">
+					<p class="lab-rodape__titulo">Páginas</p>
+					<ul class="lab-rodape__links"><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li></ul>
+				</nav>
+			</div>
+			<div class="lab-rodape__base">
+				<p>O LPR é um laboratório do <a href="../index.html">Grupo de Dosimetria e Instrumentação Nuclear (GDOIN)</a>.</p>
+				<div class="lab-rodape__instituicoes">
+					<a href="../index.html"><img src="../img/marcas/gdoin.svg" alt="GDOIN, página inicial do grupo" width="160" height="43" loading="lazy"></a>
+					<img src="../img/marcas/den-ufpe.svg" alt="Departamento de Energia Nuclear, UFPE" width="100" height="58" loading="lazy">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../js/site.js"></script>
+</body>
+</html>

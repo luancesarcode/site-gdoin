@@ -1,0 +1,48 @@
+/* Páginas internas do GDOIN: cabeçalho claro (com a imagem da página original,
+   quando há) e fotos ao lado do texto nas abas. */
+
+.cont-trilha { font-size: .82rem; color: var(--suave); margin-bottom: 1.4rem; }
+.cont-trilha a { color: inherit; text-underline-offset: .2em; }
+
+.pag-cabeca { background: var(--verde-claro); border-bottom: 1px solid var(--linha); padding-block: 1.6rem 2.4rem; }
+.pag-cabeca__grade { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem 3rem; align-items: center; }
+.pag-cabeca h1 { color: var(--verde-escuro); font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; margin: 0 0 .7rem; }
+.pag-cabeca__texto > p:last-child { color: var(--suave); font-size: 1.05rem; max-width: 56ch; margin: 0; }
+.pag-cabeca__selo { display: inline-block; font-size: .8rem; font-weight: 600; background: var(--amarelo); color: var(--verde-escuro); border-radius: 999px; padding: .15rem .7rem; margin-bottom: .8rem; }
+.pag-cabeca__logo { margin: 0; background: #fff; border-radius: 6px; padding: .7rem 1rem; }
+.pag-cabeca__logo img { max-height: 70px; width: auto; }
+
+/* Com foto: a imagem da faixa original ocupa a coluna direita, recortada */
+.pag-cabeca--foto { padding-bottom: 0; }
+.pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: end; }
+.pag-cabeca--foto .pag-cabeca__texto { padding-bottom: 2.4rem; }
+.pag-cabeca__foto { margin: 0; align-self: stretch; }
+.pag-cabeca__foto img { width: 100%; height: 100%; min-height: 220px; max-height: 300px; object-fit: cover; border-radius: 6px 6px 0 0; display: block; }
+
+/* Abas com foto: imagem à direita do texto, sem quebrar as listas */
+.aba--foto > .aba__foto { float: right; width: min(34%, 320px); margin: 0 0 1.5rem 2.5rem; }
+.aba__foto img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+.aba__foto figcaption { font-size: .78rem; color: var(--suave); margin-top: .5rem; }
+.aba--foto::after { content: ""; display: block; clear: both; }
+.aba--foto .lista-simples--colunas { columns: 1; }
+
+.patentes { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 2rem; align-items: start; clear: both; margin-top: 1rem; }
+.patentes__foto { margin: 2.6rem 0 0; }
+.patentes__foto img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+
+.equipe__topo--sem-foto { grid-template-columns: 1fr; }
+
+@media (max-width: 760px) {
+  .pag-cabeca__grade, .pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: 1fr; gap: 1.2rem; }
+  .pag-cabeca--foto .pag-cabeca__texto { padding-bottom: 0; }
+  .pag-cabeca__foto img { max-height: 200px; min-height: 0; aspect-ratio: 16 / 9; border-radius: 6px 6px 0 0; }
+  .pag-cabeca__logo { justify-self: start; }
+  .aba--foto > .aba__foto { float: none; width: 100%; max-width: 360px; margin: 0 0 1.2rem; }
+  .aba__foto img { aspect-ratio: 16 / 10; }
+  .patentes { grid-template-columns: 1fr; }
+  .patentes__foto { display: none; }
+}
+
+/* enquadramento por foto: rostos da equipe e o topo do irradiador à vista */
+.pag-cabeca__foto img[src*="equipe_grupo"] { object-position: center 42%; }
+.pag-cabeca__foto img[src*="gammacell"] { object-position: center 60%; }

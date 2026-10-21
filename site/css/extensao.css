@@ -1,0 +1,88 @@
+/* Extensão (serviços e consultoria) e RAD. O guia "Preciso de…" é o elemento
+   central: cada necessidade leva ao laboratório que atende. */
+
+.cont-trilha { font-size: .82rem; color: var(--suave); margin-bottom: 1.4rem; }
+.cont-trilha a { color: inherit; text-underline-offset: .2em; }
+.link-forte { color: var(--verde); font-weight: 600; text-underline-offset: .3em; }
+.ext-titulo { color: var(--verde-escuro); font-size: clamp(1.6rem, 2.8vw, 2.2rem); letter-spacing: -.03em; margin-bottom: 1.2rem; }
+
+.ext-hero { background: var(--verde-claro); border-bottom: 1px solid var(--linha); padding-block: 1.6rem 2.6rem; }
+.ext-hero__grade { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem 3rem; flex-wrap: wrap; }
+.ext-hero h1 { color: var(--verde-escuro); font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; margin: 0 0 .7rem; }
+.ext-hero__grade > div > p { color: var(--suave); max-width: 58ch; margin: 0; font-size: 1.05rem; }
+.ext-hero__contato { margin: 0; font-size: .95rem; color: var(--tinta); border-left: 3px solid var(--amarelo); padding-left: .9rem; }
+.ext-hero__contato a { color: var(--verde-escuro); font-weight: 600; white-space: nowrap; }
+
+/* Guia: necessidade → laboratório */
+.guia { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--verde-escuro); }
+.guia li { border-bottom: 1px solid var(--linha); }
+.guia a { display: grid; grid-template-columns: minmax(0, 1.5fr) 8rem minmax(0, 1.3fr); gap: .3rem 2rem; align-items: baseline; padding: 1.15rem .5rem; color: inherit; text-decoration: none; }
+.guia a:hover { background: var(--verde-claro); }
+.guia a:hover .guia__necessidade { text-decoration: underline; text-underline-offset: .2em; }
+.guia__necessidade { font-size: 1.1rem; font-weight: 550; color: var(--tinta); line-height: 1.35; }
+.guia__quem { font-weight: 700; color: var(--verde-escuro); font-size: 1.05rem; }
+.guia__quem::before { content: ""; display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; background: var(--amarelo); margin-right: .5rem; vertical-align: .1em; }
+.guia__detalhe { color: var(--suave); font-size: .9rem; }
+
+/* Frentes de serviço */
+.frentes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.frente { position: relative; display: grid; grid-template-columns: 170px minmax(0, 1fr); background: #fff; border: 1px solid var(--linha); border-radius: 4px; overflow: hidden; }
+.frente:hover { border-color: var(--verde); }
+.frente > img { width: 100%; height: 100%; min-height: 170px; object-fit: cover; background: #f4f6f5; }
+.frente > img[src*="gamacell"], .frente > img[src*="c_mamo"] { object-fit: contain; }
+.frente > div { padding: 1.2rem 1.3rem; }
+.frente__quem { font-size: .8rem; font-weight: 700; color: var(--verde); margin-bottom: .2rem; }
+.frente h3 { margin: 0 0 .5rem; font-size: 1.25rem; }
+.frente h3 a { color: var(--verde-escuro); text-decoration: none; }
+.frente h3 a::after { content: ""; position: absolute; inset: 0; }
+.frente p:not(.frente__quem) { color: var(--suave); font-size: .92rem; margin: 0; }
+
+/* Formação */
+.ext-formacao { display: grid; grid-template-columns: 196px minmax(0, 1fr); gap: 2rem 3rem; align-items: start; }
+.ext-formacao figure { margin: 0; }
+.ext-formacao figure img { width: 196px; border-bottom: 3px solid var(--verde-escuro); }
+.ext-formacao figcaption { font-size: .78rem; color: var(--suave); margin-top: .4rem; }
+.ext-formacao > div > p { color: var(--suave); max-width: 66ch; }
+.ext-materiais { margin: 1.2rem 0 1.4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.ext-materiais > div { border-top: 1px solid var(--linha); padding: .9rem 0; }
+.ext-materiais dt { font-weight: 600; color: var(--verde-escuro); margin-bottom: .2rem; }
+.ext-materiais dd { margin: 0; color: var(--suave); font-size: .92rem; }
+
+/* RAD */
+.rad-hero { background: #fff; border-bottom: 1px solid var(--linha); padding-block: 1.6rem clamp(2.5rem, 5vw, 4rem); }
+.rad-hero__titulo { margin: 1rem 0 1.2rem; }
+.rad-hero__titulo img { width: min(560px, 100%); height: auto; }
+.rad-hero p:not(.cont-trilha) { color: var(--suave); font-size: 1.15rem; max-width: 50ch; margin: 0; }
+.rad-origem { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem 4rem; align-items: start; }
+.rad-origem p { color: var(--suave); max-width: 56ch; }
+.rad-produtos { list-style: none; margin: 0; padding: 0; border-top: 3px solid #1d9ad6; }
+.rad-produtos li { padding: 1rem 0; border-bottom: 1px solid var(--linha); font-weight: 600; color: var(--tinta); font-size: 1.05rem; }
+.rad-pendente > * { max-width: 760px; }
+.rad-pendente p { color: var(--suave); }
+
+@media (max-width: 860px) {
+  .guia a { grid-template-columns: 1fr; gap: .25rem; }
+  .guia__quem { order: -1; font-size: .9rem; }
+  .frentes { grid-template-columns: 1fr; }
+  .rad-origem { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .frente { grid-template-columns: 1fr; }
+  .frente > img { height: 180px; }
+  .ext-formacao { grid-template-columns: 1fr; }
+  .ext-materiais { grid-template-columns: 1fr; }
+}
+
+/* Imagem da faixa original de serviços e logo do CALDOSE */
+.ext-hero__grade { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); align-items: end; }
+.ext-hero__foto { margin: 0; grid-row: span 2; grid-column: 2; }
+.ext-hero__foto img { width: 100%; max-height: 280px; object-fit: cover; border-radius: 6px; }
+.ext-hero__contato { grid-column: 1; justify-self: start; }
+.ext-materiais__logo { display: block; height: 34px; width: auto; margin-bottom: .5rem; }
+.ext-formacao { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); }
+.ext-formacao figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: 0; border-radius: 4px; }
+@media (max-width: 860px) {
+  .ext-hero__grade { grid-template-columns: 1fr; }
+  .ext-hero__foto { grid-column: 1; grid-row: auto; }
+  .ext-hero__foto img { max-height: 200px; }
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Área do cliente, LMRI</title>
+	<meta name="description" content="Entre na área do cliente do LMRI para acompanhar solicitações de calibração e baixar certificados.">
+	<link rel="icon" href="../img/lmri/icone-lmri.png">
+	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="stylesheet" href="../css/lab-site.css">
+	<link rel="stylesheet" href="../css/lmri.css">
+	<link rel="stylesheet" href="../css/lmri-site.css">
+	<link rel="stylesheet" href="../css/lmri-acesso.css">
+</head>
+<body class="pagina-lmri lab-lmri pagina-lmri-acesso">
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div class="lab-vinculo">
+		<div class="container lab-vinculo__barra">
+			<p>Laboratório do Departamento de Energia Nuclear da UFPE</p>
+			<a href="../index.html">Site do GDOIN</a>
+		</div>
+	</div>
+	<header class="topo topo--lab">
+		<div class="container topo__barra">
+			<a class="topo__logo topo__logo--lab" href="index.html"><img src="../img/lmri/lmri.svg" width="199" height="67" alt="LMRI, Laboratório de Metrologia das Radiações Ionizantes, página inicial"></a>
+			<button class="menu-botao" type="button" aria-expanded="false" aria-controls="navegacao">Menu</button>
+			<nav class="navegacao" id="navegacao" aria-label="LMRI">
+				<ul class="menu"><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="quem-somos.html">Quem somos</a></li><li><a href="credenciais.html">Credenciais</a></li><li><a href="contato.html">Contato</a></li><li class="menu__acao"><a class="lab-acao" href="entrar.html" aria-current="page">Área do cliente</a></li></ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="conteudo">
+		<section class="acesso" aria-labelledby="acesso-titulo">
+			<div class="container acesso__grade">
+				<div class="acesso__principal">
+					<p class="lmri-trilha"><a href="index.html">LMRI</a> / Área do cliente</p>
+										<h1 id="acesso-titulo">Área do cliente</h1>
+					<p class="acesso__resumo">Acompanhe suas solicitações de calibração e baixe os certificados emitidos pelo laboratório.</p>
+
+					<div class="acesso__cartao">
+						<form class="acesso__form" id="form-entrar" action="#" method="post" novalidate data-acesso="entrar">
+							<h2 class="acesso__form-titulo">Entrar</h2>
+							<div class="campo">
+								<label for="usuario">Usuário ou e-mail</label>
+								<input id="usuario" name="usuario" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required aria-describedby="usuario-erro">
+								<p class="campo__erro" id="usuario-erro" hidden>Informe o usuário ou o e-mail cadastrado.</p>
+							</div>
+							<div class="campo">
+								<div class="campo__rotulo-linha">
+									<label for="senha">Senha</label>
+									<button class="campo__mostrar" type="button" aria-controls="senha" aria-pressed="false" hidden>Mostrar</button>
+								</div>
+								<input id="senha" name="senha" type="password" autocomplete="current-password" required aria-describedby="senha-erro">
+								<p class="campo__erro" id="senha-erro" hidden>Informe a senha.</p>
+							</div>
+							<label class="campo-marcar"><input type="checkbox" name="lembrar"> Manter conectado neste computador</label>
+							<button class="lmri-botao acesso__enviar" type="submit">Entrar</button>
+							<p class="acesso__alternativa"><a class="lmri-link" href="#recuperar" data-acesso-ir="recuperar">Esqueci minha senha</a></p>
+							<div class="acesso__aviso" role="status" aria-live="polite" hidden></div>
+						</form>
+
+						<form class="acesso__form" id="recuperar" action="#" method="post" novalidate data-acesso="recuperar">
+							<h2 class="acesso__form-titulo">Redefinir senha</h2>
+							<p class="acesso__ajuda">Digite o usuário ou o e-mail cadastrado. Você vai receber um e-mail com o link para criar uma nova senha.</p>
+							<div class="campo">
+								<label for="recuperar-usuario">Usuário ou e-mail</label>
+								<input id="recuperar-usuario" name="usuario" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required aria-describedby="recuperar-erro">
+								<p class="campo__erro" id="recuperar-erro" hidden>Informe o usuário ou o e-mail cadastrado.</p>
+							</div>
+							<button class="lmri-botao acesso__enviar" type="submit">Enviar link de redefinição</button>
+							<p class="acesso__alternativa"><a class="lmri-link" href="#form-entrar" data-acesso-ir="entrar">Voltar para entrar</a></p>
+							<div class="acesso__aviso" role="status" aria-live="polite" hidden></div>
+						</form>
+					</div>
+
+					<p class="acesso__cadastro">Primeira vez no LMRI? <a class="lmri-link" href="cadastro.html">Cadastrar empresa</a></p>
+				</div>
+
+				<aside class="acesso__lateral" aria-labelledby="acesso-lateral-titulo">
+					<figure class="acesso__foto">
+						<img src="../img/lmri/sala-de-calibracao.jpg" width="918" height="631" alt="Sala de calibração do LMRI com o sistema de irradiação e as bancadas de posicionamento dos instrumentos">
+					</figure>
+					<h2 id="acesso-lateral-titulo">Na área do cliente</h2>
+					<dl class="acesso__recursos">
+						<div><dt>Solicitar calibração</dt><dd>Peça uma proposta de orçamento ou abra uma ordem de serviço, com fabricante, modelo e número de série de cada instrumento.</dd></div>
+						<div><dt>Acompanhar o andamento</dt><dd>Veja em que etapa está cada instrumento enviado ao laboratório.</dd></div>
+						<div><dt>Baixar certificados</dt><dd>Os certificados de calibração emitidos ficam disponíveis para download, com número e ordem de serviço.</dd></div>
+						<div><dt>Atualizar dados</dt><dd>Mantenha em dia os dados da empresa, de cobrança e dos responsáveis.</dd></div>
+					</dl>
+				</aside>
+			</div>
+		</section>
+
+		<section class="acesso-ajuda" aria-labelledby="acesso-ajuda-titulo">
+			<div class="container acesso-ajuda__grade">
+				<h2 id="acesso-ajuda-titulo">Problemas para entrar?</h2>
+				<p>A equipe do LMRI ajuda com o acesso, o cadastro e o envio de instrumentos.</p>
+				<div class="acesso-ajuda__contato">
+					<a href="mailto:metrologia.lmri@gmail.com?subject=Acesso%20%C3%A0%20%C3%A1rea%20do%20cliente">metrologia.lmri@gmail.com</a>
+					<a href="tel:+558121268708">(81) 2126-8708</a>
+				</div>
+			</div>
+		</section>
+		<template id="aviso-demo">A área do cliente ainda não está ligada ao sistema do LMRI. Enquanto isso, acompanhe sua solicitação por <a href="mailto:metrologia.lmri@gmail.com">metrologia.lmri@gmail.com</a> ou pelo telefone <a href="tel:+558121268708">(81) 2126-8708</a>.</template>
+	</main>
+
+	<footer class="lab-rodape lab-rodape--lmri">
+		<div class="container">
+			<div class="lab-rodape__grade">
+				<div class="lab-rodape__marca">
+					<img src="../img/lmri/lmri.svg" width="199" height="67" alt="LMRI">
+					<p>Laboratório de Metrologia das Radiações Ionizantes do Departamento de Energia Nuclear da UFPE.</p>
+					<p class="lab-rodape__selo">Acreditado pela Cgcre/Inmetro, ABNT NBR ISO/IEC 17025:2017. Autorizado pelo CASEC/CNEN.</p>
+				</div>
+				<div>
+					<p class="lab-rodape__titulo">Fale com o LMRI</p>
+					<a class="lab-rodape__destaque" href="mailto:metrologia.lmri@gmail.com">metrologia.lmri@gmail.com</a>
+					<a class="lab-rodape__destaque" href="tel:+558121268708">(81) 2126-8708</a>
+				</div>
+				<div>
+					<p class="lab-rodape__titulo">Endereço</p>
+					<address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000<br>Cidade Universitária, Recife, PE</address>
+				</div>
+				<nav aria-label="Rodapé do LMRI">
+					<p class="lab-rodape__titulo">Páginas</p>
+					<ul class="lab-rodape__links">
+						<li><a href="servicos.html">Serviços</a></li>
+						<li><a href="quem-somos.html">Quem somos</a></li>
+						<li><a href="credenciais.html">Credenciais</a></li>
+						<li><a href="contato.html">Contato</a></li>
+						<li><a href="entrar.html">Área do cliente</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lab-rodape__base">
+				<p>O LMRI é um laboratório do <a href="../index.html">Grupo de Dosimetria e Instrumentação Nuclear (GDOIN)</a>.</p>
+				<div class="lab-rodape__instituicoes">
+					<a href="../index.html"><img src="../img/marcas/gdoin.svg" alt="GDOIN, página inicial do grupo" width="160" height="43" loading="lazy"></a>
+					<img src="../img/marcas/den-ufpe.svg" alt="Departamento de Energia Nuclear, UFPE" width="100" height="58" loading="lazy">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../js/site.js"></script>
+	<script src="../js/lmri-acesso.js"></script>
+</body>
+</html>

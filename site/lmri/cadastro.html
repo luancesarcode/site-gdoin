@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar empresa, LMRI</title>
+	<meta name="description" content="Cadastre sua empresa no LMRI para solicitar calibrações e baixar certificados.">
+	<link rel="icon" href="../img/lmri/icone-lmri.png">
+	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="stylesheet" href="../css/lab-site.css">
+	<link rel="stylesheet" href="../css/lmri.css">
+	<link rel="stylesheet" href="../css/lmri-site.css">
+	<link rel="stylesheet" href="../css/lmri-acesso.css">
+</head>
+<body class="pagina-lmri lab-lmri pagina-lmri-acesso">
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div class="lab-vinculo">
+		<div class="container lab-vinculo__barra">
+			<p>Laboratório do Departamento de Energia Nuclear da UFPE</p>
+			<a href="../index.html">Site do GDOIN</a>
+		</div>
+	</div>
+	<header class="topo topo--lab">
+		<div class="container topo__barra">
+			<a class="topo__logo topo__logo--lab" href="index.html"><img src="../img/lmri/lmri.svg" width="199" height="67" alt="LMRI, Laboratório de Metrologia das Radiações Ionizantes, página inicial"></a>
+			<button class="menu-botao" type="button" aria-expanded="false" aria-controls="navegacao">Menu</button>
+			<nav class="navegacao" id="navegacao" aria-label="LMRI">
+				<ul class="menu"><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="quem-somos.html">Quem somos</a></li><li><a href="credenciais.html">Credenciais</a></li><li><a href="contato.html">Contato</a></li><li class="menu__acao"><a class="lab-acao" href="entrar.html">Área do cliente</a></li></ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="conteudo">
+		<section class="cadastro" aria-labelledby="cadastro-titulo">
+			<div class="container">
+				<p class="lmri-trilha"><a href="index.html">LMRI</a> / <a href="entrar.html">Área do cliente</a> / Cadastro</p>
+				<div class="cadastro__topo">
+					<div>
+						<h1 id="cadastro-titulo">Cadastrar empresa</h1>
+						<p class="acesso__resumo">O cadastro é feito uma vez por empresa. Depois dele, você solicita calibrações e baixa os certificados pela área do cliente.</p>
+					</div>
+					<p class="cadastro__ja">Já tem cadastro? <a class="lmri-link" href="entrar.html">Entrar</a></p>
+				</div>
+
+				<div class="cadastro__grade">
+					<ol class="etapas" aria-label="Etapas do cadastro"><li data-passo="0"><span class="etapas__num">1</span><span class="etapas__nome">Acesso</span></li><li data-passo="1"><span class="etapas__num">2</span><span class="etapas__nome">Dados do cliente</span></li><li data-passo="2"><span class="etapas__num">3</span><span class="etapas__nome">Cobrança</span></li><li data-passo="3"><span class="etapas__num">4</span><span class="etapas__nome">Responsável técnico</span></li><li data-passo="4"><span class="etapas__num">5</span><span class="etapas__nome">Responsável financeiro</span></li></ol>
+					<form class="cadastro__form" action="#" method="post" novalidate data-cadastro>
+						<p class="cadastro__obrigatorio">Todos os campos são obrigatórios, exceto os marcados como opcionais.</p>
+						<fieldset class="etapa" id="etapa-acesso" data-etapa="0">
+							<legend><span class="etapa__contagem">Etapa 1 de 5</span>Acesso</legend>
+							<p class="etapa__ajuda">Crie o usuário e a senha que você vai usar para entrar na área do cliente.</p>
+							<div class="campos"><div class="campo"><label for="login-usuario">Usuário</label><input id="login-usuario" name="login-usuario" type="text" autocomplete="username" required autocapitalize="none" spellcheck="false" minlength="4" aria-describedby="login-usuario-erro"><p class="campo__erro" id="login-usuario-erro" hidden>Crie um usuário com pelo menos 4 caracteres.</p></div><div class="campo"><label for="login-email">E-mail de acesso</label><input id="login-email" name="login-email" type="email" autocomplete="email" required aria-describedby="login-email-ajuda login-email-erro"><p class="campo__ajuda" id="login-email-ajuda">Usado para redefinir a senha.</p><p class="campo__erro" id="login-email-erro" hidden>Digite um e-mail válido, como nome@empresa.com.br.</p></div></div><div class="campos"><div class="campo"><label for="login-senha">Senha</label><input id="login-senha" name="login-senha" type="password" autocomplete="new-password" required minlength="8" aria-describedby="login-senha-ajuda login-senha-erro"><p class="campo__ajuda" id="login-senha-ajuda">Pelo menos 8 caracteres.</p><p class="campo__erro" id="login-senha-erro" hidden>A senha precisa ter pelo menos 8 caracteres.</p></div><div class="campo"><label for="login-senha2">Repita a senha</label><input id="login-senha2" name="login-senha2" type="password" autocomplete="new-password" required data-igual="login-senha" aria-describedby="login-senha2-erro"><p class="campo__erro" id="login-senha2-erro" hidden>As duas senhas precisam ser iguais.</p></div></div>
+							<div class="etapa__acoes"><button class="lmri-botao" type="button" data-etapa-avancar>Continuar</button></div>
+						</fieldset>
+						<fieldset class="etapa" id="etapa-cliente" data-etapa="1">
+							<legend><span class="etapa__contagem">Etapa 2 de 5</span>Dados do cliente</legend>
+							<p class="etapa__ajuda">Empresa ou instituição dona dos instrumentos.</p>
+							<div class="campos"><div class="campo campo--largo"><label for="cliente-razao">Razão social</label><input id="cliente-razao" name="cliente-razao" type="text" autocomplete="organization" required aria-describedby="cliente-razao-erro"><p class="campo__erro" id="cliente-razao-erro" hidden>Preencha razão social.</p></div><div class="campo"><label for="cliente-cnpj">CNPJ</label><input id="cliente-cnpj" name="cliente-cnpj" type="text" required inputmode="numeric" pattern="\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" placeholder="00.000.000/0000-00" aria-describedby="cliente-cnpj-erro"><p class="campo__erro" id="cliente-cnpj-erro" hidden>Digite os 14 números do CNPJ.</p></div><div class="campo"><label for="cliente-unidade">Unidade <span class="campo__opcional">(opcional)</span></label><input id="cliente-unidade" name="cliente-unidade" type="text" aria-describedby="cliente-unidade-ajuda cliente-unidade-erro"><p class="campo__ajuda" id="cliente-unidade-ajuda">Filial ou setor, se houver.</p><p class="campo__erro" id="cliente-unidade-erro" hidden>Preencha unidade.</p></div><div class="campo"><label for="cliente-ie">Inscrição estadual <span class="campo__opcional">(opcional)</span></label><input id="cliente-ie" name="cliente-ie" type="text" aria-describedby="cliente-ie-erro"><p class="campo__erro" id="cliente-ie-erro" hidden>Preencha inscrição estadual.</p></div><div class="campo"><label for="cliente-im">Inscrição municipal <span class="campo__opcional">(opcional)</span></label><input id="cliente-im" name="cliente-im" type="text" aria-describedby="cliente-im-erro"><p class="campo__erro" id="cliente-im-erro" hidden>Preencha inscrição municipal.</p></div></div><div class="campos"><div class="campo"><label for="cliente-cep">CEP</label><input id="cliente-cep" name="cliente-cep" type="text" autocomplete="postal-code" required inputmode="numeric" pattern="\d{5}-?\d{3}" placeholder="00000-000" aria-describedby="cliente-cep-erro"><p class="campo__erro" id="cliente-cep-erro" hidden>Digite os 8 números do CEP.</p></div><div class="campo campo--largo"><label for="cliente-endereco">Endereço</label><input id="cliente-endereco" name="cliente-endereco" type="text" autocomplete="street-address" required aria-describedby="cliente-endereco-ajuda cliente-endereco-erro"><p class="campo__ajuda" id="cliente-endereco-ajuda">Rua, número e complemento.</p><p class="campo__erro" id="cliente-endereco-erro" hidden>Preencha endereço.</p></div><div class="campo"><label for="cliente-bairro">Bairro</label><input id="cliente-bairro" name="cliente-bairro" type="text" required aria-describedby="cliente-bairro-erro"><p class="campo__erro" id="cliente-bairro-erro" hidden>Preencha bairro.</p></div><div class="campo"><label for="cliente-cidade">Cidade</label><input id="cliente-cidade" name="cliente-cidade" type="text" autocomplete="address-level2" required aria-describedby="cliente-cidade-erro"><p class="campo__erro" id="cliente-cidade-erro" hidden>Preencha cidade.</p></div><div class="campo campo--estreito"><label for="cliente-uf">Estado</label><select id="cliente-uf" name="cliente-uf" required aria-describedby="cliente-uf-erro"><option value="">Escolha</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select><p class="campo__erro" id="cliente-uf-erro" hidden>Escolha o estado.</p></div></div><div class="campos"><div class="campo"><label for="cliente-telefone">Telefone</label><input id="cliente-telefone" name="cliente-telefone" type="tel" autocomplete="tel" required inputmode="tel" aria-describedby="cliente-telefone-erro"><p class="campo__erro" id="cliente-telefone-erro" hidden>Preencha telefone.</p></div><div class="campo"><label for="cliente-telefone2">Outro telefone <span class="campo__opcional">(opcional)</span></label><input id="cliente-telefone2" name="cliente-telefone2" type="tel" inputmode="tel" aria-describedby="cliente-telefone2-erro"><p class="campo__erro" id="cliente-telefone2-erro" hidden>Preencha outro telefone.</p></div><div class="campo"><label for="cliente-email">E-mail da empresa</label><input id="cliente-email" name="cliente-email" type="email" autocomplete="email" required aria-describedby="cliente-email-erro"><p class="campo__erro" id="cliente-email-erro" hidden>Digite um e-mail válido, como nome@empresa.com.br.</p></div></div>
+							<div class="etapa__acoes"><button class="cadastro__voltar" type="button" data-etapa-voltar>Voltar</button><button class="lmri-botao" type="button" data-etapa-avancar>Continuar</button></div>
+						</fieldset>
+						<fieldset class="etapa" id="etapa-cobranca" data-etapa="2">
+							<legend><span class="etapa__contagem">Etapa 3 de 5</span>Cobrança</legend>
+							<p class="etapa__ajuda">Para onde vai a nota fiscal do serviço.</p>
+							<label class="campo-marcar campo-marcar--destaque"><input type="checkbox" id="cobranca-igual" name="cobranca-igual" checked data-esconde="cobranca-campos"> Os dados de cobrança são os mesmos do cliente</label><div id="cobranca-campos" hidden><div class="campos"><div class="campo campo--largo"><label for="cobranca-razao">Razão social</label><input id="cobranca-razao" name="cobranca-razao" type="text" autocomplete="organization" required aria-describedby="cobranca-razao-erro"><p class="campo__erro" id="cobranca-razao-erro" hidden>Preencha razão social.</p></div><div class="campo"><label for="cobranca-cnpj">CNPJ</label><input id="cobranca-cnpj" name="cobranca-cnpj" type="text" required inputmode="numeric" pattern="\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" placeholder="00.000.000/0000-00" aria-describedby="cobranca-cnpj-erro"><p class="campo__erro" id="cobranca-cnpj-erro" hidden>Digite os 14 números do CNPJ.</p></div><div class="campo"><label for="cobranca-unidade">Unidade <span class="campo__opcional">(opcional)</span></label><input id="cobranca-unidade" name="cobranca-unidade" type="text" aria-describedby="cobranca-unidade-ajuda cobranca-unidade-erro"><p class="campo__ajuda" id="cobranca-unidade-ajuda">Filial ou setor, se houver.</p><p class="campo__erro" id="cobranca-unidade-erro" hidden>Preencha unidade.</p></div><div class="campo"><label for="cobranca-ie">Inscrição estadual <span class="campo__opcional">(opcional)</span></label><input id="cobranca-ie" name="cobranca-ie" type="text" aria-describedby="cobranca-ie-erro"><p class="campo__erro" id="cobranca-ie-erro" hidden>Preencha inscrição estadual.</p></div><div class="campo"><label for="cobranca-im">Inscrição municipal <span class="campo__opcional">(opcional)</span></label><input id="cobranca-im" name="cobranca-im" type="text" aria-describedby="cobranca-im-erro"><p class="campo__erro" id="cobranca-im-erro" hidden>Preencha inscrição municipal.</p></div></div><div class="campos"><div class="campo"><label for="cobranca-cep">CEP</label><input id="cobranca-cep" name="cobranca-cep" type="text" autocomplete="postal-code" required inputmode="numeric" pattern="\d{5}-?\d{3}" placeholder="00000-000" aria-describedby="cobranca-cep-erro"><p class="campo__erro" id="cobranca-cep-erro" hidden>Digite os 8 números do CEP.</p></div><div class="campo campo--largo"><label for="cobranca-endereco">Endereço</label><input id="cobranca-endereco" name="cobranca-endereco" type="text" autocomplete="street-address" required aria-describedby="cobranca-endereco-ajuda cobranca-endereco-erro"><p class="campo__ajuda" id="cobranca-endereco-ajuda">Rua, número e complemento.</p><p class="campo__erro" id="cobranca-endereco-erro" hidden>Preencha endereço.</p></div><div class="campo"><label for="cobranca-bairro">Bairro</label><input id="cobranca-bairro" name="cobranca-bairro" type="text" required aria-describedby="cobranca-bairro-erro"><p class="campo__erro" id="cobranca-bairro-erro" hidden>Preencha bairro.</p></div><div class="campo"><label for="cobranca-cidade">Cidade</label><input id="cobranca-cidade" name="cobranca-cidade" type="text" autocomplete="address-level2" required aria-describedby="cobranca-cidade-erro"><p class="campo__erro" id="cobranca-cidade-erro" hidden>Preencha cidade.</p></div><div class="campo campo--estreito"><label for="cobranca-uf">Estado</label><select id="cobranca-uf" name="cobranca-uf" required aria-describedby="cobranca-uf-erro"><option value="">Escolha</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select><p class="campo__erro" id="cobranca-uf-erro" hidden>Escolha o estado.</p></div></div><div class="campos"><div class="campo"><label for="cobranca-telefone">Telefone</label><input id="cobranca-telefone" name="cobranca-telefone" type="tel" autocomplete="tel" required inputmode="tel" aria-describedby="cobranca-telefone-erro"><p class="campo__erro" id="cobranca-telefone-erro" hidden>Preencha telefone.</p></div><div class="campo"><label for="cobranca-telefone2">Outro telefone <span class="campo__opcional">(opcional)</span></label><input id="cobranca-telefone2" name="cobranca-telefone2" type="tel" inputmode="tel" aria-describedby="cobranca-telefone2-erro"><p class="campo__erro" id="cobranca-telefone2-erro" hidden>Preencha outro telefone.</p></div><div class="campo"><label for="cobranca-email">E-mail da empresa</label><input id="cobranca-email" name="cobranca-email" type="email" autocomplete="email" required aria-describedby="cobranca-email-erro"><p class="campo__erro" id="cobranca-email-erro" hidden>Digite um e-mail válido, como nome@empresa.com.br.</p></div></div></div>
+							<div class="etapa__acoes"><button class="cadastro__voltar" type="button" data-etapa-voltar>Voltar</button><button class="lmri-botao" type="button" data-etapa-avancar>Continuar</button></div>
+						</fieldset>
+						<fieldset class="etapa" id="etapa-tecnico" data-etapa="3">
+							<legend><span class="etapa__contagem">Etapa 4 de 5</span>Responsável técnico</legend>
+							<p class="etapa__ajuda">Quem acompanha a parte técnica das calibrações.</p>
+							<div class="campos"><div class="campo campo--largo"><label for="tecnico-nome">Nome</label><input id="tecnico-nome" name="tecnico-nome" type="text" autocomplete="name" required aria-describedby="tecnico-nome-erro"><p class="campo__erro" id="tecnico-nome-erro" hidden>Preencha nome.</p></div><div class="campo"><label for="tecnico-cargo">Cargo</label><input id="tecnico-cargo" name="tecnico-cargo" type="text" autocomplete="organization-title" required aria-describedby="tecnico-cargo-erro"><p class="campo__erro" id="tecnico-cargo-erro" hidden>Preencha cargo.</p></div><div class="campo"><label for="tecnico-email">E-mail</label><input id="tecnico-email" name="tecnico-email" type="email" autocomplete="email" required aria-describedby="tecnico-email-erro"><p class="campo__erro" id="tecnico-email-erro" hidden>Digite um e-mail válido, como nome@empresa.com.br.</p></div><div class="campo"><label for="tecnico-telefone">Telefone</label><input id="tecnico-telefone" name="tecnico-telefone" type="tel" autocomplete="tel" required inputmode="tel" aria-describedby="tecnico-telefone-erro"><p class="campo__erro" id="tecnico-telefone-erro" hidden>Preencha telefone.</p></div></div>
+							<div class="etapa__acoes"><button class="cadastro__voltar" type="button" data-etapa-voltar>Voltar</button><button class="lmri-botao" type="button" data-etapa-avancar>Continuar</button></div>
+						</fieldset>
+						<fieldset class="etapa" id="etapa-financeiro" data-etapa="4">
+							<legend><span class="etapa__contagem">Etapa 5 de 5</span>Responsável financeiro</legend>
+							<p class="etapa__ajuda">Quem recebe orçamentos e cobranças.</p>
+							<div class="campos"><div class="campo campo--largo"><label for="financeiro-nome">Nome</label><input id="financeiro-nome" name="financeiro-nome" type="text" autocomplete="name" required aria-describedby="financeiro-nome-erro"><p class="campo__erro" id="financeiro-nome-erro" hidden>Preencha nome.</p></div><div class="campo"><label for="financeiro-cargo">Cargo</label><input id="financeiro-cargo" name="financeiro-cargo" type="text" autocomplete="organization-title" required aria-describedby="financeiro-cargo-erro"><p class="campo__erro" id="financeiro-cargo-erro" hidden>Preencha cargo.</p></div><div class="campo"><label for="financeiro-email">E-mail</label><input id="financeiro-email" name="financeiro-email" type="email" autocomplete="email" required aria-describedby="financeiro-email-erro"><p class="campo__erro" id="financeiro-email-erro" hidden>Digite um e-mail válido, como nome@empresa.com.br.</p></div><div class="campo"><label for="financeiro-telefone">Telefone</label><input id="financeiro-telefone" name="financeiro-telefone" type="tel" autocomplete="tel" required inputmode="tel" aria-describedby="financeiro-telefone-erro"><p class="campo__erro" id="financeiro-telefone-erro" hidden>Preencha telefone.</p></div></div>
+							<div class="etapa__acoes"><button class="cadastro__voltar" type="button" data-etapa-voltar>Voltar</button><button class="lmri-botao" type="submit">Enviar cadastro</button></div>
+						</fieldset>
+						<div class="acesso__aviso" role="status" aria-live="polite" hidden></div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<template id="aviso-demo">A área do cliente ainda não está ligada ao sistema do LMRI, então o cadastro não foi enviado. Para se cadastrar agora, escreva para <a href="mailto:metrologia.lmri@gmail.com?subject=Cadastro%20de%20cliente">metrologia.lmri@gmail.com</a> ou ligue para <a href="tel:+558121268708">(81) 2126-8708</a>.</template>
+	</main>
+
+	<footer class="lab-rodape lab-rodape--lmri">
+		<div class="container">
+			<div class="lab-rodape__grade">
+				<div class="lab-rodape__marca">
+					<img src="../img/lmri/lmri.svg" width="199" height="67" alt="LMRI">
+					<p>Laboratório de Metrologia das Radiações Ionizantes do Departamento de Energia Nuclear da UFPE.</p>
+					<p class="lab-rodape__selo">Acreditado pela Cgcre/Inmetro, ABNT NBR ISO/IEC 17025:2017. Autorizado pelo CASEC/CNEN.</p>
+				</div>
+				<div>
+					<p class="lab-rodape__titulo">Fale com o LMRI</p>
+					<a class="lab-rodape__destaque" href="mailto:metrologia.lmri@gmail.com">metrologia.lmri@gmail.com</a>
+					<a class="lab-rodape__destaque" href="tel:+558121268708">(81) 2126-8708</a>
+				</div>
+				<div>
+					<p class="lab-rodape__titulo">Endereço</p>
+					<address>Departamento de Energia Nuclear, UFPE<br>Av. Prof. Luiz Freire, 1000<br>Cidade Universitária, Recife, PE</address>
+				</div>
+				<nav aria-label="Rodapé do LMRI">
+					<p class="lab-rodape__titulo">Páginas</p>
+					<ul class="lab-rodape__links">
+						<li><a href="servicos.html">Serviços</a></li>
+						<li><a href="quem-somos.html">Quem somos</a></li>
+						<li><a href="credenciais.html">Credenciais</a></li>
+						<li><a href="contato.html">Contato</a></li>
+						<li><a href="entrar.html">Área do cliente</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lab-rodape__base">
+				<p>O LMRI é um laboratório do <a href="../index.html">Grupo de Dosimetria e Instrumentação Nuclear (GDOIN)</a>.</p>
+				<div class="lab-rodape__instituicoes">
+					<a href="../index.html"><img src="../img/marcas/gdoin.svg" alt="GDOIN, página inicial do grupo" width="160" height="43" loading="lazy"></a>
+					<img src="../img/marcas/den-ufpe.svg" alt="Departamento de Energia Nuclear, UFPE" width="100" height="58" loading="lazy">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../js/site.js"></script>
+	<script src="../js/lmri-acesso.js"></script>
+</body>
+</html>

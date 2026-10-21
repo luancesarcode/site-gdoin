@@ -1,0 +1,67 @@
+/* Mini-sites dos laboratórios (LMRI, LPR, LDRD): faixa de vínculo com o GDOIN,
+   cabeçalho com a marca do laboratório, cabeçalho de página interna e rodapé.
+   Cada laboratório define --lab-cor, --lab-papel, --lab-texto, --lab-linha e --lab-acento. */
+
+body[class*="lab-"] {
+	--lab-cor: #18483a;
+	--lab-papel: #eef3ef;
+	--lab-texto: #4b6357;
+	--lab-linha: #cbd8cf;
+	--lab-acento: #f2c200;
+}
+
+/* Faixa de vínculo: diz de onde o laboratório é, sem competir com a marca */
+.lab-vinculo { background: var(--lab-cor); color: #dce8e0; font-size: .8rem; }
+.lab-vinculo__barra { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 34px; }
+.lab-vinculo p { margin: 0; }
+.lab-vinculo a { color: #fff; text-underline-offset: .2em; white-space: nowrap; }
+
+/* Cabeçalho */
+.topo--lab .topo__barra { min-height: 80px; }
+.topo__logo--lab img { width: auto; height: 46px; }
+.topo--lab .menu { align-items: center; gap: .15rem; }
+.topo--lab .menu a { color: var(--lab-cor); }
+.topo--lab .menu a:hover { color: var(--lab-cor); text-decoration: underline; text-underline-offset: .35em; }
+.topo--lab .menu a[aria-current="page"] { color: var(--lab-cor); box-shadow: inset 0 -3px 0 var(--lab-acento); border-radius: 0; }
+.menu__acao { margin-left: .8rem; }
+.topo--lab .menu .lab-acao { background: var(--lab-cor); color: #fff; border-radius: 3px; padding: .6rem 1rem; font-weight: 600; }
+.topo--lab .menu .lab-acao:hover { background: #006647; color: #fff; text-decoration: none; }
+.topo--lab .menu .lab-acao[aria-current="page"] { color: #fff; box-shadow: none; outline: 2px solid var(--lab-acento); outline-offset: 2px; }
+
+@media (max-width: 960px) {
+	.lab-vinculo p { display: none; }
+	.lab-vinculo__barra { justify-content: flex-end; }
+	.topo__logo--lab img { height: 40px; }
+	.menu__acao { margin: .6rem 0 0; }
+	.topo--lab .menu .lab-acao { display: inline-block; }
+}
+
+/* Cabeçalho das páginas internas: claro, na cor de papel do laboratório */
+.lab-cabeca { background: var(--lab-papel); border-bottom: 1px solid var(--lab-linha); padding-block: 1.6rem clamp(2.2rem, 4vw, 3.2rem); }
+.lab-cabeca h1,
+body[class*="lab-"] .lab-cabeca h1 { color: var(--lab-cor); font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 550; letter-spacing: -.045em; line-height: 1.05; margin: 0 0 .8rem; }
+.lab-cabeca__resumo { color: var(--lab-texto); font-size: 1.08rem; line-height: 1.65; max-width: 56ch; margin: 0; }
+
+/* Rodapé do laboratório: papel claro, para não se confundir com o rodapé verde do GDOIN */
+.lab-rodape { background: var(--lab-papel); border-top: 4px solid var(--lab-cor); color: var(--lab-texto); font-size: .92rem; padding-top: clamp(2.5rem, 5vw, 3.5rem); }
+.lab-rodape a { color: var(--lab-cor); text-underline-offset: .2em; }
+.lab-rodape__grade { display: grid; grid-template-columns: 1.4fr 1fr 1fr .8fr; gap: 2rem; }
+.lab-rodape__marca img { height: 48px; width: auto; margin-bottom: 1rem; }
+.lab-rodape__marca p { max-width: 36ch; margin-bottom: .7rem; }
+.lab-rodape__selo { font-size: .82rem; border-left: 3px solid var(--lab-acento); padding-left: .7rem; }
+.lab-rodape__titulo { color: var(--lab-cor); font-weight: 600; margin-bottom: .6rem; }
+.lab-rodape__destaque { display: block; font-weight: 550; margin-bottom: .4rem; overflow-wrap: anywhere; }
+.lab-rodape address { font-style: normal; line-height: 1.8; }
+.lab-rodape__links { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+.lab-rodape__base { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 2.5rem; padding-block: 1.3rem 1.6rem; border-top: 1px solid var(--lab-linha); }
+.lab-rodape__base p { margin: 0; font-size: .85rem; }
+.lab-rodape__instituicoes { display: flex; align-items: center; gap: 1.5rem; }
+.lab-rodape__instituicoes img { height: 40px; width: auto; }
+
+@media (max-width: 900px) {
+	.lab-rodape__grade { grid-template-columns: 1fr 1fr; }
+	.lab-rodape__marca { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+	.lab-rodape__grade { grid-template-columns: 1fr; }
+}

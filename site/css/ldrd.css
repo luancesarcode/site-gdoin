@@ -9,8 +9,6 @@
 .ldrd-hero__barra { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .ldrd-trilha { font-size: .82rem; color: #d2e3da; margin: 0; }
 .ldrd-trilha a { color: #d2e3da; text-underline-offset: .2em; }
-.ldrd-hero__movimento { border: 1px solid #769286; border-radius: 3px; padding: .4rem .7rem; background: rgba(6,23,16,.65); color: #e5eee9; font: inherit; font-size: .75rem; cursor: pointer; }
-.ldrd-hero__movimento:hover { background: #174f3d; }
 .ldrd-hero__titulo { margin: 2.5rem auto 1.3rem; max-width: 1030px; }
 .ldrd-hero__assinatura { width: 100%; height: auto; }
 .ldrd-hero__compacto { display: none; }

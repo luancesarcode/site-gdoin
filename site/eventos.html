@@ -4,8 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Eventos, GDOIN</title>
-	<meta name="description" content="Congressos e eventos com participação do GDOIN.">
+	<meta name="description" content="Congressos e eventos do GDOIN, como o First Latin-American Congress on Solid State Dosimetry, de 2021.">
+	<link rel="icon" href="img/marcas/icone-gdoin.png">
 	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/conteudos.css">
 </head>
 <body>
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -17,8 +19,8 @@
 			<nav class="navegacao" id="navegacao" aria-label="Principal">
 				<ul class="menu">
 				<li><details><summary>O grupo</summary><ul class="submenu"><li><a href="sobre.html">Sobre o GDOIN</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="ensino.html">Ensino</a></li><li><a href="pesquisa.html">Pesquisa</a></li><li><a href="publicacoes.html">Publicações</a></li></ul></details></li>
-				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri.html">LMRI</a></li><li><a href="lpr.html">LPR</a></li></ul></details></li>
-				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
+				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri/index.html">LMRI</a></li><li><a href="lpr/index.html">LPR</a></li></ul></details></li>
+				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd/index.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
 				<li><details><summary>Extensão</summary><ul class="submenu"><li><a href="extensao.html">Serviços e consultoria</a></li><li><a href="http://museunuclear.com/" rel="noopener">Museu de Ciências Nucleares</a></li><li><a href="rad.html">RAD</a></li><li><a href="eventos.html" aria-current="page">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></details></li>
 				<li><a href="noticias.html">Notícias</a></li>
 				<li><a href="contato.html">Contato</a></li>
@@ -28,32 +30,37 @@
 	</header>
 
 	<main id="conteudo">
-		<section class="cabecalho-pagina">
-			<div class="container cabecalho-pagina__marca">
-				<div>
-					<p class="trilha"><a href="index.html">Início</a> / <a href="sobre.html">O grupo</a></p>
-
-					<h1>Eventos</h1>
-					<p>Congressos, simpósios e webinars com a participação do GDOIN, UFPE.</p>
+		<section class="cont-cabeca" aria-labelledby="titulo-pagina">
+			<div class="container">
+				<p class="cont-trilha"><a href="index.html">Início</a> / <a href="extensao.html">Extensão</a> / Eventos</p>
+				<div class="cont-cabeca__grade">
+					<div><h1 id="titulo-pagina">Eventos</h1><p>Congressos, escolas e encontros organizados ou apoiados pelo GDOIN.</p></div>
+					<nav class="cont-nav" aria-label="Notícias e eventos do grupo"><ul><li><a href="noticias.html">Notícias</a></li><li><a href="eventos.html" aria-current="page">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></nav>
 				</div>
-
 			</div>
 		</section>
-		<section class="secao"><div class="container">
-			<article class="noticia noticia--lateral">
-				<img src="img/congresso_dosimetria.png" width="1024" height="682" alt="">
-				<div class="noticia__corpo">
-					<p class="noticia__data">2022</p>
-					<h2>First Latin-American Congress on Solid State Dosimetry and Radiation Measurements</h2>
-					<p>A comunidade latino-americana que estuda dosimetria das radiações com métodos baseados em matéria condensada e estado sólido convida pesquisadores do tema a participar do congresso. É uma oportunidade de encontrar colegas, compartilhar resultados científicos e fortalecer essa área de pesquisa na América Latina.</p>
-					<p>O congresso é precedido pela <strong>Shigueo Watanabe School: Concepts and Trends in Radiation Dosimetry and its Applications</strong>, para apresentar o campo às novas gerações.</p>
-					<p>Por causa da pandemia, esta primeira edição foi virtual. Participantes da América Latina e de outras regiões foram bem-vindos.</p>
-
+		<section class="secao" aria-labelledby="t-congresso">
+			<div class="container evento">
+				<figure class="evento__cartaz"><img src="img/congresso_dosimetria.png" width="1024" height="682" alt="Cartaz do First Latin-American Congress on Solid State Dosimetry and Radiation Measurements, 13 a 17 de setembro de 2021, encontro on-line, com o mapa da América Latina e curvas de dose" fetchpriority="high"></figure>
+				<div class="evento__texto">
+					<p class="data"><time datetime="2021-09-13">13 a 17 de setembro de 2021</time> <span class="idioma">Em inglês</span></p>
+					<h2 id="t-congresso" lang="en">First Latin-American Congress on Solid State Dosimetry and Radiation Measurements</h2>
+					<p>Encontro da comunidade latino-americana que estuda dosimetria das radiações com métodos de matéria condensada e estado sólido, para compartilhar resultados e fortalecer a área na região. Pesquisadores de outras regiões também foram convidados.</p>
+					<dl class="evento__ficha">
+						<div><dt>Formato</dt><dd>On-line, por causa da pandemia</dd></div>
+						<div><dt>Antes do congresso</dt><dd lang="en">Shigueo Watanabe School: Concepts and Trends in Radiation Dosimetry and its Applications</dd></div>
+						<div><dt>Para quem</dt><dd>Pesquisadores e estudantes de dosimetria de estado sólido</dd></div>
+					</dl>
+					<p class="pendente">Link dos anais do congresso (resumos) a recuperar do site antigo.</p>
 				</div>
-			</article>
-			<h2>Webinars</h2>
-			<p>Os webinars realizados ou apoiados pelo grupo estão em <a href="webinars.html">Webinars</a>.</p>
-		</div></section>
+			</div>
+		</section>
+		<section class="secao secao--alt" aria-labelledby="t-proximos">
+			<div class="container cont-proximos cont-proximos--foto"><figure class="cont-proximos__foto"><img src="img/paginas/eventos-auditorio.jpg" alt="Auditório com plateia sentada em fileiras de poltronas vermelhas" loading="lazy"></figure>
+				<div><h2 id="t-proximos" class="cont-titulo">Próximos eventos</h2><p>Os próximos eventos do grupo serão divulgados aqui e no Instagram.</p></div>
+				<div class="botoes"><a class="botao" href="https://instagram.com/gdoindenufpe" target="_blank" rel="noopener">Seguir @gdoindenufpe</a><a class="botao botao--contorno" href="webinars.html">Assistir aos webinars</a></div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="rodape">

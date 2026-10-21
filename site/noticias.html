@@ -4,8 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Notícias, GDOIN</title>
-	<meta name="description" content="Notícias do Grupo de Dosimetria e Instrumentação Nuclear.">
+	<meta name="description" content="Notícias do GDOIN, do Museu de Ciências Nucleares e dos laboratórios.">
+	<link rel="icon" href="img/marcas/icone-gdoin.png">
 	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/conteudos.css">
 </head>
 <body>
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -17,8 +19,8 @@
 			<nav class="navegacao" id="navegacao" aria-label="Principal">
 				<ul class="menu">
 				<li><details><summary>O grupo</summary><ul class="submenu"><li><a href="sobre.html">Sobre o GDOIN</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="ensino.html">Ensino</a></li><li><a href="pesquisa.html">Pesquisa</a></li><li><a href="publicacoes.html">Publicações</a></li></ul></details></li>
-				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri.html">LMRI</a></li><li><a href="lpr.html">LPR</a></li></ul></details></li>
-				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
+				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri/index.html">LMRI</a></li><li><a href="lpr/index.html">LPR</a></li></ul></details></li>
+				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd/index.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
 				<li><details><summary>Extensão</summary><ul class="submenu"><li><a href="extensao.html">Serviços e consultoria</a></li><li><a href="http://museunuclear.com/" rel="noopener">Museu de Ciências Nucleares</a></li><li><a href="rad.html">RAD</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></details></li>
 				<li><a href="noticias.html" aria-current="page">Notícias</a></li>
 				<li><a href="contato.html">Contato</a></li>
@@ -28,53 +30,57 @@
 	</header>
 
 	<main id="conteudo">
-		<section class="cabecalho-pagina">
-			<div class="container cabecalho-pagina__marca">
-				<div>
-					<p class="trilha"><a href="index.html">Início</a></p>
-
-					<h1>Notícias</h1>
-					<p>Notícias relacionadas ou de interesse do GDOIN, UFPE.</p>
+		<section class="cont-cabeca" aria-labelledby="titulo-pagina">
+			<div class="container">
+				<p class="cont-trilha"><a href="index.html">Início</a> / <a href="extensao.html">Extensão</a> / Notícias</p>
+				<div class="cont-cabeca__grade">
+					<div><h1 id="titulo-pagina">Notícias</h1><p>O que aconteceu no grupo, no Museu de Ciências Nucleares e nos laboratórios.</p></div>
+					<nav class="cont-nav" aria-label="Notícias e eventos do grupo"><ul><li><a href="noticias.html" aria-current="page">Notícias</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></nav>
 				</div>
-
 			</div>
 		</section>
-		<section class="secao"><div class="container">
-			<article class="noticia noticia--lateral" id="cnen">
-				<div class="noticia__corpo">
-					<p class="noticia__data">24 de junho de 2022</p>
-					<h2>Museu Nuclear recebe visita da CNEN</h2>
-					<p>O Museu de Ciências Nucleares da UFPE recebeu o presidente e vários diretores de institutos da Comissão Nacional de Energia Nuclear (CNEN). O grupo foi recepcionado pela professora Helen Khoury, coordenadora-geral do Museu.</p>
-					<p><a href="visitantes.html">Ver na página de visitantes</a></p>
-				</div>
-			</article>
-			<article class="noticia noticia--lateral" id="iaea">
-				<img src="img/iaea_dosimetria.png" width="1024" height="575" alt="Infográfico da IAEA sobre dosimetria: medir doses de radiação protege trabalhadores, equipe médica e pacientes." loading="lazy">
-				<div class="noticia__corpo">
-					<p class="noticia__data">25 de setembro de 2021</p>
-					<h2>Protección radiológica de pacientes y trabajadores: el IAEA contribuye a afianzar la dosimetría en América Latina y el Caribe</h2>
-					<p>A principios de este año (2021) se celebró en Recife (Brasil), bajo la dirección del OIEA, la primera reunión de cooperación entre laboratorios nacionales de dosimetría de países de América Latina y el Caribe. En ella se sentaron las bases para una mejor protección radiológica de los pacientes y los trabajadores de la región y se propició la elaboración de estrategias nacionales y el intercambio de conocimiento entre expertos de 26 instituciones de 20 países.</p>
+		<section class="secao" aria-label="Notícia em destaque">
+			<div class="container">
+				<article class="destaque">
+					<a class="destaque__foto" href="visitantes.html#iaea"><img src="img/visita_iaea_3.jpg" alt="Diretor-geral da IAEA, Rafael Mariano Grossi, com a professora Helen Khoury, o reitor da UFPE e convidados em frente ao Museu de Ciências Nucleares" fetchpriority="high"></a>
+					<div class="destaque__texto">
+						<p class="data"><time datetime="2021-07-15">15 de julho de 2021</time></p>
+						<h2><a href="visitantes.html#iaea">Diretor-geral da IAEA visita o Museu de Ciências Nucleares</a></h2>
+						<p>Rafael Mariano Grossi, diretor-geral da Agência Internacional de Energia Atômica, foi recebido pela professora Helen Khoury, coordenadora-geral do Museu, com o reitor Alfredo Gomes, o vice-reitor Moacyr Araújo, o embaixador do Brasil em Viena, Carlos Duarte, e o diretor do CRCN-NE, Carlos Alberto Brayner.</p>
+						<a class="link-forte" href="visitantes.html#iaea">Ver as fotos da visita</a>
+					</div>
+				</article>
+			</div>
+		</section>
 
+		<section class="secao secao--alt" aria-labelledby="t-arquivo">
+			<div class="container">
+				<h2 id="t-arquivo" class="cont-titulo">Todas as notícias</h2>
+				<div class="arquivo">
+					<div class="arquivo__ano"><h3>2022</h3>
+						<article class="item">
+							<div class="item__texto"><p class="data"><time datetime="2022-06-24">24 de junho de 2022</time></p><h4><a href="visitantes.html#cnen">Museu Nuclear recebe visita da CNEN</a></h4><p>O presidente e diretores de institutos da Comissão Nacional de Energia Nuclear foram recebidos pela professora Helen Khoury, coordenadora-geral do Museu.</p></div>
+						</article>
+					</div>
+					<div class="arquivo__ano"><h3>2021</h3>
+						<article class="item item--midia">
+							<span class="item__midia"><img src="img/iaea_dosimetria.png" width="1024" height="575" alt="Infográfico da IAEA sobre o sistema internacional de medidas para dosimetria, ligando laboratórios primários e secundários a pacientes, equipes médicas e trabalhadores" loading="lazy"></span>
+							<div class="item__texto"><p class="data"><time datetime="2021-09-25">25 de setembro de 2021</time> <span class="idioma" lang="es">Em espanhol</span></p><h4 lang="es">Protección radiológica de pacientes y trabajadores: el IAEA contribuye a afianzar la dosimetría en América Latina y el Caribe</h4><p>Recife recebeu a primeira reunião de cooperação entre laboratórios nacionais de dosimetria da América Latina e do Caribe, organizada pela IAEA, com especialistas de 26 instituições de 20 países.</p><p class="pendente">Link da matéria completa da IAEA a recuperar do site antigo.</p></div>
+						</article>
+						<article class="item item--midia">
+							<a class="item__midia" href="https://youtu.be/qx--WDUcbsY" rel="noopener" tabindex="-1" aria-hidden="true"><span class="video"><img src="https://i.ytimg.com/vi/qx--WDUcbsY/hqdefault.jpg" width="480" height="360" alt="" loading="lazy"><span class="video__play" aria-hidden="true"></span></span></a>
+							<div class="item__texto"><p class="data"><time datetime="2021-02-14">14 de fevereiro de 2021</time></p><h4><a href="https://youtu.be/qx--WDUcbsY" rel="noopener">Desvendando os segredos do patrimônio cultural com técnicas nucleares</a></h4><p>Palestra do professor Ricardo Tadeu Lopes, da UFRJ-COPPE/PEN e do PPGARQ/MN. Vídeo no YouTube.</p></div>
+						</article>
+					</div>
+					<div class="arquivo__ano"><h3>Sem data</h3>
+						<article class="item item--midia">
+							<a class="item__midia" href="https://youtu.be/OgmCQe688fA" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/paginas/noticia-alepe-titulo.jpg" width="800" height="800" alt="" loading="lazy"></a>
+							<div class="item__texto"><p class="data">Assembleia Legislativa de Pernambuco</p><h4><a href="https://youtu.be/OgmCQe688fA" rel="noopener">Professora Helen Khoury recebe o Título de Cidadã de Pernambuco</a></h4><p>Vídeo da reunião solene de entrega do título à professora Helen Jamil Khoury. Vídeo no YouTube.</p><p class="pendente">Data da cerimônia a confirmar.</p></div>
+						</article>
+					</div>
 				</div>
-			</article>
-			<article class="noticia noticia--lateral" id="alepe">
-				<div class="noticia__corpo">
-					<p class="noticia__data">Assembleia Legislativa de Pernambuco, ALEPE</p>
-					<h2>Professora Helen Khoury recebe o Título de Cidadã de Pernambuco</h2>
-					<p>Veja o vídeo da reunião solene de entrega do Título de Cidadã de Pernambuco à professora Helen Jamil Khoury.</p>
-					<div class="botoes"><a class="botao botao--contorno" href="https://youtu.be/OgmCQe688fA" rel="noopener">Assistir no YouTube</a></div>
-				</div>
-			</article>
-			<article class="noticia noticia--lateral" id="patrimonio">
-				<div class="noticia__corpo">
-					<p class="noticia__data">14 de fevereiro de 2021</p>
-					<h2>Desvendando os segredos do patrimônio cultural com técnicas nucleares</h2>
-					<p>Veja o vídeo com a palestra do Professor Ricardo Tadeu Lopes, UFRJ-COPPE/PEN e PPGARQ/MN.</p>
-					<div class="botoes"><a class="botao botao--contorno" href="https://youtu.be/qx--WDUcbsY" rel="noopener">Assistir no YouTube</a></div>
-				</div>
-			</article>
-			<p class="pequeno">Mais conteúdos em vídeo estão em <a href="webinars.html">Webinars</a>.</p>
-		</div></section>
+			</div>
+		</section>
 	</main>
 
 	<footer class="rodape">

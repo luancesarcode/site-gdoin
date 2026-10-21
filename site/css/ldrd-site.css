@@ -1,0 +1,56 @@
+/* LDRD como site próprio. O hero com a rede animada (ldrd.css) segue como destaque;
+   aqui ficam a marca do cabeçalho e as páginas que eram abas. */
+
+.lab-ldrd { --lab-cor: #174f3d; --lab-papel: #e7efe9; --lab-texto: #4d6357; --lab-linha: #cad8ce; }
+.lab-trilha { color: var(--lab-texto); font-size: .82rem; margin-bottom: 1.6rem; }
+.lab-trilha a { color: inherit; text-underline-offset: .2em; }
+
+.ldrd-marca { display: inline-flex; align-items: center; gap: .6rem; color: var(--ldrd-verde); }
+.ldrd-marca img { width: 42px; height: 42px; }
+.ldrd-marca strong { font-size: 1.6rem; font-weight: 750; letter-spacing: -.04em; line-height: 1; }
+.ldrd-marca > span { font-size: .74rem; line-height: 1.3; color: var(--ldrd-texto); font-weight: 500; border-left: 2px solid #f2c200; padding-left: .6rem; }
+.lab-rodape .ldrd-marca { margin-bottom: 1rem; }
+
+
+/* Páginas internas: o painel branco das antigas abas vira o corpo da página */
+.lab-ldrd .ldrd-corpo { padding-inline: 0; }
+.ldrd-paineis--pagina { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+.ldrd-paineis--pagina > section > h2:first-child { margin-top: 0; }
+.ldrd-paineis--pagina .instalacoes > section:first-child { margin-top: 0; }
+
+/* Equipe */
+.ldrd-equipe-pagina { display: grid; gap: 2.5rem; }
+.ldrd-equipe-pagina h2 { color: var(--ldrd-verde); font-size: clamp(1.5rem, 2.6vw, 1.9rem); letter-spacing: -.025em; margin-bottom: .4rem; }
+.ldrd-equipe-pagina section > p { color: var(--ldrd-texto); max-width: 60ch; }
+.ldrd-pessoas { list-style: none; margin: 1.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 0 2rem; }
+.ldrd-pessoas li { display: grid; gap: .2rem; padding: .9rem 0; border-top: 1px solid var(--ldrd-linha); }
+.ldrd-pessoas strong { color: var(--ldrd-verde); font-weight: 600; }
+.ldrd-pessoas a { color: inherit; text-underline-offset: .25em; }
+.ldrd-pessoas span { color: var(--ldrd-texto); font-size: .88rem; }
+.ldrd-membros { margin: .8rem 0 0; padding-left: 1.2rem; color: #23392f; columns: 2 18rem; column-gap: 2rem; }
+.ldrd-membros li { margin-bottom: .45rem; }
+.ldrd-equipe-pagina__nota { font-size: .85rem; }
+
+/* Agendamento: prioridades e regras */
+.ldrd-regras { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--ldrd-linha); }
+.ldrd-regras h2 { color: var(--ldrd-verde); font-size: 1.3rem; margin-bottom: .8rem; }
+.ldrd-regras .ldrd-membros { columns: 1; }
+.ldrd-prioridade { list-style: none; counter-reset: prioridade; margin: 0; padding: 0; }
+.ldrd-prioridade li { counter-increment: prioridade; display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; align-items: baseline; padding: .8rem 0; border-top: 1px solid var(--ldrd-linha); color: #23392f; }
+.ldrd-prioridade li::before { content: counter(prioridade) "º"; font-weight: 700; color: var(--ldrd-verde); font-size: 1.1rem; }
+
+/* Chamada da home */
+.lab-chamada-ldrd { background: var(--ldrd-verde); color: #fff; padding-block: clamp(2.5rem, 5vw, 3.5rem); }
+.lab-chamada-ldrd__grade { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem 3rem; flex-wrap: wrap; }
+.pagina-ldrd .lab-chamada-ldrd h2 { color: #fff; font-size: clamp(1.5rem, 2.8vw, 2rem); margin-bottom: .4rem; }
+.lab-chamada-ldrd p { color: #d9e7df; margin: 0; max-width: 55ch; }
+
+@media (max-width: 720px) {
+  .ldrd-regras { grid-template-columns: 1fr; }
+  .ldrd-marca > span { display: none; }
+}
+
+/* Hero: a trilha fica sozinha na barra, e o texto pequeno ganha sombra
+   para continuar legível sobre a rede mais densa */
+.lab-ldrd .ldrd-hero__titulo { margin-top: 1.8rem; }
+.lab-ldrd .ldrd-hero__resumo { text-shadow: 0 1px 2px rgba(4, 16, 11, .9), 0 0 14px rgba(4, 16, 11, .85); }

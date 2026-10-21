@@ -1,0 +1,93 @@
+/* CIDIN: a matriz técnica × área é o elemento central; o resto é quieto.
+   Usa as cores do site (estilo.css). */
+
+.pular-visual { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.cidin-hero { background: var(--verde-claro); border-bottom: 1px solid var(--linha); padding-block: 1.8rem clamp(2.5rem, 5vw, 4rem); }
+.cidin-hero__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.trilha-clara { font-size: .82rem; color: var(--suave); margin-bottom: 1.8rem; }
+.trilha-clara a { color: inherit; text-underline-offset: .2em; }
+.cidin-hero__sigla { display: inline-block; font-size: 1.05rem; font-weight: 700; letter-spacing: .02em; color: var(--verde-escuro); border-bottom: 3px solid var(--amarelo); padding-bottom: .2rem; margin-bottom: 1rem; }
+.cidin-hero h1 { color: var(--verde-escuro); font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 600; letter-spacing: -.035em; line-height: 1.08; max-width: 20ch; margin-bottom: 1.1rem; }
+.cidin-hero__resumo { color: var(--suave); font-size: 1.08rem; max-width: 50ch; }
+
+.cidin-hero__fotos { display: grid; grid-template-columns: .75fr 1fr; grid-template-rows: auto auto; gap: .75rem; }
+.cidin-hero__foto { margin: 0; position: relative; background: #fff; }
+.cidin-hero__foto img { width: 100%; height: 100%; object-fit: cover; }
+.cidin-hero__foto--alta { grid-row: span 2; }
+.cidin-hero__foto--alta img { object-fit: contain; background: #fff; }
+.cidin-hero__foto:not(.cidin-hero__foto--alta) img { aspect-ratio: 4 / 3; }
+.cidin-hero__foto figcaption { position: absolute; left: 0; bottom: 0; background: var(--verde-escuro); color: #fff; font-size: .75rem; line-height: 1.35; padding: .35rem .6rem; max-width: 100%; }
+.cidin-hero__foto figcaption strong { display: block; font-size: .8rem; color: var(--amarelo); }
+
+.cidin-cabeca { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 3rem; align-items: end; margin-bottom: 2rem; }
+.cidin-cabeca h2 { margin: 0; color: var(--verde-escuro); font-size: clamp(1.7rem, 3vw, 2.3rem); letter-spacing: -.025em; }
+.cidin-cabeca p { margin: 0; color: var(--suave); max-width: 50ch; }
+
+/* Matriz técnica × área */
+.matriz-rolagem { overflow-x: auto; border: 1px solid var(--linha); border-radius: 4px; background: #fff; }
+.matriz-rolagem:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.matriz { width: 100%; border-collapse: collapse; min-width: 760px; }
+.matriz thead th { font-size: .8rem; font-weight: 600; color: var(--suave); text-align: center; vertical-align: bottom; padding: 1rem .6rem .8rem; border-bottom: 2px solid var(--verde-escuro); }
+.matriz thead th:first-child { text-align: left; padding-left: 1.2rem; }
+.matriz thead th span { display: inline-block; max-width: 9rem; line-height: 1.3; }
+.matriz tbody th { text-align: left; font-weight: 500; padding: .95rem 1rem .95rem 1.2rem; width: 38%; }
+.matriz tbody th a { color: var(--verde-escuro); font-weight: 600; text-underline-offset: .2em; }
+.matriz__lab { display: block; font-size: .8rem; color: var(--suave); font-weight: 400; margin-top: .15rem; }
+.matriz td { text-align: center; padding: .6rem; border-left: 1px solid #edf2ef; }
+.matriz tbody tr + tr > * { border-top: 1px solid var(--linha); }
+.matriz tbody tr:hover { background: #f6f9f7; }
+.matriz__sim,
+.matriz__nao { display: inline-block; width: 14px; height: 14px; border-radius: 50%; overflow: hidden; text-indent: 100%; white-space: nowrap; vertical-align: middle; }
+.matriz__sim { background: var(--verde); box-shadow: 0 0 0 3px #d5e6dc; }
+.matriz__nao { width: 6px; height: 6px; background: #cfdad3; }
+
+/* Laboratórios */
+.cidin-labs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.cidin-lab { position: relative; display: grid; grid-template-rows: 210px auto; background: #fff; border: 1px solid var(--linha); border-radius: 4px; overflow: hidden; }
+.cidin-lab:hover { border-color: var(--verde); }
+.cidin-lab > img { width: 100%; height: 210px; object-fit: cover; background: #f4f6f5; }
+.cidin-lab > img[src*="gamacell"] { object-fit: contain; }
+.cidin-lab > img[src*="micro-XRF"] { object-position: center 35%; }
+.cidin-lab > div:last-child { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; }
+.cidin-lab h3 { margin: 0 0 .2rem; font-size: 1.45rem; }
+.cidin-lab h3 a { color: var(--verde-escuro); text-decoration: none; }
+.cidin-lab h3 a::after { content: ""; position: absolute; inset: 0; }
+.cidin-lab__nome { font-weight: 500; font-size: .95rem; margin-bottom: .6rem; }
+.cidin-lab p:not(.cidin-lab__nome) { color: var(--suave); font-size: .92rem; }
+.cidin-lab__acao { margin-top: auto; color: var(--verde); font-weight: 600; font-size: .9rem; }
+.cidin-lab__marca { display: grid; place-items: center; height: 210px; background: repeating-linear-gradient(135deg, #f1f5f2 0 10px, #e8efea 10px 20px); color: var(--verde-escuro); font-size: 2.6rem; font-weight: 700; letter-spacing: -.03em; }
+
+/* Acesso e governança */
+.cidin-acesso { display: grid; grid-template-columns: .9fr 1.6fr; gap: 2rem 4rem; align-items: start; }
+.cidin-acesso h2, .cidin-governanca h2, .cidin-proposito h2 { color: var(--verde-escuro); font-size: clamp(1.6rem, 2.8vw, 2.1rem); letter-spacing: -.025em; }
+.cidin-acesso p, .cidin-governanca p { color: var(--suave); }
+.cidin-etapas { list-style: none; counter-reset: etapa; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.cidin-etapas li { counter-increment: etapa; border-top: 2px solid var(--verde); padding-top: .9rem; display: grid; gap: .3rem; }
+.cidin-etapas li::before { content: counter(etapa); font-size: 1.8rem; font-weight: 700; line-height: 1; color: var(--verde-escuro); }
+.cidin-etapas strong { color: var(--verde-escuro); }
+.cidin-etapas span { color: var(--suave); font-size: .9rem; }
+
+.cidin-governanca { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 4rem; align-items: start; }
+.cidin-orgaos { margin: 0; }
+.cidin-orgaos > div { padding: 1.1rem 0; border-top: 1px solid var(--linha); }
+.cidin-orgaos > div:first-child { border-top: 3px solid var(--amarelo); }
+.cidin-orgaos dt { font-weight: 600; color: var(--verde-escuro); font-size: 1.1rem; margin-bottom: .3rem; }
+.cidin-orgaos dd { margin: 0; color: var(--suave); }
+
+.cidin-proposito > * { max-width: 760px; }
+.cidin-proposito p { font-size: 1.2rem; line-height: 1.6; color: var(--tinta); }
+
+@media (max-width: 900px) {
+  .cidin-hero__grade, .cidin-cabeca, .cidin-acesso, .cidin-governanca { grid-template-columns: 1fr; }
+  .cidin-labs { grid-template-columns: 1fr; }
+  .cidin-lab { grid-template-rows: none; grid-template-columns: 160px minmax(0, 1fr); }
+  .cidin-lab > img, .cidin-lab__marca { height: 100%; min-height: 180px; }
+  .cidin-etapas { grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }
+}
+@media (max-width: 520px) {
+  .cidin-hero__fotos { grid-template-columns: 1fr 1fr; }
+  .cidin-lab { grid-template-columns: 1fr; }
+  .cidin-lab > img, .cidin-lab__marca { height: 180px; }
+  .cidin-etapas { grid-template-columns: 1fr; }
+}

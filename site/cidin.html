@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CIDIN, Centro Integrado de Dosimetria e Instrumentação Nuclear</title>
 	<meta name="description" content="Infraestrutura multiusuária do GDOIN que reúne GAMALAB, LDRD e LPN.">
+	<link rel="icon" href="img/marcas/icone-gdoin.png">
 	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/cidin.css">
 </head>
 <body>
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -17,8 +19,8 @@
 			<nav class="navegacao" id="navegacao" aria-label="Principal">
 				<ul class="menu">
 				<li><details><summary>O grupo</summary><ul class="submenu"><li><a href="sobre.html">Sobre o GDOIN</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="ensino.html">Ensino</a></li><li><a href="pesquisa.html">Pesquisa</a></li><li><a href="publicacoes.html">Publicações</a></li></ul></details></li>
-				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri.html">LMRI</a></li><li><a href="lpr.html">LPR</a></li></ul></details></li>
-				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html" aria-current="page">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
+				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri/index.html">LMRI</a></li><li><a href="lpr/index.html">LPR</a></li></ul></details></li>
+				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html" aria-current="page">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd/index.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
 				<li><details><summary>Extensão</summary><ul class="submenu"><li><a href="extensao.html">Serviços e consultoria</a></li><li><a href="http://museunuclear.com/" rel="noopener">Museu de Ciências Nucleares</a></li><li><a href="rad.html">RAD</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></details></li>
 				<li><a href="noticias.html">Notícias</a></li>
 				<li><a href="contato.html">Contato</a></li>
@@ -28,55 +30,87 @@
 	</header>
 
 	<main id="conteudo">
-		<section class="cabecalho-pagina">
-			<div class="container cabecalho-pagina__marca">
+		<section class="cidin-hero" aria-labelledby="cidin-titulo">
+			<div class="container cidin-hero__grade">
+				<div class="cidin-hero__texto">
+					<p class="trilha-clara"><a href="index.html">Início</a> / CIDIN</p>
+					<p class="cidin-hero__sigla">CIDIN</p>
+					<h1 id="cidin-titulo">Centro Integrado de Dosimetria e Instrumentação Nuclear</h1>
+					<p class="cidin-hero__resumo">Laboratórios, equipamentos e equipe do Departamento de Energia Nuclear da UFPE abertos a pesquisadores de dentro e de fora da universidade, para irradiação gama, datação, dosimetria e caracterização de materiais.</p>
+					<div class="botoes"><a class="botao" href="multiusuario.html">Solicitar o uso</a><a class="botao botao--contorno" href="#tecnicas">Ver as técnicas disponíveis</a></div>
+				</div>
+				<div class="cidin-hero__fotos">
+					<figure class="cidin-hero__foto cidin-hero__foto--alta"><img src="img/laboratorios/gammacell-220.jpg" width="600" height="600" alt="Irradiador Gamma Cell 220 Excel do GAMALAB, um cilindro metálico com sinalização de radiação" fetchpriority="high"><figcaption><strong>GAMALAB</strong> Irradiador Gamma Cell</figcaption></figure>
+					<figure class="cidin-hero__foto"><img src="img/ldrd/micro-XRF.jpg" width="756" height="689" alt="Espectrômetro µXRF ARTAX em tripé, junto à bancada do LDRD" fetchpriority="high"><figcaption><strong>LDRD</strong> Espectrômetro µXRF ARTAX</figcaption></figure>
+					<figure class="cidin-hero__foto"><img src="img/ldrd/Leitora-TL-HW-3500.jpg" width="522" height="488" alt="Leitora de termoluminescência Harshaw 3500" loading="lazy"><figcaption><strong>LDRD</strong> Leitora TL Harshaw 3500</figcaption></figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="secao cidin-tecnicas" id="tecnicas" aria-labelledby="t-tecnicas">
+			<div class="container">
+				<div class="cidin-cabeca"><h2 id="t-tecnicas">O que dá para fazer no CIDIN</h2><p>Técnicas disponíveis e as áreas de pesquisa em que já são usadas. Escolha a técnica para ver o laboratório e os equipamentos.</p></div>
+				<div class="matriz-rolagem" tabindex="0" aria-label="Tabela de técnicas por área de pesquisa; role para o lado no celular">
+					<table class="matriz">
+						<caption class="pular-visual">Técnicas do CIDIN e áreas de pesquisa em que são aplicadas</caption>
+						<thead><tr><th scope="col">Técnica e laboratório</th><th scope="col"><span>Ciência dos materiais</span></th><th scope="col"><span>Arqueometria e patrimônio</span></th><th scope="col"><span>Geologia e ambiente</span></th><th scope="col"><span>Saúde e biologia</span></th><th scope="col"><span>Indústria</span></th></tr></thead>
+						<tbody><tr><th scope="row"><a href="gamalab.html">Irradiação gama de altas taxas de dose</a><span class="matriz__lab">GAMALAB. Irradiador Gamma Cell, fonte de Co-60</span></th><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__sim">sim</span></td></tr><tr><th scope="row"><a href="ldrd/instalacoes.html">Datação por termoluminescência e OSL</a><span class="matriz__lab">LDRD. Leitoras Harshaw 3500, Lumideteck 3000 e Lexyg Smart</span></th><td><span class="matriz__nao">não</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__nao">não</span></td></tr><tr><th scope="row"><a href="ldrd/index.html#sobre">Datação e dosimetria por EPR</a><span class="matriz__lab">LDRD. Ressonância paramagnética eletrônica</span></th><td><span class="matriz__nao">não</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__nao">não</span></td></tr><tr><th scope="row"><a href="ldrd/index.html#sobre">Dosimetria retrospectiva</a><span class="matriz__lab">LDRD. Estimativa de doses passadas em materiais</span></th><td><span class="matriz__nao">não</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td></tr><tr><th scope="row"><a href="ldrd/instalacoes.html">Fluorescência de raios X</a><span class="matriz__lab">LDRD. µXRF ARTAX e ProSpector LE portátil</span></th><td><span class="matriz__sim">sim</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__nao">não</span></td></tr><tr><th scope="row"><a href="ldrd/instalacoes.html">Espectrometria gama de alta resolução</a><span class="matriz__lab">LDRD. Detector HPGe Canberra</span></th><td><span class="matriz__nao">não</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__sim">sim</span></td><td><span class="matriz__nao">não</span></td><td><span class="matriz__nao">não</span></td></tr></tbody>
+					</table>
+				</div>
+				<p class="pendente">O LPN ainda não tem técnicas e equipamentos confirmados; entram aqui quando forem informados.</p>
+			</div>
+		</section>
+
+		<section class="secao secao--alt" aria-labelledby="t-labs">
+			<div class="container">
+				<div class="cidin-cabeca"><h2 id="t-labs">Os laboratórios</h2><p>Cada laboratório tem coordenação, regras de uso e agenda próprias.</p></div>
+				<div class="cidin-labs">
+					<article class="cidin-lab">
+						<img src="img/ldrd/XRF.jpg" width="425" height="590" alt="Analisador portátil de fluorescência de raios X ProSpector LE, do LDRD, em seu estojo" loading="lazy">
+						<div><h3><a href="ldrd/index.html">LDRD</a></h3><p class="cidin-lab__nome">Laboratório de Dosimetria Retrospectiva e Datação</p><p>Datação por TL, OSL e EPR, dosimetria retrospectiva e caracterização de materiais arqueométricos, geológicos e geomorfológicos.</p><span class="cidin-lab__acao">Site do LDRD</span></div>
+					</article>
+					<article class="cidin-lab">
+						<img src="img/laboratorios/gammacell-220.jpg" width="600" height="600" alt="Irradiador Gamma Cell 220 Excel do GAMALAB" loading="lazy">
+						<div><h3><a href="gamalab.html">GAMALAB</a></h3><p class="cidin-lab__nome">Laboratório de Irradiação Gama de Altas Taxas de Dose</p><p>Irradiação de amostras de até 1 litro com Co-60, para ciência dos materiais, nanotecnologia, farmacologia e ciências biológicas e da saúde.</p><span class="cidin-lab__acao">Página do GAMALAB</span></div>
+					</article>
+					<article class="cidin-lab cidin-lab--sem-foto">
+						<div class="cidin-lab__marca" aria-hidden="true">LPN</div>
+						<div><h3><a href="lpn.html">LPN</a></h3><p class="cidin-lab__nome">Pesquisa multiusuária</p><p>Infraestrutura de pesquisa compartilhada do CIDIN. Nome por extenso, equipamentos e responsável em confirmação.</p><span class="cidin-lab__acao">Página do LPN</span></div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="secao" aria-labelledby="t-acesso">
+			<div class="container cidin-acesso">
+				<div><h2 id="t-acesso">Como usar a infraestrutura</h2><p>O acesso segue os procedimentos de solicitação, autorização, agendamento e segurança de cada laboratório.</p><a class="botao" href="multiusuario.html">Ver as etapas e solicitar</a></div>
+				<ol class="cidin-etapas">
+					<li><strong>Solicitação</strong><span>Projeto, análise ou irradiação pretendida e número de amostras.</span></li>
+					<li><strong>Autorização</strong><span>A coordenação avalia viabilidade técnica, segurança e agenda.</span></li>
+					<li><strong>Agendamento</strong><span>Data, horário e procedimentos combinados com a equipe.</span></li>
+					<li><strong>Uso com segurança</strong><span>Conforme o plano de proteção radiológica do laboratório.</span></li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="secao secao--alt" aria-labelledby="t-governanca">
+			<div class="container cidin-governanca">
 				<div>
-					<p class="trilha"><a href="index.html">Início</a></p>
-					<span class="selo">Multiusuário</span>
-					<h1>CIDIN</h1>
-					<p>Centro Integrado de Dosimetria e Instrumentação Nuclear. Infraestrutura multiusuária de pesquisa do GDOIN.</p>
-				</div>
-
-			</div>
-		</section>
-		<section class="secao">
-			<div class="container">
-				<div class="texto">
-					<p>O Centro Integrado de Dosimetria e Instrumentação Nuclear (CIDIN), vinculado ao Departamento de Energia Nuclear (DEN) da Universidade Federal de Pernambuco (UFPE), reúne infraestruturas laboratoriais, equipamentos e competências científicas destinados ao desenvolvimento de pesquisas, à inovação tecnológica e à formação de recursos humanos nas áreas de dosimetria, instrumentação nuclear, aplicações das radiações ionizantes e caracterização de materiais.</p><p>Constituído como uma infraestrutura integrada de pesquisa multiusuária, o CIDIN reúne o Laboratório de Irradiação Gama de Altas Taxas de Dose (GAMALAB), o Laboratório de Dosimetria Retrospectiva e Datação (LDRD) e o LPN, articulando diferentes técnicas, equipamentos e especialidades para apoiar projetos de pesquisa e desenvolvimento científico e tecnológico.</p><p>Suas atividades abrangem experimentos de irradiação gama, dosimetria retrospectiva, datação por termoluminescência (TL) e luminescência opticamente estimulada (OSL), caracterização de materiais e outras aplicações relacionadas às radiações ionizantes. Essas competências contribuem para investigações em áreas como ciência dos materiais, arqueometria, geologia, patrimônio cultural, saúde e aplicações industriais e ambientais.</p><p>A atuação integrada dos laboratórios busca otimizar o uso compartilhado da infraestrutura, ampliar a cooperação entre pesquisadores e instituições e favorecer o desenvolvimento de projetos interdisciplinares. O acesso aos equipamentos e às instalações é realizado conforme os procedimentos de solicitação, autorização, agendamento e segurança estabelecidos para cada laboratório.</p><p>O CIDIN tem como propósito fortalecer a capacidade científica e tecnológica da UFPE, promovendo o uso eficiente e seguro de sua infraestrutura, a colaboração interinstitucional e a produção de conhecimento por meio da pesquisa, do desenvolvimento metodológico e da formação de recursos humanos.</p>
-
-				</div>
-			</div>
-		</section>
-		<section class="secao secao--alt">
-			<div class="container">
-				<h2>Laboratórios do CIDIN</h2>
-				<div class="cartoes">
-					<article class="cartao">
-							<div class="cartao__cabeca"><h5 class="cartao__sigla"><a href="ldrd.html">LDRD</a></h5><img class="cartao__logo" src="img/logo_ldrd3.png" alt=""></div>
-							<p class="cartao__nome">Laboratório de Dosimetria Retrospectiva e Datação</p>
-							<p class="cartao__desc">Datação por TL, OSL e EPR, dosimetria retrospectiva e caracterização de materiais arqueométricos, geológicos e geomorfológicos.</p>
-
-							<span class="cartao__acao">Uso multiusuário</span>
-						</article>
-					<article class="cartao">
-							<div class="cartao__cabeca"><h5 class="cartao__sigla"><a href="lpn.html">LPN</a></h5></div>
-							<p class="cartao__nome">Pesquisa multiusuária</p>
-							<p class="cartao__desc">Infraestrutura de pesquisa compartilhada do CIDIN.</p>
-
-							<span class="cartao__acao">Uso multiusuário</span>
-						</article>
-				</div>
-				<article class="cartao cartao--largo">
-							<div class="cartao__cabeca"><h5 class="cartao__sigla"><a href="gamalab.html">GAMALAB</a></h5><img class="cartao__logo" src="img/GAMALAB_2-300x277.png" alt=""></div>
-							<p class="cartao__nome">Laboratório de Irradiação Gama de Altas Taxas de Dose</p>
-							<p class="cartao__desc">Irradiação gama para pesquisas em ciência dos materiais, nanotecnologia, farmacologia e ciências biológicas e da saúde.</p>
-
-							<span class="cartao__acao">Uso multiusuário</span>
-						</article>
-				<div class="botoes">
-					<a class="botao" href="multiusuario.html">Como solicitar o uso</a>
+					<h2 id="t-governanca">Quem decide</h2>
+					<p>O CIDIN é coordenado pela Profa. Dra. Viviane Khoury Asfora, com vice-coordenação do Prof. Dr. Vinicius Saito Monteiro de Barros.</p>
 					<a class="botao botao--contorno" href="cidin-equipe.html">Equipe e governança</a>
 				</div>
+				<dl class="cidin-orgaos">
+					<div><dt>Comitê Gestor</dt><dd>Define as diretrizes de funcionamento e a política de uso da infraestrutura.</dd></div>
+					<div><dt>Comissão de Usuários</dt><dd>Acompanha e avalia as atividades, identifica demandas e propõe melhorias nos procedimentos.</dd></div>
+				</dl>
+			</div>
+		</section>
+
+		<section class="secao" aria-labelledby="t-proposito">
+			<div class="container cidin-proposito">
+				<h2 id="t-proposito">Para que serve</h2>
+				<p>Fortalecer a capacidade científica e tecnológica da UFPE, com uso eficiente e seguro da infraestrutura, colaboração entre instituições e formação de pesquisadores em dosimetria e instrumentação nuclear.</p>
 			</div>
 		</section>
 	</main>

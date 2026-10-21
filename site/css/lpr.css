@@ -1,6 +1,6 @@
 /* LPR: identidade tipográfica, fotografias do acervo e conteúdo de serviços.
    Paleta do mosaico da página inicial; sem efeitos sobre outras páginas.
-   Composição: sigla + mosaico / navegação / destaque + lista de serviços. */
+   Composição: planta do levantamento radiométrico / navegação / destaque + lista de serviços. */
 .pagina-lpr {
   --lpr-verde: #174f3d;
   --lpr-claro: #e7efe9;
@@ -9,23 +9,12 @@
   --lpr-amarelo: #f2c200;
 }
 .pagina-lpr [hidden] { display: none !important; }
-.lpr-abertura { background: var(--lpr-claro); padding: 2rem 0 2.75rem; }
 .lpr-trilha { margin-bottom: 2rem; font-size: .85rem; color: var(--lpr-texto); }
 .lpr-trilha a { text-underline-offset: .2em; }
-.lpr-abertura__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
-.lpr-categoria { display: inline-block; background: var(--lpr-verde); color: #fff; font-size: .8rem; font-weight: 600; padding: .25rem .65rem; border-radius: 2px; margin-bottom: .6rem; }
-.lpr-abertura h1 { color: var(--lpr-verde); font-size: clamp(5.2rem, 9vw, 7.5rem); line-height: 1; letter-spacing: -.055em; font-weight: 750; margin: 0 0 .65rem; }
-.lpr-abertura__titulo { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; font-weight: 500; color: var(--lpr-verde); max-width: 24ch; margin: 0 0 .8rem; }
-.lpr-abertura__resumo { color: var(--lpr-texto); max-width: 45ch; font-size: 1rem; margin: 0; }
 .lpr-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin-top: 1.5rem; }
 .lpr-botao { display: inline-block; background: var(--lpr-verde); border: 1px solid var(--lpr-verde); color: #fff; padding: .65rem 1.1rem; font-size: .95rem; font-weight: 600; border-radius: 3px; text-decoration: none; transition: background-color .15s; }
 .lpr-botao:hover { background: #006647; }
 .lpr-link { color: var(--lpr-verde); text-underline-offset: .3em; font-size: .95rem; font-weight: 500; padding-block: .5rem; }
-.lpr-acervo { margin: 0; width: 100%; max-width: 420px; justify-self: end; }
-.lpr-acervo__mosaico { display: grid; grid-template-columns: .95fr 1fr; grid-template-rows: 142px 142px; gap: 8px; }
-.lpr-acervo img { display: block; height: 100%; width: 100%; object-fit: cover; min-height: 0; min-width: 0; }
-.lpr-acervo__principal { grid-row: span 2; }
-.lpr-acervo figcaption { font-size: .75rem; line-height: 1.5; color: var(--lpr-texto); margin-top: .75rem; }
 .lpr-corpo { background: var(--lpr-claro); padding: 0 0 clamp(2.5rem, 5vw, 4rem); }
 .lpr-paineis { background: #fff; border: 1px solid var(--lpr-linha); border-radius: 4px; padding: 0 clamp(1.25rem, 3vw, 2.5rem) 2.5rem; }
 .pagina-lpr .abas__lista { border-bottom: 1px solid var(--lpr-linha); gap: 1.5rem; margin: 0 0 2.25rem; padding-top: .5rem; scroll-margin-top: 95px; }
@@ -70,17 +59,9 @@
 .js .pagina-lpr .aba { padding-top: 0; }
 
 @media (max-width: 960px) {
-  .lpr-abertura__grade { grid-template-columns: 1fr 340px; gap: 2rem; }
-  .lpr-acervo__mosaico { grid-template-rows: 124px 124px; }
-  .lpr-abertura h1 { font-size: 5.5rem; }
 }
 @media (max-width: 720px) {
-  .lpr-abertura { padding-top: 1.5rem; padding-bottom: 2rem; }
   .lpr-trilha { margin-bottom: 1.5rem; }
-  .lpr-abertura__grade { grid-template-columns: 1fr; gap: 2rem; }
-  .lpr-abertura h1 { font-size: 5.5rem; }
-  .lpr-acervo { justify-self: start; max-width: 420px; }
-  .lpr-acervo__mosaico { grid-template-rows: 128px 128px; }
   .lpr-servicos { grid-template-columns: 1fr; gap: 1.5rem; }
   .lpr-servico-destaque { gap: 1.5rem; }
   .lpr-servico-destaque figure { align-items: center; }
@@ -97,9 +78,62 @@
 }
 @media (max-width: 380px) {
   .lpr-paineis { padding-inline: 1rem; }
-  .lpr-acervo__mosaico { grid-template-rows: 112px 112px; }
   .lpr-servico-destaque { padding: 1.25rem; }
   .lpr-servico-destaque figure { gap: .75rem; }
   .lpr-servico-destaque img { width: 95px; height: 107px; }
   .lpr-servico-destaque figcaption { font-size: .7rem; }
+}
+
+/* ------------------------------------------------------------------
+   Hero: a planta de um levantamento radiométrico é o elemento central.
+   Amarelo de sinalização de radiação só nos pontos de medida.
+   ------------------------------------------------------------------ */
+.lpr-hero { background: var(--lpr-claro); padding: 2rem 0 clamp(2.5rem, 5vw, 4rem); }
+.lpr-hero__grade { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.lpr-hero__sigla { display: flex; align-items: baseline; gap: .7rem; color: var(--lpr-texto); font-size: .95rem; margin: 0 0 1.2rem; }
+.lpr-hero__sigla strong { color: var(--lpr-verde); font-size: 1.7rem; font-weight: 750; letter-spacing: -.04em; line-height: 1; padding-right: .75rem; border-right: 2px solid var(--lpr-amarelo); }
+.pagina-lpr .lpr-hero h1 { color: var(--lpr-verde); font-size: clamp(2.3rem, 4.6vw, 3.6rem); font-weight: 650; line-height: 1.04; letter-spacing: -.045em; max-width: 13ch; margin: 0 0 1.2rem; }
+.lpr-hero__resumo { color: var(--lpr-texto); font-size: 1.08rem; line-height: 1.65; max-width: 44ch; margin: 0; }
+.lpr-hero__servicos { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.5rem; margin: 2.2rem 0 0; padding: 0; max-width: 32rem; }
+.lpr-hero__servicos li { border-top: 1px solid var(--lpr-linha); padding: .7rem 0; font-size: .9rem; font-weight: 550; color: var(--lpr-verde); }
+
+.lpr-hero__planta { margin: 0; min-width: 0; }
+.lpr-hero__prancha { background: #fff; border: 1px solid var(--lpr-linha); border-radius: 4px; padding: clamp(.9rem, 2vw, 1.4rem) clamp(.9rem, 2vw, 1.4rem) 1rem; }
+.lpr-planta { display: block; width: 100%; height: auto; font-family: inherit; }
+.lpr-planta__sala { fill: #fff; }
+.lpr-planta__vizinho { fill: #f3f7f4; stroke: none; }
+.lpr-planta__campo circle { fill: none; stroke: #f2c200; stroke-opacity: .55; stroke-width: 1.2; stroke-dasharray: 3 5; }
+.lpr-planta__mesa { fill: var(--lpr-claro); stroke: #9fb6a8; stroke-width: 1; }
+.lpr-planta__tubo { fill: var(--lpr-verde); }
+.lpr-planta__blindagem { fill: none; stroke: var(--lpr-verde); stroke-width: 7; stroke-linejoin: miter; }
+.lpr-planta__parede { fill: none; stroke: #9fb6a8; stroke-width: 2; }
+.lpr-planta__visor { stroke: #9cc9d9; stroke-width: 7; }
+.lpr-planta__porta { fill: none; stroke: #9fb6a8; stroke-width: 1.2; stroke-dasharray: 2 3; }
+.lpr-planta__sala-nome { fill: var(--lpr-verde); font-size: 14px; font-weight: 650; }
+.lpr-planta__nome { fill: var(--lpr-texto); font-size: 12px; }
+.lpr-ponto circle { fill: var(--lpr-amarelo); stroke: var(--lpr-verde); stroke-width: 2; }
+.lpr-ponto__id { fill: var(--lpr-verde); font-size: 10px; font-weight: 750; }
+.lpr-ponto__valor { fill: var(--lpr-verde); font-size: 13px; font-weight: 650; font-variant-numeric: tabular-nums; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+.lpr-ponto__valor tspan { font-size: 10px; font-weight: 500; fill: var(--lpr-texto); }
+
+/* Um único momento de movimento: os pontos aparecem na ordem da medição. */
+@media (prefers-reduced-motion: no-preference) {
+  .lpr-ponto { animation: lpr-medida .45s ease-out backwards; animation-delay: calc(.5s + var(--ordem) * .28s); }
+  @keyframes lpr-medida { from { opacity: 0; } to { opacity: 1; } }
+}
+
+.lpr-legenda { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin: .8rem 0 0; padding: .8rem 0 0; border-top: 1px solid var(--lpr-linha); font-size: .78rem; color: var(--lpr-texto); }
+.lpr-legenda li { display: flex; align-items: center; gap: .45rem; }
+.lpr-legenda__ponto { width: 12px; height: 12px; border-radius: 50%; background: var(--lpr-amarelo); border: 2px solid var(--lpr-verde); }
+.lpr-legenda__blindagem { width: 22px; height: 6px; background: var(--lpr-verde); }
+.lpr-legenda__campo { width: 22px; height: 0; border-top: 2px dashed #f2c200; }
+.lpr-hero__planta figcaption { font-size: .8rem; line-height: 1.55; color: var(--lpr-texto); margin-top: .8rem; max-width: 60ch; }
+
+@media (max-width: 900px) {
+  .lpr-hero__grade { grid-template-columns: 1fr; }
+  .pagina-lpr .lpr-hero h1 { max-width: 16ch; }
+}
+@media (max-width: 480px) {
+  .lpr-hero__servicos { grid-template-columns: 1fr; }
+  .pagina-lpr .lpr-hero h1 { font-size: 2.2rem; }
 }

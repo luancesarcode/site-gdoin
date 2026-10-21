@@ -1,0 +1,122 @@
+/* LMRI: área do cliente (entrar, redefinir senha e cadastro).
+   Usa as variáveis de lmri.css; só vale nas páginas .pagina-lmri-acesso. */
+
+.pagina-lmri-acesso [hidden] { display: none !important; }
+
+/* ------------------------------------------------------------ entrar */
+.acesso { background: var(--lmri-papel); border-bottom: 1px solid var(--lmri-linha); padding-block: 2rem clamp(3rem, 6vw, 5rem); }
+.acesso__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5.5rem); align-items: start; }
+.acesso__marca { width: 150px; height: auto; margin: 0 0 1.4rem -6px; }
+.pagina-lmri .acesso h1,
+.pagina-lmri .cadastro h1 { color: var(--lmri-verde); font-size: clamp(2.1rem, 4vw, 3rem); font-weight: 550; letter-spacing: -.045em; line-height: 1.05; margin-bottom: .8rem; }
+.acesso__resumo { color: var(--lmri-texto); font-size: 1.05rem; line-height: 1.65; max-width: 44ch !important; margin-bottom: 2rem; }
+
+.acesso__cartao { background: #fff; border: 1px solid var(--lmri-linha); border-top: 3px solid #f2c200; border-radius: 3px; padding: clamp(1.4rem, 3vw, 2.2rem); max-width: 30rem; }
+.pagina-lmri .acesso__form-titulo { font-size: 1.35rem; letter-spacing: -.02em; font-weight: 600; margin-bottom: 1.3rem; }
+.acesso__ajuda { color: var(--lmri-texto); font-size: .95rem; margin: -.5rem 0 1.3rem; }
+.js .acesso__form[data-acesso="recuperar"] { display: none; }
+.js .acesso__cartao.recuperando .acesso__form[data-acesso="entrar"] { display: none; }
+.js .acesso__cartao.recuperando .acesso__form[data-acesso="recuperar"] { display: block; }
+.acesso__form[data-acesso="recuperar"] { border-top: 1px solid var(--lmri-linha); margin-top: 2rem; padding-top: 2rem; }
+.js .acesso__form[data-acesso="recuperar"] { border-top: 0; margin-top: 0; padding-top: 0; }
+
+.acesso__enviar { width: 100%; margin-top: .4rem; font-size: 1rem; cursor: pointer; }
+.acesso__alternativa { margin: 1rem 0 0; text-align: center; }
+.acesso__cadastro { margin: 1.4rem 0 0; color: var(--lmri-texto); font-size: .95rem; }
+
+.acesso__aviso { margin-top: 1.3rem; padding: .9rem 1rem; background: var(--lmri-papel); border-left: 3px solid #f2c200; color: #2f4a3d; font-size: .9rem; line-height: 1.6; }
+.acesso__aviso a { color: var(--lmri-verde); }
+
+.acesso__lateral { padding-top: clamp(0rem, 6vw, 4.6rem); }
+.acesso__foto { margin: 0 0 2rem !important; }
+.acesso__foto img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 4px solid var(--lmri-verde); }
+.pagina-lmri .acesso__lateral h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -.02em; margin-bottom: .4rem; }
+.acesso__recursos { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.acesso__recursos > div { border-top: 1px solid var(--lmri-linha); padding: 1rem 0 .4rem; }
+.acesso__recursos dt { color: var(--lmri-verde); font-weight: 600; margin-bottom: .3rem; }
+.acesso__recursos dd { margin: 0; color: var(--lmri-texto); font-size: .88rem; line-height: 1.6; }
+
+.acesso-ajuda { padding-block: 2.2rem; }
+.acesso-ajuda__grade { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: .5rem 2.5rem; }
+.pagina-lmri .acesso-ajuda h2 { font-size: 1.2rem; font-weight: 600; letter-spacing: -.015em; margin: 0; }
+.acesso-ajuda p { margin: 0; color: var(--lmri-texto); font-size: .95rem; }
+.acesso-ajuda__contato { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.acesso-ajuda__contato a { color: var(--lmri-verde); font-weight: 550; text-underline-offset: .25em; }
+
+/* ------------------------------------------------------------ campos */
+.campo { display: grid; gap: .35rem; margin-bottom: 1.1rem; min-width: 0; align-content: start; }
+.campo label,
+.campo__rotulo-linha label { font-size: .9rem; font-weight: 550; color: #23392f; }
+.campo__rotulo-linha { display: flex; justify-content: space-between; align-items: baseline; }
+.campo__opcional { font-weight: 400; color: var(--lmri-texto); font-size: .82rem; }
+.campo input,
+.campo select { font: inherit; font-size: 1rem; color: #1c2620; background: #fff; border: 1px solid #9fb3a6; border-radius: 3px; padding: .7rem .8rem; width: 100%; min-height: 2.9rem; }
+.campo input:hover,
+.campo select:hover { border-color: var(--lmri-verde); }
+.campo input:focus-visible,
+.campo select:focus-visible { outline: 3px solid #f2c200; outline-offset: 1px; border-color: var(--lmri-verde); }
+.campo input[aria-invalid="true"],
+.campo select[aria-invalid="true"] { border-color: #a1321f; box-shadow: inset 3px 0 0 #a1321f; }
+.campo__erro { margin: 0; color: #a1321f; font-size: .85rem; line-height: 1.45; }
+.campo__ajuda { margin: 0; color: var(--lmri-texto); font-size: .82rem; line-height: 1.45; }
+.campo__mostrar { font: inherit; font-size: .82rem; font-weight: 550; color: var(--lmri-verde); background: none; border: 0; padding: .2rem 0; cursor: pointer; text-decoration: underline; text-underline-offset: .2em; }
+.campo-marcar { display: flex; align-items: center; gap: .6rem; font-size: .92rem; color: #2f4a3d; margin: .2rem 0 1.3rem; cursor: pointer; }
+.campo-marcar input { width: 1.15rem; height: 1.15rem; accent-color: var(--lmri-verde); flex-shrink: 0; }
+.campo-marcar--destaque { background: var(--lmri-papel); border: 1px solid var(--lmri-linha); border-radius: 3px; padding: .9rem 1rem; margin-bottom: 1.5rem; }
+
+/* ------------------------------------------------------------ cadastro */
+.cadastro { background: var(--lmri-papel); padding-block: 2rem clamp(3rem, 6vw, 5rem); }
+.cadastro__topo { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem 3rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+.cadastro__topo .acesso__resumo { margin-bottom: 0; }
+.cadastro__ja { color: var(--lmri-texto); font-size: .95rem; margin: 0; }
+.cadastro__grade { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+
+/* Trilho das etapas: é uma sequência real, por isso numerada */
+.etapas { list-style: none; margin: 0; padding: 0; position: sticky; top: 100px; }
+.etapas li { position: relative; display: flex; align-items: center; gap: .8rem; padding: .7rem 0; color: var(--lmri-texto); font-size: .95rem; }
+.etapas li + li::before { content: ""; position: absolute; left: calc(1rem - 1px); top: -.7rem; height: 1.4rem; border-left: 2px solid var(--lmri-linha); }
+.etapas__num { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid var(--lmri-linha); background: #fff; font-weight: 600; font-size: .85rem; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+.etapas li[aria-current="step"] { color: var(--lmri-verde); font-weight: 600; }
+.etapas li[aria-current="step"] .etapas__num { border-color: var(--lmri-verde); background: var(--lmri-verde); color: #fff; }
+.etapas li.feita { color: var(--lmri-verde); }
+.etapas li.feita .etapas__num { border-color: var(--lmri-verde); color: var(--lmri-verde); }
+.etapas li.feita + li::before,
+.etapas li[aria-current="step"]::before { border-color: var(--lmri-verde); }
+
+.cadastro__form { background: #fff; border: 1px solid var(--lmri-linha); border-top: 3px solid #f2c200; border-radius: 3px; padding: clamp(1.4rem, 3vw, 2.4rem); }
+.cadastro__obrigatorio { color: var(--lmri-texto); font-size: .85rem; margin-bottom: 1.6rem; }
+.js .cadastro__obrigatorio { margin-bottom: 1.2rem; }
+.etapa { border: 0; margin: 0; padding: 0; min-width: 0; }
+.etapa + .etapa { border-top: 1px solid var(--lmri-linha); margin-top: 2rem; padding-top: 2rem; }
+.js .etapa + .etapa { border-top: 0; margin-top: 0; padding-top: 0; }
+.js .etapa:not(.ativa) { display: none; }
+.etapa legend { padding: 0; font-size: 1.5rem; font-weight: 600; letter-spacing: -.025em; color: var(--lmri-verde); margin-bottom: .3rem; }
+.etapa__contagem { display: block; font-size: .82rem; font-weight: 500; letter-spacing: 0; color: var(--lmri-texto); margin-bottom: .25rem; }
+.etapa__ajuda { color: var(--lmri-texto); font-size: .95rem; margin-bottom: 1.6rem; }
+.campos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 1rem; }
+.campos .campo { grid-column: span 3; }
+.campos .campo--largo { grid-column: span 6; }
+.campos .campo--estreito { grid-column: span 2; }
+.campos + .campos { border-top: 1px dashed var(--lmri-linha); padding-top: 1.1rem; margin-top: .2rem; }
+.etapa__acoes { display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem; margin-top: 1rem; padding-top: 1.4rem; border-top: 1px solid var(--lmri-linha); }
+.etapa__acoes .lmri-botao { cursor: pointer; min-width: 11rem; }
+.cadastro__voltar { margin-right: auto; font: inherit; font-size: .95rem; font-weight: 550; color: var(--lmri-verde); background: none; border: 0; padding: .5rem 0; cursor: pointer; text-decoration: underline; text-underline-offset: .25em; }
+
+@media (max-width: 900px) {
+  .acesso__grade { grid-template-columns: 1fr; }
+  .acesso__lateral { padding-top: 0; }
+  .acesso__cartao { max-width: none; }
+  .acesso-ajuda__grade { grid-template-columns: 1fr; }
+  .cadastro__grade { grid-template-columns: 1fr; }
+  .etapas { position: static; display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .3rem; }
+  .etapas li { flex-direction: column; gap: .35rem; padding: 0; flex: 1 0 5.5rem; text-align: center; font-size: .78rem; line-height: 1.25; }
+  .etapas li + li::before { left: auto; right: calc(50% + 1.3rem); top: 1rem; width: calc(100% - 2.6rem); height: 0; border-left: 0; border-top: 2px solid var(--lmri-linha); }
+}
+@media (max-width: 560px) {
+  .acesso__recursos { grid-template-columns: 1fr; }
+  .campos .campo,
+  .campos .campo--estreito { grid-column: span 6; }
+  .etapa__acoes { flex-wrap: wrap-reverse; }
+  .etapa__acoes .lmri-botao { width: 100%; }
+  .cadastro__voltar { margin-right: 0; }
+}
