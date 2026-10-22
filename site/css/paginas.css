@@ -11,6 +11,8 @@
 .pag-cabeca__selo { display: inline-block; font-size: .8rem; font-weight: 600; background: var(--amarelo); color: var(--verde-escuro); border-radius: 999px; padding: .15rem .7rem; margin-bottom: .8rem; }
 .pag-cabeca__logo { margin: 0; background: #fff; border-radius: 6px; padding: .7rem 1rem; }
 .pag-cabeca__logo img { max-height: 70px; width: auto; }
+.pag-cabeca__logo--lpn { width: 360px; max-width: 100%; min-width: 0; background: transparent; padding: 0; }
+.pag-cabeca__logo--lpn img { width: 100%; height: auto; max-height: none; }
 
 /* Com foto: a imagem da faixa original ocupa a coluna direita, recortada */
 .pag-cabeca--foto { padding-bottom: 0; }
