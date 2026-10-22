@@ -31,6 +31,7 @@
 .lab-tile__logo { height: 98px; width: auto; max-width: 100%; object-fit: contain; object-position: left center; margin-bottom: 1.2rem; }
 .lab-tile__logo--lmri { width: 250px; height: 70px; margin-bottom: 1.3rem; }
 .lab-tile__logo--lpn { width: 220px; height: auto; }
+.lab-tile__logo--lpr { width: 350px; height: auto; }
 .lab-tile__logo--gama { width: 150px; height: 139px; margin-top: -.3rem; margin-bottom: .8rem; }
 .lab-tile h4.lab-tile__sigla { font-weight: 750; font-size: clamp(2.6rem, 4vw, 3.7rem); line-height: 1; letter-spacing: -.04em; color: #174f3d; margin: .15rem 0 1.2rem; }
 .lab-tile h4 { font-size: 1.1rem; line-height: 1.35; margin: 0 0 .6rem; color: #193b2d; }
