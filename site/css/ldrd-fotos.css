@@ -1,0 +1,27 @@
+/* Recortes transparentes com espaço próprio para o controle de ampliação. */
+.instalacoes .inst-foto { display: grid; gap: .75rem; }
+.instalacoes .inst-foto__acao {
+  position: static; justify-self: end; align-self: end;
+  width: max-content; max-width: 100%;
+}
+.inst-ambientes__foto .inst-foto { height: auto; min-height: 0; }
+.inst-ambientes__foto img { height: auto; object-fit: contain; }
+.inst-ambientes__foto .inst-foto__acao { margin-right: .75rem; }
+.inst-leitoras { align-items: start; }
+.instalacoes .inst-foto--equipamento {
+  height: auto; min-height: 0; padding: 0;
+  grid-template-rows: 300px auto; gap: 1rem;
+}
+.inst-foto--equipamento img {
+  width: 100%; height: 100%; min-height: 0; object-fit: contain;
+}
+.inst-lexy { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); }
+.instalacoes .inst-foto--lexsyg { grid-template-rows: 220px auto; }
+.inst-lexy .inst-foto--lexsyg img {
+  width: 100%; height: 100%; min-height: 0; object-fit: contain;
+}
+@media (max-width: 640px) {
+  .instalacoes .inst-foto--equipamento { grid-template-rows: 270px auto; }
+  .inst-lexy { grid-template-columns: 1fr; }
+  .inst-lexy .inst-foto--lexsyg { width: min(100%, 340px); }
+}
