@@ -57,17 +57,21 @@
 .lab-tile--acesso figcaption { position: absolute; bottom: 0; right: 0; left: 0; background: linear-gradient(transparent, rgba(6, 32, 22, .9)); color: #fff; font-size: .7rem; padding: 1.5rem .75rem .6rem; }
 .lab-tile__centro { font-size: .85rem; font-weight: 600; color: #f2c200; margin-bottom: 1.5rem; }
 .rede-labs__extensao { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid #bdcec2; }
-.lab-tile--extensao { grid-column: 1 / -1; min-height: 180px; }
+.lab-tile--extensao { grid-column: span 6; min-height: 230px; }
 .lab-tile--extensao .lab-tile__conteudo { flex-direction: row; gap: 2rem; align-items: center; }
 .lab-tile--extensao .lab-tile__conteudo > div { flex: 1; min-width: 0; }
 .lab-tile--extensao .lab-tile__logo { width: 160px; height: 100px; margin: 0; }
 .lab-tile--extensao h4.lab-tile__marca { margin: 0; flex-shrink: 0; }
+.lab-tile--rad .lab-tile__conteudo { flex-direction: column; align-items: flex-start; gap: 1rem; }
+.lab-tile--rad .lab-tile__logo { width: 260px; height: auto; }
+.lab-tile--rad .lab-tile__conteudo > div { width: 100%; }
 .lab-tile--extensao p { margin-bottom: .4rem; font-size: .87rem; }
 .lab-tile--extensao .lab-tile__nome-museu { color: #193b2d; font-size: 1.1rem; font-weight: 600; line-height: 1.35; margin-bottom: .6rem; }
 .lab-tile--extensao .lab-tile__acao { display: inline-block; }
 .rede-labs__nota { color: #53695b; font-size: .78rem; margin: 1.5rem 0 0; }
 
 @media (max-width: 1050px) {
+  .lab-tile--extensao .lab-tile__conteudo { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .lab-tile--lmri, .lab-tile--lpr, .lab-tile--gamalab, .lab-tile--ldrd { grid-column: span 6; }
   .lab-tile__conteudo { padding: 1.3rem; }
   .lab-tile__foto { flex-basis: 30%; }
@@ -86,6 +90,8 @@
   .lab-tile--extensao { min-height: 230px; }
   .lab-tile--extensao .lab-tile__conteudo { flex-direction: row; align-items: center; gap: 1.25rem; }
   .lab-tile--extensao .lab-tile__logo { width: 110px; height: auto; }
+  .lab-tile--rad .lab-tile__conteudo { flex-direction: column; align-items: flex-start; }
+  .lab-tile--rad .lab-tile__logo { width: 240px; }
 }
 @media (max-width: 560px) {
   .lab-tile--ldrd, .lab-tile--acesso { flex-direction: column; }
