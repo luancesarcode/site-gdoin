@@ -20,10 +20,7 @@
   display: inline-block; width: 100%; height: auto; max-width: none;
   aspect-ratio: auto; margin-bottom: .65rem; break-inside: avoid;
 }
-.lab-tile__foto { align-self: center; background: transparent; }
-.lab-tile__foto img { position: static; width: 100%; height: auto; aspect-ratio: auto; }
 .lab-tile:hover .lab-tile__foto img { transform: none; }
-.lab-tile--acesso figcaption { position: static; }
 .cidin-hero__fotos { align-items: start; }
 .cidin-hero__foto { background: transparent; }
 .cidin-hero__foto img,

@@ -36,14 +36,15 @@
 .lab-tile h4 a::after { content: ""; position: absolute; inset: 0; z-index: 2; }
 .lab-tile p { font-size: .92rem; line-height: 1.65; color: #4d6357; max-width: 42ch; margin-bottom: 1rem; }
 .lab-tile__acao { color: #006647; font-size: .85rem; font-weight: 600; margin-top: auto; padding-top: .8rem; text-decoration: underline; text-underline-offset: .3em; }
-.lab-tile__foto { flex: 0 0 34%; min-width: 0; margin: 0; overflow: hidden; position: relative; background: #d5e0d8; }
+.lab-tile__foto { flex: 0 0 34%; min-width: 0; margin: 0; align-self: stretch; overflow: hidden; position: relative; background: #d5e0d8; }
 .lab-tile__foto img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .4s ease; }
 .lab-tile__foto-recorte { width: 100%; height: 100%; position: absolute; inset: 0; display: block; transition: transform .4s ease; }
 .lab-tile:hover .lab-tile__foto img { transform: scale(1.035); }
 .lab-tile:hover .lab-tile__foto-recorte { transform: scale(1.035); }
 .lab-tile--gamalab .lab-tile__foto { flex-basis: 37%; }
+.lab-tile--gamalab .lab-tile__foto img { object-position: 56% center; }
 .lab-tile--ldrd .lab-tile__foto { flex-basis: 44%; }
-.lab-tile--ldrd .lab-tile__foto img { object-position: 60% center; }
+.lab-tile--ldrd .lab-tile__foto img { object-position: 55% center; }
 .lab-tile .lab-tile__nota { font-size: .8rem; line-height: 1.5; color: #647167; border-left: 2px solid #f2c200; padding-left: .6rem; margin-bottom: .5rem; }
 .lab-tile--lpr .lab-tile__conteudo { padding-right: 3rem; }
 .lab-tile--acesso { background: #174f3d; border-color: #174f3d; }
@@ -51,7 +52,8 @@
 .lab-tile--acesso p { color: #d9e7dd; }
 .lab-tile--acesso .lab-tile__acao { color: #fff; }
 .lab-tile--acesso .lab-tile__foto { flex-basis: 36%; }
-.lab-tile--acesso figcaption { position: absolute; bottom: 0; right: 0; left: 0; background: #174f3d; color: #fff; font-size: .7rem; padding: .35rem .6rem; }
+.lab-tile--acesso .lab-tile__foto img { object-position: 65% center; }
+.lab-tile--acesso figcaption { position: absolute; bottom: 0; right: 0; left: 0; background: linear-gradient(transparent, rgba(6, 32, 22, .9)); color: #fff; font-size: .7rem; padding: 1.5rem .75rem .6rem; }
 .lab-tile__centro { font-size: .85rem; font-weight: 600; color: #f2c200; margin-bottom: 1.5rem; }
 .rede-labs__extensao { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid #bdcec2; }
 .lab-tile--extensao { min-height: 230px; }
@@ -90,10 +92,15 @@
   .lab-tile--rad .lab-tile__conteudo { flex-direction: column; align-items: flex-start; }
   .lab-tile--rad .lab-tile__logo { width: 240px; }
 }
+@media (max-width: 560px) {
+  .lab-tile--ldrd, .lab-tile--acesso { flex-direction: column; }
+  .lab-tile--ldrd .lab-tile__foto { min-height: 220px; flex-basis: auto; }
+  .lab-tile--acesso .lab-tile__foto { min-height: 260px; flex-basis: auto; }
+}
 @media (max-width: 380px) {
   .lab-tile--lmri .lab-tile__foto { flex-basis: 27%; }
   .lab-tile--gamalab .lab-tile__foto, .lab-tile--ldrd .lab-tile__foto { flex-basis: 30%; }
   .lab-tile--acesso { flex-direction: column; }
-  .lab-tile--acesso .lab-tile__foto { min-height: 160px; flex-basis: auto; }
+  .lab-tile--acesso .lab-tile__foto { min-height: 240px; flex-basis: auto; }
   .lab-tile--extensao .lab-tile__conteudo { flex-direction: column; align-items: flex-start; }
 }
