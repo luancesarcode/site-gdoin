@@ -93,8 +93,8 @@
 .inst-modelos dt { font-weight: 600; font-size: 1.1rem; color: var(--inst-escuro); }
 .inst-modelos dt span { display: inline-block; margin-left: .5rem; font-size: .85rem; font-weight: 400; color: var(--inst-cinza); }
 .inst-modelos dd { margin: .3rem 0 0; font-size: .95rem; max-width: 46ch; }
-.inst-elementar figure { justify-self: center; width: min(100%, 340px); }
-.inst-elementar img { width: 100%; }
+.inst-elementar figure { justify-self: center; width: 100%; max-width: 520px; }
+.inst-elementar img { display: block; width: 100%; height: auto; }
 .inst-elementar figcaption { margin-top: .8rem; }
 .inst-gama { display: grid; grid-template-columns: .8fr 1.2fr; background: var(--inst-papel); align-items: center; }
 .inst-gama figure { width: 100%; max-width: 330px; justify-self: center; padding: 2rem; }
@@ -145,7 +145,7 @@ html:has(.inst-visualizador[open]) { overflow: hidden; }
   .inst-lexy { grid-template-columns: 1fr; gap: 1.25rem; }
   .inst-lexy img { justify-self: start; }
   .inst-elementar { grid-template-columns: 1fr; gap: 2rem; }
-  .inst-elementar figure { width: min(100%, 280px); }
+  .inst-elementar figure { width: 100%; }
   .inst-gama { grid-template-columns: 1fr; }
   .inst-gama figure { max-width: 280px; padding: 1.5rem 1.5rem 0; }
   .inst-gama > div { padding: 2rem 1.5rem; }
