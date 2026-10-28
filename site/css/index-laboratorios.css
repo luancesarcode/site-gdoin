@@ -1,16 +1,10 @@
 /* Mosaico de laboratórios da página inicial. Estilos isolados da navegação,
    das páginas dos laboratórios e das demais seções do site. */
 .rede-labs { background: #e7efe9; scroll-margin-top: 90px; }
-.rede-labs [hidden] { display: none !important; }
 .rede-labs__abertura { display: flex; justify-content: space-between; align-items: center; gap: 2rem; margin-bottom: 2rem; }
 .rede-labs__abertura h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; color: #174f3d; margin-bottom: .4rem; }
 .rede-labs__abertura p { max-width: 52ch; margin: 0; color: #4d6357; }
 .rede-labs__marca { width: 260px; height: auto; flex-shrink: 0; }
-.rede-labs__filtros { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 2rem; }
-.rede-labs__filtros button { font: inherit; font-size: .95rem; font-weight: 500; border: 1px solid #bdcec2; border-radius: 3px; padding: .6rem 1rem; color: #174f3d; background: transparent; cursor: pointer; transition: background-color .15s, color .15s; }
-.rede-labs__filtros button[aria-pressed="true"] { background: #174f3d; border-color: #174f3d; color: white; }
-.rede-labs__filtros button:hover { border-color: #006647; }
-.rede-labs__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .lab-grupo + .lab-grupo { margin-top: 2.75rem; }
 .lab-grupo__cabecalho { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem 2rem; margin-bottom: 1rem; }
 .lab-grupo__cabecalho h3 { color: #174f3d; font-size: 1.35rem; margin: 0; }
@@ -84,8 +78,6 @@
 @media (max-width: 720px) {
   .rede-labs__abertura { align-items: flex-start; flex-direction: column-reverse; gap: 1.5rem; }
   .rede-labs__marca { width: 225px; }
-  .rede-labs__filtros { gap: .4rem; }
-  .rede-labs__filtros button { font-size: .85rem; padding: .55rem .7rem; }
   .lab-mosaico { grid-template-columns: 1fr; }
   .lab-tile { grid-column: 1; min-height: 280px; }
   .lab-tile--lpr, .lab-tile--lpn { min-height: 240px; }

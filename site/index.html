@@ -7,7 +7,7 @@
 	<meta name="description" content="Grupo de pesquisa do Departamento de Energia Nuclear da UFPE: laboratórios de serviços, CIDIN multiusuário, Museu e RAD.">
 	<link rel="icon" type="image/svg+xml" href="img/marcas/icone-gdoin.svg">
 	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="css/index-laboratorios.css?v=20261022-lpr">
+	<link rel="stylesheet" href="css/index-laboratorios.css?v=20261028-todos">
 	<link rel="stylesheet" href="css/acervo.css?v=20261027-proporcoes">
 	<link rel="stylesheet" href="css/galeria-inicial.css?v=20261028-hover">
 </head>
@@ -69,17 +69,10 @@
 					<div><h2 id="rede-labs-titulo">Laboratórios do grupo</h2><p>Serviços especializados e infraestrutura compartilhada para pesquisa no DEN/UFPE.</p></div>
 					<img class="rede-labs__marca" src="img/logo_gdoin.png" width="300" height="81" alt="Grupo de Dosimetria e Instrumentação Nuclear">
 				</header>
-				<div class="rede-labs__filtros" role="group" aria-label="Filtrar laboratórios por tipo de atuação" hidden>
-					<button type="button" data-lab-filtro="todos" aria-pressed="true" aria-controls="labs-servicos labs-multiusuarios">Todos os laboratórios</button>
-					<button type="button" data-lab-filtro="servicos" aria-pressed="false" aria-controls="labs-servicos labs-multiusuarios">Serviços</button>
-					<button type="button" data-lab-filtro="multiusuarios" aria-pressed="false" aria-controls="labs-servicos labs-multiusuarios">Multiusuários</button>
-				</div>
-				<p class="rede-labs__status" data-lab-status role="status" aria-live="polite" aria-atomic="true"></p>
-
-				<section class="lab-grupo" id="labs-servicos" data-lab-grupo="servicos" aria-labelledby="labs-servicos-titulo">
+				<section class="lab-grupo" id="labs-servicos" aria-labelledby="labs-servicos-titulo">
 					<header class="lab-grupo__cabecalho"><h3 id="labs-servicos-titulo">Laboratórios de serviços</h3><p>Atendimento a hospitais, clínicas, indústrias e universidades.</p></header>
 					<div class="lab-mosaico">
-						<article class="lab-tile lab-tile--lmri" data-laboratorio>
+						<article class="lab-tile lab-tile--lmri">
 							<div class="lab-tile__conteudo">
 								<span class="lab-tile__tipo">Serviços</span>
 								<h4 class="lab-tile__marca"><a href="lmri/index.html"><img class="lab-tile__logo lab-tile__logo--lmri" src="img/LMRI_0b-2.png" width="432" height="120" alt="LMRI" loading="lazy"></a></h4>
@@ -88,7 +81,7 @@
 							</div>
 							<figure class="lab-tile__foto"><img src="img/acervo-2026/irradiacao-detalhe.jpg" width="960" height="1280" alt="Sistema de irradiação do LMRI com roda de posicionamento" loading="lazy"></figure>
 						</article>
-						<article class="lab-tile lab-tile--lpr" data-laboratorio>
+						<article class="lab-tile lab-tile--lpr">
 							<div class="lab-tile__conteudo">
 								<span class="lab-tile__tipo">Serviços</span>
 								<h4 class="lab-tile__marca"><a href="http://www.lpr.net.br/"><img class="lab-tile__logo lab-tile__logo--lpr" src="img/laboratorios/lpr-logo.png" width="1971" height="444" alt="LPR, Laboratório de Proteção Radiológica, DEN/UFPE" loading="lazy"></a></h4>
@@ -100,10 +93,10 @@
 					</div>
 				</section>
 
-				<section class="lab-grupo" id="labs-multiusuarios" data-lab-grupo="multiusuarios" aria-labelledby="labs-multi-titulo">
+				<section class="lab-grupo" id="labs-multiusuarios" aria-labelledby="labs-multi-titulo">
 					<header class="lab-grupo__cabecalho"><h3 id="labs-multi-titulo">Laboratórios multiusuários</h3><p>Integram o <a href="cidin.html">CIDIN</a>. Acesso para pesquisadores da UFPE e de outras instituições.</p></header>
 					<div class="lab-mosaico">
-						<article class="lab-tile lab-tile--gamalab" data-laboratorio>
+						<article class="lab-tile lab-tile--gamalab">
 							<div class="lab-tile__conteudo">
 								<span class="lab-tile__tipo lab-tile__tipo--multi">Multiusuário</span>
 								<h4 class="lab-tile__marca"><a href="gamalab.html"><img class="lab-tile__logo lab-tile__logo--gama" src="img/laboratorios/gamalab-logo.png" width="679" height="628" alt="GAMALAB, Laboratório de Irradiação Gama de Altas Taxas de Dose" loading="lazy"></a></h4>
@@ -112,7 +105,7 @@
 							</div>
 							<figure class="lab-tile__foto"><img src="img/acervo-2026/gammacell-completo.jpeg" width="960" height="1280" alt="Irradiador Gamma Cell 220 Excel do GAMALAB, visto por inteiro" loading="lazy"></figure>
 						</article>
-						<article class="lab-tile lab-tile--ldrd" data-laboratorio>
+						<article class="lab-tile lab-tile--ldrd">
 							<div class="lab-tile__conteudo">
 								<span class="lab-tile__tipo lab-tile__tipo--multi">Multiusuário</span>
 								<h4 class="lab-tile__marca"><a href="ldrd/index.html"><img class="lab-tile__logo" src="img/logo_ldrd3.png" width="196" height="251" alt="LDRD" loading="lazy"></a></h4>
@@ -121,7 +114,7 @@
 							</div>
 							<figure class="lab-tile__foto"><img src="img/acervo-2026/espectrometro-epr.jpg" width="1600" height="900" alt="Espectrômetro EPR Magnettech ESR5000, Bruker" loading="lazy"></figure>
 						</article>
-						<article class="lab-tile lab-tile--lpn" data-laboratorio>
+						<article class="lab-tile lab-tile--lpn">
 							<div class="lab-tile__conteudo">
 								<span class="lab-tile__tipo lab-tile__tipo--multi">Multiusuário</span>
 								<h4 class="lab-tile__marca"><a href="lpn.html"><img class="lab-tile__logo lab-tile__logo--lpn" src="img/laboratorios/lpn-logo.png" width="1642" height="958" alt="LPN, UFPE" loading="lazy"></a></h4>
@@ -202,6 +195,5 @@
 	</footer>
 
 	<script src="js/site.js"></script>
-	<script src="js/index-laboratorios.js"></script>
 </body>
 </html>
