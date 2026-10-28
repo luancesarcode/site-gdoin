@@ -14,33 +14,31 @@
 .pag-cabeca__logo--lpn { width: 360px; max-width: 100%; min-width: 0; background: transparent; padding: 0; }
 .pag-cabeca__logo--lpn img { width: 100%; height: auto; max-height: none; }
 
-/* Com foto: a imagem da faixa original ocupa a coluna direita, recortada */
+/* Fotos preservam a proporção original dentro da coluna direita. */
 .pag-cabeca--foto { padding-bottom: 0; }
 .pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: end; }
 .pag-cabeca--foto .pag-cabeca__texto { padding-bottom: 2.4rem; }
-.pag-cabeca__foto { margin: 0; align-self: stretch; }
-.pag-cabeca__foto img { width: 100%; height: 100%; min-height: 220px; max-height: 300px; object-fit: cover; border-radius: 6px 6px 0 0; display: block; }
+.pag-cabeca__foto { margin: 0; align-self: center; }
+.pag-cabeca__foto img { width: 100%; height: auto; display: block; }
 
 /* Abas com foto: imagem à direita do texto, sem quebrar as listas */
 .aba--foto > .aba__foto { float: right; width: min(34%, 320px); margin: 0 0 1.5rem 2.5rem; }
-.aba__foto img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+.aba__foto img { width: 100%; height: auto; }
 .aba__foto figcaption { font-size: .78rem; color: var(--suave); margin-top: .5rem; }
 .aba--foto::after { content: ""; display: block; clear: both; }
 .aba--foto .lista-simples--colunas { columns: 1; }
 
 .patentes { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 2rem; align-items: start; clear: both; margin-top: 1rem; }
 .patentes__foto { margin: 2.6rem 0 0; }
-.patentes__foto img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+.patentes__foto img { width: 100%; height: auto; }
 
 .equipe__topo--sem-foto { grid-template-columns: 1fr; }
 
 @media (max-width: 760px) {
   .pag-cabeca__grade, .pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: 1fr; gap: 1.2rem; }
   .pag-cabeca--foto .pag-cabeca__texto { padding-bottom: 0; }
-  .pag-cabeca__foto img { max-height: 200px; min-height: 0; aspect-ratio: 16 / 9; border-radius: 6px 6px 0 0; }
   .pag-cabeca__logo { justify-self: start; }
   .aba--foto > .aba__foto { float: none; width: 100%; max-width: 360px; margin: 0 0 1.2rem; }
-  .aba__foto img { aspect-ratio: 16 / 10; }
   .patentes { grid-template-columns: 1fr; }
   .patentes__foto { display: none; }
 }

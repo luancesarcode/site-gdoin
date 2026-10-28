@@ -22,7 +22,7 @@
 
 /* Destaque de notícias */
 .destaque { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
-.destaque__foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+.destaque__foto img { width: 100%; height: auto; }
 .destaque h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); letter-spacing: -.03em; line-height: 1.12; }
 .destaque h2 a { color: var(--verde-escuro); text-decoration: none; }
 .destaque h2 a:hover { text-decoration: underline; text-underline-offset: .2em; }
@@ -35,7 +35,7 @@
 .item { grid-column: 2; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.2rem 0 1.4rem; border-top: 1px solid var(--linha); }
 .item--midia { grid-template-columns: 220px minmax(0, 1fr); }
 .item__midia { display: block; }
-.item__midia img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 3px; }
+.item__midia img { width: 100%; height: auto; }
 .item h4 { font-size: 1.2rem; line-height: 1.3; margin: 0 0 .5rem; }
 .item h4 a { color: var(--verde-escuro); text-underline-offset: .2em; }
 .item p:not(.data) { color: var(--suave); font-size: .95rem; margin-bottom: .5rem; }
@@ -83,9 +83,9 @@
 .visita__comitiva dd { margin: .1rem 0 0; font-weight: 600; color: var(--verde-escuro); }
 .visita__nota { font-size: .9rem; }
 .visita__fotos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
-.visita__fotos img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; }
+.visita__fotos { align-items: start; }
+.visita__fotos img { width: 100%; height: auto; }
 .visita__foto--grande { grid-column: 1 / -1; }
-.visita__foto--grande img { aspect-ratio: 16 / 9; }
 .visita .pendente { align-self: end; }
 
 @media (max-width: 860px) {
@@ -103,6 +103,5 @@
 /* Próximos eventos com a foto de auditório do site original */
 .cont-proximos--foto { display: grid; grid-template-columns: 260px minmax(0, 1fr) auto; gap: 1.5rem 2.5rem; align-items: center; }
 .cont-proximos__foto { margin: 0; }
-.cont-proximos__foto img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; }
+.cont-proximos__foto img { width: 100%; height: auto; }
 @media (max-width: 860px) { .cont-proximos--foto { grid-template-columns: 1fr; } .cont-proximos__foto { max-width: 360px; } }
-.item__midia img[src*="alepe"] { aspect-ratio: 1 / 1; }
