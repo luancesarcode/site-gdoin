@@ -1,4 +1,4 @@
-/* Extensão (serviços e consultoria) e RAD. O guia "Preciso de…" é o elemento
+/* Extensão (serviços e consultoria). O guia "Preciso de…" é o elemento
    central: cada necessidade leva ao laboratório que atende. */
 
 .cont-trilha { font-size: .82rem; color: var(--suave); margin-bottom: 1.4rem; }
@@ -48,23 +48,10 @@
 .ext-materiais dt { font-weight: 600; color: var(--verde-escuro); margin-bottom: .2rem; }
 .ext-materiais dd { margin: 0; color: var(--suave); font-size: .92rem; }
 
-/* RAD */
-.rad-hero { background: #fff; border-bottom: 1px solid var(--linha); padding-block: 1.6rem clamp(2.5rem, 5vw, 4rem); }
-.rad-hero__titulo { margin: 1rem 0 1.2rem; }
-.rad-hero__titulo img { width: min(560px, 100%); height: auto; }
-.rad-hero p:not(.cont-trilha) { color: var(--suave); font-size: 1.15rem; max-width: 50ch; margin: 0; }
-.rad-origem { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem 4rem; align-items: start; }
-.rad-origem p { color: var(--suave); max-width: 56ch; }
-.rad-produtos { list-style: none; margin: 0; padding: 0; border-top: 3px solid #1d9ad6; }
-.rad-produtos li { padding: 1rem 0; border-bottom: 1px solid var(--linha); font-weight: 600; color: var(--tinta); font-size: 1.05rem; }
-.rad-pendente > * { max-width: 760px; }
-.rad-pendente p { color: var(--suave); }
-
 @media (max-width: 860px) {
   .guia a { grid-template-columns: 1fr; gap: .25rem; }
   .guia__quem { order: -1; font-size: .9rem; }
   .frentes { grid-template-columns: 1fr; }
-  .rad-origem { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .frente { grid-template-columns: 1fr; }
