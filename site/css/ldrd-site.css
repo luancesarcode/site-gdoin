@@ -40,10 +40,16 @@
 .ldrd-prioridade li::before { content: counter(prioridade) "º"; font-weight: 700; color: var(--ldrd-verde); font-size: 1.1rem; }
 
 /* Chamada da home */
-.lab-chamada-ldrd { background: var(--ldrd-verde); color: #fff; padding-block: clamp(2.5rem, 5vw, 3.5rem); }
-.lab-chamada-ldrd__grade { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem 3rem; flex-wrap: wrap; }
+.lab-chamada-ldrd { position: relative; background: #0c2a22 url("../img/lmri/faixa-radiacao.jpg") center / cover no-repeat; color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); isolation: isolate; }
+.lab-chamada-ldrd::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10, 34, 27, .25) 0%, rgba(10, 34, 27, .85) 55%); z-index: -1; }
+.lab-chamada-ldrd__grade { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.5rem 3rem; padding-left: max(var(--gutter), clamp(0rem, 22vw, 18rem)); }
 .pagina-ldrd .lab-chamada-ldrd h2 { color: #fff; font-size: clamp(1.5rem, 2.8vw, 2rem); margin-bottom: .4rem; }
 .lab-chamada-ldrd p { color: #d9e7df; margin: 0; max-width: 55ch; }
+
+@media (max-width: 960px) {
+  .lab-chamada-ldrd__grade { grid-template-columns: 1fr; justify-items: start; padding-left: var(--gutter); }
+  .lab-chamada-ldrd::before { background: rgba(10, 34, 27, .78); }
+}
 
 @media (max-width: 720px) {
   .ldrd-regras { grid-template-columns: 1fr; }
