@@ -15,12 +15,12 @@ body[class*="lab-"] {
 .lab-vinculo__barra { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 36px; padding-block: .15rem; }
 .lab-vinculo p { margin: 0; }
 .lab-vinculo a { color: #fff; text-underline-offset: .2em; white-space: nowrap; }
-.lab-vinculo .lab-vinculo__gdoin { display: inline-flex; align-items: center; gap: .45rem; flex-shrink: 0; padding: .1rem .45rem; background: #fff; color: var(--lab-cor); border-radius: 2px; text-decoration: none; }
+.lab-vinculo .lab-vinculo__gdoin { display: inline-flex; align-items: center; gap: .45rem; flex-shrink: 0; padding: .1rem .45rem; background: transparent; color: #fff; text-decoration: none; }
 .lab-vinculo__gdoin img { width: 26px; height: 26px; }
 .lab-vinculo__destino { font-size: .78rem; line-height: 1.25; }
 .lab-vinculo__destino strong { font-size: inherit; font-weight: 700; }
 .lab-vinculo__seta { font-size: 1rem; line-height: 1; }
-.lab-vinculo .lab-vinculo__gdoin:hover { background: #fff8de; }
+.lab-vinculo__gdoin:hover .lab-vinculo__destino { text-decoration: underline; text-underline-offset: .2em; }
 .lab-vinculo__gdoin:focus-visible { outline: 2px solid var(--lab-acento); outline-offset: 1px; }
 
 /* Cabeçalho */
