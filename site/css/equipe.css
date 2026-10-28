@@ -1,0 +1,78 @@
+/* Página da equipe: tipografia editorial, fotografia integral e listas abertas. */
+.pagina-equipe { --equipe-papel: #f6f7f2; --equipe-fio: #d7ded6; }
+.equipe-abertura { background: var(--equipe-papel); padding: 2rem 0 2.75rem; }
+.equipe-trilha { margin: 0 0 2rem; font-size: .78rem; color: var(--suave); }
+.equipe-trilha a { color: inherit; text-decoration: none; }
+.equipe-trilha a:hover { text-decoration: underline; text-underline-offset: .25em; }
+.equipe-trilha span { margin-inline: .6rem; color: #8b978d; }
+.equipe-abertura__grade { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.equipe-sobretitulo { display: flex; align-items: center; gap: .75rem; color: var(--verde); font-size: .73rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 1.25rem; }
+.equipe-sobretitulo::before { content: ""; width: 2rem; height: 2px; background: #b59939; }
+.equipe-abertura h1 { font: 400 clamp(4.5rem, 7vw, 6.5rem)/1.05 Georgia, "Times New Roman", serif; color: var(--verde-escuro); letter-spacing: -.055em; margin: 0 0 1.4rem; }
+.equipe-abertura__resumo { color: #526157; font-size: 1.12rem; line-height: 1.8; max-width: 35ch; margin: 0; }
+.equipe-abertura__foto { min-width: 0; margin: 0; }
+.equipe-abertura__foto img { display: block; width: 100%; height: auto; }
+.equipe-abertura__foto figcaption { margin-top: .8rem; color: #65736a; font-size: .73rem; line-height: 1.5; }
+.equipe-indice { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .7rem 1.4rem; }
+.equipe-indice a { font-size: .79rem; font-weight: 500; color: var(--verde-escuro); text-decoration: none; border-bottom: 1px solid #aabbb0; padding-bottom: .3rem; }
+.equipe-indice a:hover { border-color: var(--verde); color: var(--verde); }
+.equipe-secao { padding-block: clamp(3rem, 6vw, 5rem); scroll-margin-top: 100px; }
+.equipe-secao + .equipe-secao:not(.equipe-formacao) { padding-top: 0; }
+.equipe-secao__cabecalho { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 1rem; align-items: start; margin-bottom: 2rem; }
+.equipe-secao__numero { color: #74867a; font-size: .75rem; padding-top: .7rem; letter-spacing: .08em; }
+.equipe-secao__cabecalho h2 { font: 400 clamp(2rem, 3.5vw, 2.75rem)/1.18 Georgia, "Times New Roman", serif; letter-spacing: -.03em; color: var(--verde-escuro); margin: 0 0 .6rem; }
+.equipe-secao__cabecalho p { max-width: 64ch; margin: 0; color: var(--suave); font-size: .95rem; }
+.equipe-docentes, .equipe-apoio { list-style: none; padding: 0; margin: 0 0 0 60px; display: grid; column-gap: 3rem; }
+.equipe-docentes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.equipe-docentes li { padding: 1.4rem 0 1.65rem; border-top: 1px solid var(--equipe-fio); }
+.equipe-docentes__titulo { display: block; color: var(--suave); font-size: .75rem; margin-bottom: .35rem; }
+.equipe-docentes__nome { display: block; color: #214d37; font-size: clamp(1.1rem, 1.7vw, 1.35rem); font-weight: 500; line-height: 1.5; }
+.equipe-apoio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.equipe-apoio li { padding: 1.1rem 0; border-top: 1px solid var(--equipe-fio); font-size: .95rem; line-height: 1.6; }
+.equipe-governanca { margin: 2.5rem 0 0 60px; padding: 1.5rem 1.75rem; background: #edf2ed; display: flex; justify-content: space-between; align-items: center; gap: 1rem 2rem; }
+.equipe-governanca p { margin: 0; font-size: .88rem; color: var(--suave); max-width: 55ch; }
+.equipe-governanca a { display: inline-flex; gap: 1rem; align-items: center; color: var(--verde-escuro); font-size: .85rem; font-weight: 600; text-decoration: none; }
+.equipe-governanca a span { flex-shrink: 0; }
+.equipe-governanca a:hover { text-decoration: underline; text-underline-offset: .25em; }
+.equipe-formacao { background: var(--equipe-papel); }
+.equipe-formacao .equipe-secao__cabecalho { margin-bottom: 2.5rem; }
+.equipe-arquivo { margin-left: 60px; }
+.equipe-ano { border-top: 1px solid #cbd7cd; }
+.equipe-ano:last-child { border-bottom: 1px solid #cbd7cd; }
+.equipe-ano > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 1.25rem; padding: 1.25rem 0; color: var(--verde-escuro); }
+.equipe-ano > summary::-webkit-details-marker { display: none; }
+.equipe-ano__titulo { font: 400 2rem/1.2 Georgia, "Times New Roman", serif; letter-spacing: -.035em; margin: 0; }
+.equipe-ano__quantidade { font-size: .76rem; color: var(--suave); }
+.equipe-ano > summary::after { content: "+"; margin-left: auto; font-size: 1.5rem; font-weight: 300; line-height: 1; }
+.equipe-ano[open] > summary::after { content: "−"; }
+.equipe-ano > summary:hover .equipe-ano__titulo { color: var(--verde); }
+.equipe-arquivo .conc { margin: 0 0 1.25rem 7rem; gap: 0; }
+.equipe-arquivo .conc li { padding: 1rem 0 1.15rem; border-top: 1px solid #e0e6dc; gap: .3rem; }
+.equipe-arquivo .conc strong { font-size: 1.04rem; font-weight: 500; color: #214d37; }
+.equipe-arquivo .conc li > span:last-child { max-width: 80ch; font-size: .87rem; line-height: 1.75; }
+.equipe-arquivo .conc__nivel { padding: 0; border-radius: 0; font-size: .67rem; letter-spacing: .08em; text-transform: uppercase; background: transparent; color: #617466; }
+.equipe-arquivo .conc__nivel--do { color: var(--verde); }
+@media (max-width: 900px) {
+  .equipe-abertura__grade { grid-template-columns: 1fr 1.1fr; gap: 2rem; }
+  .equipe-abertura__resumo { font-size: 1rem; }
+  .equipe-apoio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .equipe-governanca { align-items: start; flex-direction: column; }
+}
+@media (max-width: 680px) {
+  .equipe-abertura { padding: 1.5rem 0 2rem; }
+  .equipe-trilha { margin-bottom: 2rem; }
+  .equipe-abertura__grade { grid-template-columns: 1fr; gap: 2rem; }
+  .equipe-abertura h1 { font-size: 4.5rem; margin-bottom: 1rem; }
+  .equipe-sobretitulo { margin-bottom: 1rem; }
+  .equipe-abertura__resumo { max-width: 42ch; }
+  .equipe-indice { margin-top: 1.5rem; }
+  .equipe-secao__cabecalho { grid-template-columns: 26px minmax(0, 1fr); gap: .75rem; }
+  .equipe-docentes, .equipe-apoio, .equipe-governanca, .equipe-arquivo { margin-left: 0; }
+  .equipe-docentes { column-gap: 1.5rem; }
+  .equipe-apoio { column-gap: 1.5rem; }
+  .equipe-governanca { padding: 1.25rem; }
+  .equipe-arquivo .conc { margin-left: 0; }
+}
+@media (max-width: 380px) {
+  .equipe-docentes, .equipe-apoio { grid-template-columns: 1fr; }
+}
