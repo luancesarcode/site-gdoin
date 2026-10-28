@@ -48,6 +48,13 @@
 .lab-chamada p { color: #d6e4dc; margin: 0; }
 .lab-chamada__link { color: #fff; font-weight: 550; text-underline-offset: .3em; }
 
+/* Contato com o mesmo fundo das chamadas dos laboratórios. */
+.lmri-contato { position: relative; background: #0c2a22 url("../img/lmri/faixa-radiacao.jpg") center / cover no-repeat; isolation: isolate; }
+.lmri-contato::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10, 34, 27, .25) 0%, rgba(10, 34, 27, .85) 55%); z-index: -1; }
+@media (max-width: 800px) {
+  .lmri-contato::before { background: rgba(10, 34, 27, .78); }
+}
+
 /* Passos da solicitação: sequência real do sistema do LMRI */
 .lab-passos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; counter-reset: passo; }
 .lab-passos li { counter-increment: passo; position: relative; padding: 3.2rem 0 0; border-top: 2px solid var(--lmri-verde); }
