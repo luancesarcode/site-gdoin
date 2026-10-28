@@ -16,6 +16,7 @@
   </defs>
 
   
+  <circle cx="40" cy="40.5" r="42" fill="#fff" />
   <use href="#gdin-swoosh" fill="url(#gdin-green)" />
   <use href="#gdin-swoosh" fill="url(#gdin-yellow)" transform="rotate(180 40 40.5)" />
   <g fill="#4d4d4d" transform="translate(39.5 41.5)">
