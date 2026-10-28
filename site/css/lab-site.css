@@ -12,17 +12,16 @@ body[class*="lab-"] {
 
 /* Faixa de vínculo: identificação institucional e acesso visível ao GDOIN. */
 .lab-vinculo { background: var(--lab-cor); color: #dce8e0; font-size: .8rem; }
-.lab-vinculo__barra { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 68px; padding-block: .4rem; }
+.lab-vinculo__barra { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 36px; padding-block: .15rem; }
 .lab-vinculo p { margin: 0; }
 .lab-vinculo a { color: #fff; text-underline-offset: .2em; white-space: nowrap; }
-.lab-vinculo .lab-vinculo__gdoin { display: inline-flex; align-items: center; gap: .9rem; flex-shrink: 0; padding: .35rem .65rem; background: #fff; color: var(--lab-cor); border-radius: 3px; text-decoration: none; }
-.lab-vinculo__gdoin img { width: 180px; height: auto; }
-.lab-vinculo__destino { display: grid; gap: .15rem; line-height: 1.1; }
-.lab-vinculo__destino > span { font-size: .65rem; }
-.lab-vinculo__destino strong { font-size: .96rem; font-weight: 700; letter-spacing: .025em; }
-.lab-vinculo__seta { font-size: 1.3rem; line-height: 1; }
+.lab-vinculo .lab-vinculo__gdoin { display: inline-flex; align-items: center; gap: .45rem; flex-shrink: 0; padding: .1rem .45rem; background: #fff; color: var(--lab-cor); border-radius: 2px; text-decoration: none; }
+.lab-vinculo__gdoin img { width: 26px; height: 26px; }
+.lab-vinculo__destino { font-size: .78rem; line-height: 1.25; }
+.lab-vinculo__destino strong { font-size: inherit; font-weight: 700; }
+.lab-vinculo__seta { font-size: 1rem; line-height: 1; }
 .lab-vinculo .lab-vinculo__gdoin:hover { background: #fff8de; }
-.lab-vinculo__gdoin:focus-visible { outline: 3px solid var(--lab-acento); outline-offset: 3px; }
+.lab-vinculo__gdoin:focus-visible { outline: 2px solid var(--lab-acento); outline-offset: 1px; }
 
 /* Cabeçalho */
 .topo--lab .topo__barra { min-height: 80px; }
@@ -44,10 +43,7 @@ body[class*="lab-"] {
 	.topo--lab .menu .lab-acao { display: inline-block; }
 }
 @media (max-width: 520px) {
-	.lab-vinculo__barra { justify-content: center; min-height: 58px; }
-	.lab-vinculo .lab-vinculo__gdoin { gap: .65rem; padding: .35rem .6rem; }
-	.lab-vinculo__gdoin img { width: 138px; }
-	.lab-vinculo__destino strong { font-size: .9rem; }
+	.lab-vinculo__barra { justify-content: center; }
 }
 
 /* Cabeçalho das páginas internas: claro, na cor de papel do laboratório */
