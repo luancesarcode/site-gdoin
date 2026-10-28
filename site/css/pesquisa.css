@@ -1,0 +1,54 @@
+/* Linhas de pesquisa em uma lista editorial, com título e descrição alinhados. */
+.pesquisa-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 260px);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+  margin-bottom: 3rem;
+}
+.pesquisa-intro h2 {
+  font: 400 clamp(2.2rem, 4vw, 3rem)/1.15 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+  color: var(--verde-escuro);
+  margin: 0 0 1.5rem;
+}
+.pesquisa-intro .texto { max-width: 70ch; }
+.pesquisa-intro .texto p { font-size: .97rem; line-height: 1.85; color: var(--suave); }
+.pesquisa-intro .texto p:last-child { margin-bottom: 0; }
+.pesquisa-intro__foto { margin: .3rem 0 0; }
+.pesquisa-intro__foto img { width: 100%; height: auto; }
+.pesquisa-intro__foto figcaption { font-size: .73rem; line-height: 1.6; margin-top: .75rem; color: var(--suave); }
+.pesquisa-areas { list-style: none; margin: 0; padding: 0; counter-reset: area; }
+.pesquisa-areas li {
+  counter-increment: area;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, .95fr) minmax(0, 1.2fr);
+  column-gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: baseline;
+  padding: 1.75rem 0;
+  border-top: 1px solid #d9e1d9;
+}
+.pesquisa-areas li:last-child { border-bottom: 1px solid #d9e1d9; }
+.pesquisa-areas li::before {
+  content: counter(area, decimal-leading-zero);
+  grid-column: 1;
+  font: 400 1.2rem/1.4 Georgia, "Times New Roman", serif;
+  color: #667b6c;
+}
+.pesquisa-areas h3 {
+  grid-column: 2; margin: 0;
+  color: #214d37;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 500; line-height: 1.5; letter-spacing: -.015em;
+}
+.pesquisa-areas p { grid-column: 3; margin: 0; font-size: .93rem; line-height: 1.8; color: var(--suave); }
+@media (max-width: 800px) {
+  .pesquisa-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 190px); gap: 2rem; }
+}
+@media (max-width: 620px) {
+  .pesquisa-intro { grid-template-columns: 1fr; margin-bottom: 2rem; }
+  .pesquisa-intro__foto { max-width: 230px; }
+  .pesquisa-areas li { grid-template-columns: 1.75rem minmax(0, 1fr); gap: .65rem 1rem; padding-block: 1.5rem; }
+  .pesquisa-areas h3 { grid-column: 2; grid-row: 1; font-size: 1.15rem; }
+  .pesquisa-areas p { grid-column: 2; grid-row: 2; font-size: .9rem; }
+}
