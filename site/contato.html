@@ -7,7 +7,7 @@
 	<meta name="description" content="Contato do Grupo de Dosimetria e Instrumentação Nuclear.">
 	<link rel="icon" type="image/svg+xml" href="img/marcas/icone-gdoin.svg?v=20261028-fundo-contido">
 	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="css/contato.css">
+	<link rel="stylesheet" href="css/contato.css?v=20261028-painel-compacto">
 </head>
 <body class="pagina-contato">
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -49,7 +49,7 @@
 						<form class="contato-form" data-contato-form aria-labelledby="contato-form-titulo" hidden>
 							<p class="contato-form__obrigatorios">Os campos com * são obrigatórios.</p>
 							<div class="contato-form__campos">
-								<div class="contato-campo contato-campo--inteiro">
+								<div class="contato-campo">
 									<label for="ct-laboratorio">Para qual laboratório? *</label>
 									<select id="ct-laboratorio" name="laboratorio" aria-describedby="ct-destino" required>
 										<option value="">Selecione um laboratório</option>
@@ -58,11 +58,11 @@
 									</select>
 									<p class="contato-form__destino" id="ct-destino" data-contato-destino aria-live="polite">Escolha o laboratório que receberá sua mensagem.</p>
 								</div>
+								<div class="contato-campo"><label for="ct-assunto">Assunto *</label><input id="ct-assunto" name="assunto" maxlength="150" required></div>
 								<div class="contato-campo"><label for="ct-nome">Nome *</label><input id="ct-nome" name="nome" autocomplete="name" maxlength="120" required></div>
 								<div class="contato-campo"><label for="ct-instituicao">Instituição <small>(opcional)</small></label><input id="ct-instituicao" name="instituicao" autocomplete="organization" maxlength="160"></div>
 								<div class="contato-campo"><label for="ct-email">E-mail *</label><input id="ct-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
 								<div class="contato-campo"><label for="ct-telefone">Telefone <small>(opcional)</small></label><input id="ct-telefone" name="telefone" type="tel" autocomplete="tel" maxlength="40"></div>
-								<div class="contato-campo contato-campo--inteiro"><label for="ct-assunto">Assunto *</label><input id="ct-assunto" name="assunto" maxlength="150" required></div>
 								<div class="contato-campo contato-campo--inteiro"><label for="ct-mensagem">Sua mensagem *</label><textarea id="ct-mensagem" name="mensagem" rows="5" maxlength="3000" placeholder="Descreva o serviço, a análise ou a informação de que você precisa." required></textarea></div>
 							</div>
 							<div class="contato-form__rodape"><button class="contato-enviar" type="submit">Continuar no e-mail</button><p class="contato-form__ajuda">A mensagem será aberta no seu aplicativo de e-mail para você revisar e enviar.</p></div>

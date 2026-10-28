@@ -91,3 +91,36 @@
   .contato-laboratorio__canais { grid-column: 1 / -1; }
   .contato-laboratorio__email { font-size: .9rem; }
 }
+
+/* Formulário completo na primeira tela de computadores e notebooks. */
+@media (min-width: 761px) {
+  .contato-abertura { padding: .65rem 0 .8rem; }
+  .contato-trilha { font-size: .75rem; line-height: 1.4; margin-bottom: .4rem; }
+  .contato-abertura__grade { align-items: center; gap: 1rem; }
+  .contato-abertura h1 { font-size: 1.8rem; line-height: 1.1; margin-bottom: .3rem; }
+  .contato-abertura__grade p { max-width: none; font-size: .85rem; line-height: 1.45; }
+  .contato-telefone span { font-size: .75rem; }
+  .contato-telefone a { font-size: 1.3rem; line-height: 1.4; }
+  .contato-painel { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); scroll-margin-top: 88px; }
+  .contato-mensagem { padding: 1rem 1.25rem; }
+  .contato-mensagem h2 { font-size: 1.55rem; margin-bottom: .25rem; }
+  .contato-mensagem__intro { font-size: .82rem; line-height: 1.4; margin-bottom: .55rem; }
+  .contato-form__obrigatorios { font-size: .7rem; line-height: 1.4; margin-bottom: .5rem; }
+  .contato-form__campos { gap: .55rem .85rem; }
+  .contato-campo label { font-size: .775rem; line-height: 1.35; margin-bottom: .25rem; }
+  .contato-campo label small { font-size: .72rem; }
+  .contato-campo input, .contato-campo select, .contato-campo textarea { font-size: .875rem; padding: .35rem .6rem; }
+  .contato-campo input, .contato-campo select { min-height: 36px; height: 36px; }
+  .contato-campo textarea { min-height: 64px; height: clamp(64px, 10vh, 80px); }
+  .contato-campo textarea::placeholder { font-size: .8rem; }
+  .contato-form__destino { font-size: .7rem; line-height: 1.35; margin-top: .2rem; }
+  .contato-form__rodape { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .8rem; margin-top: .65rem; }
+  .contato-enviar { font-size: .82rem; padding: .5rem .85rem; }
+  .contato-form__ajuda { font-size: .72rem; line-height: 1.4; margin: 0; }
+  .contato-local__mapa { min-height: 0; }
+  .contato-local__endereco { padding: .9rem 1.25rem; }
+  .contato-local h2 { font-size: 1rem; margin-bottom: .35rem; }
+  .contato-local address { font-size: .8rem; line-height: 1.45; }
+  .contato-local__acoes { gap: .4rem 1rem; margin-top: .5rem; }
+  .contato-local__acoes a { font-size: .75rem; }
+}
