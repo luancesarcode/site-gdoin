@@ -52,3 +52,79 @@
   .pesquisa-areas h3 { grid-column: 2; grid-row: 1; font-size: 1.15rem; }
   .pesquisa-areas p { grid-column: 2; grid-row: 2; font-size: .9rem; }
 }
+
+/* Cooperações: mapa vetorial local e diretório por país. */
+.cooperacoes { scroll-margin-top: 100px; }
+.cooperacoes [hidden] { display: none !important; }
+.cooperacoes-intro { display: grid; grid-template-columns: .65fr 1.35fr; gap: 2rem 4rem; margin-bottom: 2.5rem; align-items: start; }
+.cooperacoes-intro h2 { font: 400 clamp(2.2rem, 4vw, 3rem)/1.15 Georgia, "Times New Roman", serif; letter-spacing: -.035em; color: var(--verde-escuro); margin: 0; }
+.cooperacoes-intro p { color: var(--suave); font-size: .97rem; line-height: 1.85; margin: 0; max-width: 70ch; }
+.rede-mapa { margin: 0; background: radial-gradient(ellipse at 65% 35%, #234d3c, #10372d 70%); color: #fff; }
+.rede-mapa__cabecalho { padding: 1.6rem 2rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.rede-mapa__cabecalho p { color: #c4d4c6; text-transform: uppercase; font-size: .65rem; letter-spacing: .13em; margin: 0 0 .35rem; }
+.rede-mapa__cabecalho h3 { margin: 0; font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 400; color: #fff; }
+.rede-mapa__pausa { font: inherit; font-size: .73rem; color: #e1eadf; border: 1px solid #6b8a77; background: transparent; border-radius: 3px; padding: .45rem .75rem; cursor: pointer; flex-shrink: 0; }
+.rede-mapa__pausa:hover { border-color: #e0d19c; color: #fff; }
+.rede-mapa svg { display: block; width: 100%; height: auto; overflow: hidden; }
+.mapa-grade { opacity: .12; }
+.mapa-pais { fill: #679074; stroke: #8cab8f; stroke-width: .5; transition: opacity .3s; }
+.mapa-pais--origem { fill: #8bb895; stroke: #b4d2ac; }
+.mapa-conexao { color: #e6cf8f; transition: opacity .3s; }
+.mapa-rota { fill: none; stroke: currentColor; stroke-width: 1; opacity: .45; vector-effect: non-scaling-stroke; }
+.mapa-fluxo { fill: none; stroke: #fff0b8; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 3 97; stroke-dashoffset: 100; vector-effect: non-scaling-stroke; }
+.mapa-ponto { fill: #f2d897; stroke: #10372d; stroke-width: 1.5; }
+.mapa-pulso { fill: none; stroke: #e6cf8f; stroke-width: 1; opacity: .7; transform-box: fill-box; transform-origin: center; }
+.mapa-origem .mapa-ponto { fill: #fff4c5; }
+.mapa-origem .mapa-pulso { stroke: #e9e2ad; }
+.mapa-rotulo { fill: #e6eadf; font: 400 15px var(--fonte); }
+.mapa-origem .mapa-rotulo { fill: #fff3c3; font-weight: 600; font-size: 17px; }
+.mapa-pronto .mapa-fluxo { animation: mapa-percurso var(--duracao, 4s) linear infinite; animation-delay: var(--atraso, 0s); }
+.mapa-pronto .mapa-pulso { animation: mapa-pulso 3s ease-out infinite; animation-delay: var(--atraso, 0s); }
+.mapa-pronto:not(.mapa-visivel) .mapa-fluxo,
+.mapa-pronto:not(.mapa-visivel) .mapa-pulso,
+.rede-mapa[data-pausado="true"] .mapa-fluxo,
+.rede-mapa[data-pausado="true"] .mapa-pulso { animation-play-state: paused; }
+.rede-mapa .mapa-atenuado { opacity: .14; }
+.mapa-atenuado .mapa-fluxo, .mapa-atenuado .mapa-pulso { animation-play-state: paused; }
+.rede-mapa figcaption { padding: 0 2rem 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 2rem; font-size: .7rem; line-height: 1.6; color: #c1d1c3; }
+.rede-mapa figcaption a { color: inherit; text-underline-offset: .2em; }
+.cooperacoes-diretorio { padding-top: 2.75rem; }
+.cooperacoes-diretorio__cabecalho { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem 2rem; flex-wrap: wrap; }
+.cooperacoes-diretorio__cabecalho h3 { font: 400 1.9rem/1.2 Georgia, "Times New Roman", serif; letter-spacing: -.025em; color: var(--verde-escuro); margin: 0; }
+.cooperacoes-diretorio__cabecalho p { color: var(--suave); font-size: .8rem; margin: 0; }
+.cooperacoes-filtros { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; margin: 1.5rem 0 1rem; }
+.cooperacoes-filtros button { padding: .55rem 0; font: inherit; font-size: .85rem; color: var(--suave); background: transparent; border: 0; border-bottom: 2px solid transparent; cursor: pointer; }
+.cooperacoes-filtros button:hover { color: var(--verde); }
+.cooperacoes-filtros button[aria-pressed="true"] { color: var(--verde-escuro); border-color: var(--verde); font-weight: 600; }
+.cooperacoes-status { color: var(--suave); font-size: .75rem; margin: 0 0 1.5rem; }
+.cooperacoes-lista { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 4rem; align-items: start; }
+.cooperacao-pais { min-width: 0; padding-top: .85rem; border-top: 1px solid #d9e1d9; }
+.cooperacao-pais[data-instituicoes-pais="brasil"] { grid-row: span 4; }
+.cooperacao-pais h4 { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--verde); margin: 0 0 1rem; }
+.cooperacao-pais ul { list-style: none; padding: 0; margin: 0; }
+.cooperacao-pais li + li { margin-top: 1.15rem; }
+.cooperacao-pais strong { display: block; font-size: 1.02rem; font-weight: 500; color: #214d37; line-height: 1.5; }
+.cooperacao-pais li span { display: block; font-size: .86rem; color: var(--suave); line-height: 1.7; margin-top: .2rem; }
+.cooperacoes[data-pais-selecionado]:not([data-pais-selecionado="todos"]) .cooperacoes-lista { grid-template-columns: 1fr; max-width: 800px; }
+.cooperacoes[data-pais-selecionado]:not([data-pais-selecionado="todos"]) .cooperacao-pais { grid-row: auto; }
+@keyframes mapa-percurso { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes mapa-pulso { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(2.5); opacity: 0; } }
+@media (max-width: 700px) {
+  .cooperacoes-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .rede-mapa__cabecalho { padding: 1.2rem 1.2rem .5rem; align-items: start; }
+  .rede-mapa__cabecalho p { font-size: .6rem; }
+  .rede-mapa__cabecalho h3 { max-width: 19ch; }
+  .rede-mapa__pausa { font-size: .66rem; padding: .35rem .5rem; max-width: 7.5rem; }
+  .rede-mapa figcaption { padding: .5rem 1.2rem 1.2rem; font-size: .65rem; }
+  .mapa-rotulo { display: none; }
+  .mapa-origem .mapa-rotulo { display: block; font-size: 30px; }
+  .mapa-ponto { r: 6px; }
+  .cooperacoes-lista { grid-template-columns: 1fr; }
+  .cooperacao-pais[data-instituicoes-pais="brasil"] { grid-row: auto; }
+  .cooperacoes-diretorio__cabecalho { display: block; }
+  .cooperacoes-diretorio__cabecalho p { margin-top: .75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mapa-pronto .mapa-fluxo, .mapa-pronto .mapa-pulso { animation: none; }
+  .mapa-pais, .mapa-conexao { transition: none; }
+}

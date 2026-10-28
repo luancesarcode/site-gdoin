@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/estilo.css">
 	<link rel="stylesheet" href="css/paginas.css?v=20261027-proporcoes">
 	<link rel="stylesheet" href="css/acervo.css?v=20261027-proporcoes">
-	<link rel="stylesheet" href="css/pesquisa.css?v=20261027-linhas">
+	<link rel="stylesheet" href="css/pesquisa.css?v=20261027-mapa">
 </head>
 <body>
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -63,12 +63,62 @@
 						<li><h3>Garantia da qualidade em radiodiagnóstico e medicina nuclear</h3><p>Programas de controle de qualidade de equipamentos.</p></li>
 					</ol>
 				</section>
-				<section class="aba aba--foto" id="cooperacoes" data-titulo="Cooperações">
-					<h2>Cooperações</h2>
-					<figure class="aba__foto"><img src="img/paginas/pesquisa-cooperacoes.jpg" alt="Mapa-múndi noturno com linhas que ligam o Brasil a outros continentes" loading="lazy"></figure>
-					<div class="texto"><p>Os pesquisadores do grupo mantêm interação com grupos de pesquisa do Brasil e do exterior. Isso resulta em trabalhos conjuntos, na incorporação de tecnologia de ponta e na disseminação do conhecimento em países menos desenvolvidos.</p></div>
-					<h3>Principais instituições</h3>
-					<ul class="lista-simples lista-simples--colunas"><li>ITN, Instituto de Tecnologia Nuclear</li><li>COPPE, UFRJ</li><li>IPEN-CNEN/SP</li><li>IRD-CNEN/RJ</li><li>DEN, UFMG</li><li>CEFET/PR</li><li>Northeast Institute of Nuclear Technology, Xi'an, China</li><li>INFN, Istituto Nazionale di Fisica Nucleare, Gênova, Itália</li><li>NRC, National Research Council, Canadá</li><li>Departamentos DEMEC, DQF, DMINAS, DGEO e Arqueologia da UFPE</li></ul>
+				<section class="aba cooperacoes" id="cooperacoes" data-titulo="Cooperações" data-cooperacoes>
+					<header class="cooperacoes-intro"><h2>Cooperações</h2><p>Os pesquisadores do grupo mantêm interação com grupos de pesquisa do Brasil e do exterior. Isso resulta em trabalhos conjuntos, na incorporação de tecnologia de ponta e na disseminação do conhecimento em países menos desenvolvidos.</p></header>
+					<figure class="rede-mapa" data-mapa-rede>
+						<div class="rede-mapa__cabecalho"><div><p>Pesquisa em rede</p><h3>Conexões a partir do Recife</h3></div><button class="rede-mapa__pausa" type="button" data-mapa-pausa hidden>Pausar animação</button></div>
+						<svg viewBox="0 0 1000 430" role="img" aria-labelledby="mapa-cooperacoes-titulo mapa-cooperacoes-descricao">
+							<title id="mapa-cooperacoes-titulo">Rede de cooperação do GDOIN</title>
+							<desc id="mapa-cooperacoes-descricao">Mapa-múndi com o Brasil e conexões ilustrativas de Recife com Portugal, Itália, Canadá e China. A lista de instituições e os filtros por país estão abaixo do mapa.</desc>
+							<defs><pattern id="mapa-grade" width="76.67" height="76.67" patternUnits="userSpaceOnUse" x="40" y="12.22"><path d="M76.67 0H0V76.67" fill="none" stroke="#97b4a0" stroke-width=".5"/></pattern></defs>
+							<rect class="mapa-grade" x="40" y="20" width="920" height="380" fill="url(#mapa-grade)"/>
+							<use href="img/mapas/mundo-cooperacoes.svg#continentes"/>
+							<g aria-hidden="true">
+								<use class="mapa-pais mapa-pais--origem" data-mapa-pais="brasil" href="img/mapas/mundo-cooperacoes.svg#BRA"/>
+								<use class="mapa-pais" data-mapa-pais="portugal" href="img/mapas/mundo-cooperacoes.svg#PRT"/>
+								<use class="mapa-pais" data-mapa-pais="italia" href="img/mapas/mundo-cooperacoes.svg#ITA"/>
+								<use class="mapa-pais" data-mapa-pais="canada" href="img/mapas/mundo-cooperacoes.svg#CAN"/>
+								<use class="mapa-pais" data-mapa-pais="china" href="img/mapas/mundo-cooperacoes.svg#CHN"/>
+							</g>
+							<g class="mapa-conexao" data-mapa-pais="canada" style="--duracao:4.8s;--atraso:-1.5s">
+								<path class="mapa-rota" d="M410.9 262.8Q253 242 231.7 99.1"/><path class="mapa-fluxo" pathLength="100" d="M410.9 262.8Q253 242 231.7 99.1"/>
+								<circle class="mapa-pulso" cx="231.7" cy="99.1" r="6"/><circle class="mapa-ponto" cx="231.7" cy="99.1" r="3.5"/><text class="mapa-rotulo" x="231.7" y="80" text-anchor="middle">Canadá</text>
+							</g>
+							<g class="mapa-conexao" data-mapa-pais="portugal" style="--duracao:3.2s;--atraso:-.7s">
+								<path class="mapa-rota" d="M410.9 262.8Q423 171 478.5 141.3"/><path class="mapa-fluxo" pathLength="100" d="M410.9 262.8Q423 171 478.5 141.3"/>
+								<circle class="mapa-pulso" cx="478.5" cy="141.3" r="6"/><circle class="mapa-ponto" cx="478.5" cy="141.3" r="3.5"/><text class="mapa-rotulo" x="464" y="126" text-anchor="end">Portugal</text>
+							</g>
+							<g class="mapa-conexao" data-mapa-pais="italia" style="--duracao:3.8s;--atraso:-2.1s">
+								<path class="mapa-rota" d="M410.9 262.8Q438 130 531.9 133.6"/><path class="mapa-fluxo" pathLength="100" d="M410.9 262.8Q438 130 531.9 133.6"/>
+								<circle class="mapa-pulso" cx="531.9" cy="133.6" r="6"/><circle class="mapa-ponto" cx="531.9" cy="133.6" r="3.5"/><text class="mapa-rotulo" x="545" y="118">Itália</text>
+							</g>
+							<g class="mapa-conexao" data-mapa-pais="china" style="--duracao:5.6s;--atraso:-3s">
+								<path class="mapa-rota" d="M410.9 262.8Q533 46 765.8 152.8"/><path class="mapa-fluxo" pathLength="100" d="M410.9 262.8Q533 46 765.8 152.8"/>
+								<circle class="mapa-pulso" cx="765.8" cy="152.8" r="6"/><circle class="mapa-ponto" cx="765.8" cy="152.8" r="3.5"/><text class="mapa-rotulo" x="779" y="140">China</text>
+							</g>
+							<g class="mapa-origem"><circle class="mapa-pulso" cx="410.9" cy="262.8" r="9"/><circle class="mapa-ponto" cx="410.9" cy="262.8" r="5"/><text class="mapa-rotulo" x="428" y="286">Recife</text></g>
+						</svg>
+						<figcaption><span>Os pontos representam os países das instituições. Conexões ilustrativas.</span><span>Base cartográfica: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a></span></figcaption>
+					</figure>
+					<div class="cooperacoes-diretorio" id="instituicoes-cooperacoes">
+						<header class="cooperacoes-diretorio__cabecalho"><h3>Instituições parceiras</h3><p>Selecione um país para consultar as instituições.</p></header>
+						<div class="cooperacoes-filtros" role="group" aria-label="Filtrar instituições por país" data-mapa-filtros hidden>
+							<button type="button" data-pais-filtro="todos" aria-pressed="true" aria-controls="lista-cooperacoes">Todos os países</button>
+							<button type="button" data-pais-filtro="brasil" aria-pressed="false" aria-controls="lista-cooperacoes">Brasil</button>
+							<button type="button" data-pais-filtro="portugal" aria-pressed="false" aria-controls="lista-cooperacoes">Portugal</button>
+							<button type="button" data-pais-filtro="italia" aria-pressed="false" aria-controls="lista-cooperacoes">Itália</button>
+							<button type="button" data-pais-filtro="canada" aria-pressed="false" aria-controls="lista-cooperacoes">Canadá</button>
+							<button type="button" data-pais-filtro="china" aria-pressed="false" aria-controls="lista-cooperacoes">China</button>
+						</div>
+						<p class="cooperacoes-status" data-mapa-status role="status" aria-live="polite" aria-atomic="true">10 instituições em 5 países</p>
+						<div class="cooperacoes-lista" id="lista-cooperacoes">
+							<section class="cooperacao-pais" data-instituicoes-pais="brasil" aria-labelledby="coop-brasil"><h4 id="coop-brasil">Brasil</h4><ul><li><strong>COPPE</strong><span>UFRJ</span></li><li><strong>IPEN-CNEN/SP</strong></li><li><strong>IRD-CNEN/RJ</strong></li><li><strong>DEN</strong><span>UFMG</span></li><li><strong>CEFET/PR</strong></li><li><strong>UFPE</strong><span>Departamentos DEMEC, DQF, DMINAS, DGEO e Arqueologia</span></li></ul></section>
+							<section class="cooperacao-pais" data-instituicoes-pais="portugal" aria-labelledby="coop-portugal"><h4 id="coop-portugal">Portugal</h4><ul><li><strong>ITN</strong><span>Instituto de Tecnologia Nuclear</span></li></ul></section>
+							<section class="cooperacao-pais" data-instituicoes-pais="italia" aria-labelledby="coop-italia"><h4 id="coop-italia">Itália</h4><ul><li><strong>INFN</strong><span>Istituto Nazionale di Fisica Nucleare, Gênova, Itália</span></li></ul></section>
+							<section class="cooperacao-pais" data-instituicoes-pais="canada" aria-labelledby="coop-canada"><h4 id="coop-canada">Canadá</h4><ul><li><strong>NRC</strong><span>National Research Council, Canadá</span></li></ul></section>
+							<section class="cooperacao-pais" data-instituicoes-pais="china" aria-labelledby="coop-china"><h4 id="coop-china">China</h4><ul><li><strong>Northeast Institute of Nuclear Technology</strong><span>Xi'an, China</span></li></ul></section>
+						</div>
+					</div>
 				</section>
 				<section class="aba aba--foto" id="produtos" data-titulo="Produtos e patentes">
 					<h2>Produtos e patentes</h2>
@@ -109,5 +159,6 @@
 	</footer>
 
 	<script src="js/site.js"></script>
+	<script src="js/cooperacoes.js?v=20261027-mapa"></script>
 </body>
 </html>
