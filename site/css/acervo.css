@@ -11,6 +11,9 @@
 }
 .pag-cabeca__foto--vertical { width: min(100%, 280px); justify-self: end; }
 .lab-panorama--integral img { height: auto; aspect-ratio: auto; }
+.lab-equipe__foto { max-width: 520px; margin: 1.5rem 0 0 !important; }
+.lab-equipe__foto img { display: block; width: 100%; height: auto; }
+.lab-equipe__foto figcaption { color: var(--lmri-texto); margin-top: .65rem; }
 .lab-resumo .lab-resumo__foto-integral { width: min(100%, 260px); justify-self: center; }
 .lab-resumo .lab-resumo__foto-integral img {
   width: 100%; height: auto; aspect-ratio: auto;
