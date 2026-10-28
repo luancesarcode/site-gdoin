@@ -2,7 +2,8 @@
    das páginas dos laboratórios e das demais seções do site. */
 .rede-labs { background: #e7efe9; scroll-margin-top: 90px; }
 .rede-labs__abertura { display: flex; justify-content: space-between; align-items: center; gap: 2rem; margin-bottom: 2rem; }
-.rede-labs__abertura h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; color: #174f3d; margin-bottom: .4rem; }
+.rede-labs__identificacao { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 1.5rem); min-width: 0; }
+.rede-labs__abertura h2 { flex-shrink: 0; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; color: #174f3d; margin: 0; }
 .rede-labs__abertura p { max-width: 52ch; margin: 0; color: #4d6357; }
 .rede-labs__marca { width: 260px; height: auto; flex-shrink: 0; }
 .lab-grupo + .lab-grupo { margin-top: 2.75rem; }
