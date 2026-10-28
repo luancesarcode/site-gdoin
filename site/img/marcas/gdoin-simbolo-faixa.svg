@@ -21,7 +21,7 @@
   </defs>
 
   <!-- icon (desenhado em 80x81, escalado para o círculo de r=24.5) -->
-  <circle cx="25" cy="25.5" r="24.5" fill="url(#lmri-sphere)"/>
+  <circle cx="25" cy="25.5" r="23" fill="url(#lmri-sphere)"/>
   <g transform="translate(0.5 0.69) scale(0.6125)">
     <use href="#lmri-swoosh" fill="url(#lmri-green)"/>
     <use href="#lmri-swoosh" fill="url(#lmri-yellow)" transform="rotate(180 40 40.5)"/>
