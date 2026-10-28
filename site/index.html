@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/estilo.css">
 	<link rel="stylesheet" href="css/index-laboratorios.css?v=20261022-lpr">
 	<link rel="stylesheet" href="css/acervo.css?v=20261027-proporcoes">
-	<link rel="stylesheet" href="css/galeria-inicial.css?v=20261028-acervo">
+	<link rel="stylesheet" href="css/galeria-inicial.css?v=20261028-hover">
 </head>
 <body>
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -43,28 +43,22 @@
 						<a class="botao botao--contorno" href="equipe.html">Conhecer a equipe</a>
 					</div>
 				</div>
-				<div class="abertura__acervo" data-galeria-viva aria-label="Acervo atual e histórico dos laboratórios">
-					<div class="galeria-viva" id="galeria-fotos">
-						<ul class="galeria-viva__destaque" aria-label="Destaques do acervo">
-							<li><img src="img/acervo-2026/operacao-irradiacao.jpg" width="3000" height="4000" alt="Profissional operando o sistema de irradiação e posicionamento de amostras" fetchpriority="high" decoding="async"></li>
-							<li><img src="img/c_lab.png" width="180" height="128" alt="Acervo anterior: pesquisador em bancada com osciloscópio e notebook" decoding="async"></li>
-							<li><img src="img/c_comp.png" width="196" height="128" alt="Acervo anterior: estudantes em laboratório de informática" decoding="async"></li>
-						</ul>
-						<div class="galeria-viva__coluna" data-galeria-coluna><div class="galeria-viva__trilha"><ul class="galeria-viva__grupo" aria-label="Equipamentos e dosimetria">
-							<li><img src="img/acervo-2026/espectrometro-epr.jpg" width="1600" height="900" alt="Espectrômetro EPR Magnettech ESR5000, Bruker" decoding="async"></li>
-							<li><img src="img/c_tomo2.png" width="182" height="126" alt="Acervo anterior: tomógrafo com mesa de posicionamento" decoding="async"></li>
-							<li><img src="img/acervo-2026/gammacell-completo.jpeg" width="960" height="1280" alt="Irradiador Gamma Cell 220 Excel do GAMALAB, visto por inteiro" decoding="async"></li>
-							<li><img src="img/c_mamo.png" width="196" height="220" alt="Acervo anterior: mamógrafo com dosímetro no suporte" decoding="async"></li>
-							<li><img src="img/c_sim.png" width="196" height="130" alt="Acervo anterior: simulador com dosímetros posicionados" decoding="async"></li>
-						</ul></div></div>
-						<div class="galeria-viva__coluna galeria-viva__coluna--inversa" data-galeria-coluna><div class="galeria-viva__trilha"><ul class="galeria-viva__grupo" aria-label="Instrumentação e radiodiagnóstico">
-							<li><img src="img/acervo-2026/medicao-raios-x.jpg" width="1600" height="1200" alt="Instrumentos de medida posicionados na bancada de raios X" decoding="async"></li>
-							<li><img src="img/c_sala.png" width="180" height="130" alt="Acervo anterior: profissionais operando um tomógrafo" decoding="async"></li>
-							<li><img src="img/ldrd/micro-XRF.jpg" width="756" height="689" alt="Espectrômetro de microfluorescência de raios X ARTAX do LDRD" decoding="async"></li>
-							<li><img src="img/c_xray.png" width="182" height="272" alt="Acervo anterior: tubo de raios X sobre bancada de calibração" decoding="async"></li>
-						</ul></div></div>
-					</div>
-					<div class="galeria-viva__rodape"><p>Acervo dos laboratórios</p><button class="galeria-viva__pausa" type="button" data-galeria-pausa aria-controls="galeria-fotos" hidden>Pausar movimento</button></div>
+				<div class="abertura__acervo">
+					<ul class="abertura__galeria abertura__galeria--expansivel" id="galeria-fotos" aria-label="Acervo atual e histórico dos laboratórios">
+						<li class="col1 l12 foto-principal"><a href="img/acervo-2026/operacao-irradiacao.jpg" target="_blank" rel="noopener"><img src="img/acervo-2026/operacao-irradiacao.jpg" width="3000" height="4000" alt="Profissional operando o sistema de irradiação e posicionamento de amostras" fetchpriority="high" decoding="async"></a></li>
+						<li class="col2 l1"><a href="img/acervo-2026/espectrometro-epr.jpg" target="_blank" rel="noopener"><img src="img/acervo-2026/espectrometro-epr.jpg" width="1600" height="900" alt="Espectrômetro EPR Magnettech ESR5000, Bruker" decoding="async"></a></li>
+						<li class="col3 l1"><a href="img/acervo-2026/medicao-raios-x.jpg" target="_blank" rel="noopener"><img src="img/acervo-2026/medicao-raios-x.jpg" width="1600" height="1200" alt="Instrumentos de medida posicionados na bancada de raios X" decoding="async"></a></li>
+						<li class="col2 l2"><a href="img/c_tomo2.png" target="_blank" rel="noopener"><img src="img/c_tomo2.png" width="182" height="126" alt="Acervo anterior: tomógrafo com mesa de posicionamento" decoding="async"></a></li>
+						<li class="col3 l2"><a href="img/c_sala.png" target="_blank" rel="noopener"><img src="img/c_sala.png" width="180" height="130" alt="Acervo anterior: profissionais operando um tomógrafo" decoding="async"></a></li>
+						<li class="col1 l3"><a href="img/c_lab.png" target="_blank" rel="noopener"><img src="img/c_lab.png" width="180" height="128" alt="Acervo anterior: pesquisador em bancada com osciloscópio e notebook" decoding="async"></a></li>
+						<li class="col2 l34"><a href="img/acervo-2026/gammacell-completo.jpeg" target="_blank" rel="noopener"><img src="img/acervo-2026/gammacell-completo.jpeg" width="960" height="1280" alt="Irradiador Gamma Cell 220 Excel do GAMALAB, visto por inteiro" decoding="async"></a></li>
+						<li class="col3 l3"><a href="img/ldrd/micro-XRF.jpg" target="_blank" rel="noopener"><img src="img/ldrd/micro-XRF.jpg" width="756" height="689" alt="Espectrômetro de microfluorescência de raios X ARTAX do LDRD" decoding="async"></a></li>
+						<li class="col1 l4"><a href="img/c_comp.png" target="_blank" rel="noopener"><img src="img/c_comp.png" width="196" height="128" alt="Acervo anterior: estudantes em laboratório de informática" decoding="async"></a></li>
+						<li class="col3 l45"><a href="img/c_xray.png" target="_blank" rel="noopener"><img src="img/c_xray.png" width="182" height="272" alt="Acervo anterior: tubo de raios X sobre bancada de calibração" decoding="async"></a></li>
+						<li class="col1 l5"><a href="img/c_sim.png" target="_blank" rel="noopener"><img src="img/c_sim.png" width="196" height="130" alt="Acervo anterior: simulador com dosímetros posicionados" decoding="async"></a></li>
+						<li class="col2 l5"><a href="img/c_mamo.png" target="_blank" rel="noopener"><img src="img/c_mamo.png" width="196" height="220" alt="Acervo anterior: mamógrafo com dosímetro no suporte" decoding="async"></a></li>
+					</ul>
+					<p class="galeria-inicial__legenda"><span class="galeria-inicial__mouse">Passe o mouse para ampliar; clique para abrir a foto.</span><span class="galeria-inicial__toque">Toque para abrir a foto.</span></p>
 				</div>
 			</div>
 		</section>
@@ -208,7 +202,6 @@
 	</footer>
 
 	<script src="js/site.js"></script>
-	<script src="js/galeria-inicial.js?v=20261028-acervo"></script>
 	<script src="js/index-laboratorios.js"></script>
 </body>
 </html>
