@@ -17,7 +17,6 @@
 .contato-painel { display: grid; grid-template-columns: 1.15fr 1fr; border: 1px solid var(--ct-linha); border-radius: 5px; background: #fff; overflow: hidden; }
 .contato-mensagem { padding: clamp(1.5rem, 3vw, 2.5rem); }
 .contato-mensagem h2 { color: var(--ct-verde); font-size: clamp(1.5rem, 2.7vw, 2rem); letter-spacing: -.025em; margin-bottom: .6rem; }
-.contato-mensagem__intro { font-size: .95rem; color: var(--ct-texto); margin-bottom: 1.5rem; max-width: 45ch; }
 .contato-form { scroll-margin-top: 110px; }
 .contato-form__campos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem 1.2rem; }
 .contato-campo { min-width: 0; }
@@ -30,21 +29,14 @@
 .contato-campo textarea::placeholder { color: #65776b; font-size: .9rem; }
 .contato-campo input:focus, .contato-campo select:focus, .contato-campo textarea:focus { background: #fff; border-color: #006647; }
 .contato-form__destino { font-size: .78rem; color: var(--ct-texto); margin: .5rem 0 0; overflow-wrap: anywhere; }
-.contato-form__obrigatorios { color: var(--ct-texto); font-size: .75rem; margin: 0 0 1rem; }
 .contato-form__rodape { margin-top: 1.25rem; }
 .contato-enviar { border: 1px solid var(--ct-verde); border-radius: 3px; background: var(--ct-verde); color: #fff; font: inherit; font-size: .95rem; font-weight: 600; padding: .75rem 1.2rem; cursor: pointer; transition: background-color .15s; }
 .contato-enviar:hover { background: #006647; }
-.contato-form__ajuda { color: var(--ct-texto); font-size: .78rem; line-height: 1.6; max-width: 51ch; margin: .8rem 0 0; }
 .contato-form__status { font-size: .85rem; color: var(--ct-verde); margin: 1rem 0 0; }
 .contato-form__status:empty { margin: 0; }
 .contato-local { min-width: 0; display: flex; flex-direction: column; background: #f5f8f6; border-left: 1px solid var(--ct-linha); }
 .contato-local__mapa { flex: 1; min-height: 470px; background: #e3ebe5; position: relative; }
 .contato-local__mapa iframe { display: block; position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.contato-local__endereco { padding: 1.5rem 1.75rem; border-top: 1px solid var(--ct-linha); }
-.contato-local h2 { font-size: 1.1rem; color: var(--ct-verde); margin-bottom: .6rem; }
-.contato-local address { color: var(--ct-texto); font-style: normal; font-size: .9rem; line-height: 1.7; }
-.contato-local__acoes { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 1rem; }
-.contato-local__acoes a { font-size: .85rem; font-weight: 600; text-underline-offset: .25em; padding-block: .25rem; }
 .contato-diretos { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .contato-diretos > header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .5rem 2rem; margin-bottom: 1.25rem; }
 .contato-diretos h2 { font-size: clamp(1.45rem, 2.5vw, 1.8rem); color: var(--ct-verde); margin: 0; }
@@ -61,7 +53,6 @@
 .contato-laboratorio__canais { text-align: right; min-width: 0; }
 .contato-laboratorio__email { display: block; font-size: .92rem; overflow-wrap: anywhere; text-underline-offset: .25em; padding: .4rem 0; }
 .contato-laboratorio__escrever { font: inherit; font-size: .78rem; border: 0; padding: .5rem 0; background: none; color: var(--ct-verde); text-decoration: underline; text-underline-offset: .25em; cursor: pointer; }
-.contato-diretos__nota { font-size: .8rem; color: var(--ct-texto); margin: 1rem 0 0; max-width: 85ch; }
 
 @media (max-width: 1000px) {
   .contato-painel { grid-template-columns: 1.2fr 1fr; }
@@ -78,7 +69,6 @@
   .contato-painel { grid-template-columns: 1fr; }
   .contato-local { border-left: 0; border-top: 1px solid var(--ct-linha); }
   .contato-local__mapa, .contato-local__mapa iframe { height: 340px; min-height: 340px; }
-  .contato-local__endereco { padding: 1.5rem; }
 }
 @media (max-width: 480px) {
   .contato-mensagem { padding: 1.5rem 1.1rem; }
@@ -103,9 +93,7 @@
   .contato-telefone a { font-size: 1.3rem; line-height: 1.4; }
   .contato-painel { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); scroll-margin-top: 88px; }
   .contato-mensagem { padding: 1rem 1.25rem; }
-  .contato-mensagem h2 { font-size: 1.55rem; margin-bottom: .25rem; }
-  .contato-mensagem__intro { font-size: .82rem; line-height: 1.4; margin-bottom: .55rem; }
-  .contato-form__obrigatorios { font-size: .7rem; line-height: 1.4; margin-bottom: .5rem; }
+  .contato-mensagem h2 { font-size: 1.55rem; margin-bottom: 1rem; }
   .contato-form__campos { gap: .55rem .85rem; }
   .contato-campo label { font-size: .775rem; line-height: 1.35; margin-bottom: .25rem; }
   .contato-campo label small { font-size: .72rem; }
@@ -114,13 +102,19 @@
   .contato-campo textarea { min-height: 64px; height: clamp(64px, 10vh, 80px); }
   .contato-campo textarea::placeholder { font-size: .8rem; }
   .contato-form__destino { font-size: .7rem; line-height: 1.35; margin-top: .2rem; }
-  .contato-form__rodape { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .8rem; margin-top: .65rem; }
+  .contato-form__rodape { margin-top: .65rem; }
   .contato-enviar { font-size: .82rem; padding: .5rem .85rem; }
-  .contato-form__ajuda { font-size: .72rem; line-height: 1.4; margin: 0; }
   .contato-local__mapa { min-height: 0; }
-  .contato-local__endereco { padding: .9rem 1.25rem; }
-  .contato-local h2 { font-size: 1rem; margin-bottom: .35rem; }
-  .contato-local address { font-size: .8rem; line-height: 1.45; }
-  .contato-local__acoes { gap: .4rem 1rem; margin-top: .5rem; }
-  .contato-local__acoes a { font-size: .75rem; }
+}
+
+@media (max-width: 960px) {
+  .contato-painel { grid-template-columns: minmax(0, 1fr); }
+  .contato-local { border-left: 0; border-top: 1px solid var(--ct-linha); }
+  .contato-local__mapa, .contato-local__mapa iframe { height: 340px; min-height: 340px; }
+  .contato-campo label { font-size: .85rem; }
+  .contato-campo label small { font-size: .78rem; }
+  .contato-campo input, .contato-campo select, .contato-campo textarea { font-size: 1rem; }
+  .contato-campo input, .contato-campo select { min-height: 44px; height: auto; }
+  .contato-campo textarea { min-height: 7rem; height: auto; }
+  .contato-enviar { min-height: 44px; touch-action: manipulation; }
 }

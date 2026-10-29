@@ -9,10 +9,29 @@ const botaoMenu = document.querySelector(".menu-botao");
 const navegacao = document.getElementById("navegacao");
 
 if (botaoMenu && navegacao) {
-	botaoMenu.addEventListener("click", () => {
-		const aberto = navegacao.classList.toggle("aberta");
+	const telaCompacta = window.matchMedia("(max-width: 960px)");
+	const atualizarMenu = (aberto, devolverFoco = false) => {
+		navegacao.classList.toggle("aberta", aberto);
 		botaoMenu.setAttribute("aria-expanded", String(aberto));
+		botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+		if (!aberto) navegacao.querySelectorAll("details[open]").forEach(item => (item.open = false));
+		if (devolverFoco) botaoMenu.focus({ preventScroll: true });
+	};
+
+	botaoMenu.addEventListener("click", () => {
+		atualizarMenu(!navegacao.classList.contains("aberta"));
 	});
+	navegacao.addEventListener("click", evento => {
+		if (telaCompacta.matches && evento.target.closest("a")) atualizarMenu(false);
+	});
+	document.addEventListener("click", evento => {
+		if (telaCompacta.matches && !navegacao.contains(evento.target) && !botaoMenu.contains(evento.target)) atualizarMenu(false);
+	});
+	document.addEventListener("keydown", evento => {
+		if (evento.key === "Escape" && navegacao.classList.contains("aberta")) atualizarMenu(false, true);
+	});
+	telaCompacta.addEventListener("change", () => atualizarMenu(false));
+	atualizarMenu(false);
 }
 
 // Submenus: só um aberto por vez; fecham ao clicar fora ou com Esc

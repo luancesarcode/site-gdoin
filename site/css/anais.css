@@ -1,0 +1,24 @@
+.anais-filtros { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 1.25rem; max-width: 900px; margin-top: 1.5rem; }
+.anais-filtros label { display: block; margin-bottom: .4rem; font-size: .9rem; font-weight: 600; }
+.anais-filtros input, .anais-filtros select { width: 100%; min-width: 0; min-height: 44px; padding: .65rem .8rem; border: 1px solid var(--linha); border-radius: 3px; background: #fff; color: var(--tinta); font: inherit; }
+.anais-contagem, .anais-origem { color: var(--suave); font-size: .9rem; }
+.anais-contagem { margin: 1.2rem 0; }
+.anais-lista { list-style: none; padding: 0; margin: 0; }
+.anais-item { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--linha); }
+.anais-item__codigo { font-size: .9rem; font-variant-numeric: tabular-nums; color: var(--suave); padding-top: .1rem; }
+.anais-item__area { margin: 0 0 .4rem; font-size: .8rem; font-weight: 600; color: var(--verde); }
+.anais-item h3 { margin: 0 0 .65rem; font-size: 1.08rem; line-height: 1.45; overflow-wrap: anywhere; }
+.anais-item h3 a { color: var(--verde-escuro); text-underline-offset: .18em; }
+.anais-item__autores { margin: 0; font-size: .9rem; line-height: 1.65; color: var(--suave); overflow-wrap: anywhere; }
+.anais-item__arquivo { margin: .65rem 0 0; font-size: .8rem; color: var(--suave); }
+.anais-paginacao { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem; }
+.anais-paginacao .botao:disabled { opacity: .45; cursor: default; }
+.anais-origem { margin: 2rem 0 0; }
+#t-resumos { scroll-margin-top: 100px; }
+.anais-filtros[hidden], .anais-item[hidden], .anais-paginacao[hidden], [data-vazio][hidden] { display: none; }
+@media (max-width: 600px) {
+  .anais-filtros { grid-template-columns: 1fr; gap: 1rem; }
+  .anais-item { grid-template-columns: 1fr; gap: .3rem; padding: 1.25rem 0; }
+  .anais-item h3 { font-size: 1rem; }
+  .anais-paginacao { gap: .6rem; font-size: .85rem; }
+}

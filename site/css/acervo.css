@@ -46,10 +46,6 @@
   align-self: start; background: transparent;
 }
 .cidin-lab > img[src*="gammacell"] { width: min(100%, 180px); justify-self: center; }
-.frente > img {
-  width: 100%; height: auto; min-height: 0; aspect-ratio: auto;
-  align-self: center; background: transparent;
-}
 .acervo-pares { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .acervo-pares figure { margin: 0; width: min(100%, 300px); justify-self: center; }
 .acervo-pares img { width: 100%; height: auto; }
@@ -74,5 +70,4 @@
 }
 @media (max-width: 520px) {
   .acervo-pares { grid-template-columns: 1fr; }
-  .frente--integral > img { width: min(100%, 240px); justify-self: center; }
 }

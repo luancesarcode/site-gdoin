@@ -161,16 +161,35 @@ p {
 	width: 220px;
 }
 
+.topo__logo { min-width: 0; }
+
 .menu-botao {
 	display: none;
 	background: none;
 	border: 1px solid var(--linha);
 	border-radius: var(--raio);
-	padding: 0.45rem 0.75rem;
+	width: 48px;
+	height: 48px;
+	min-width: 48px;
+	min-height: 48px;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 	font: inherit;
-	font-size: 0.95rem;
+	line-height: 1;
 	color: var(--tinta);
 	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.menu-botao__icone {
+	display: block;
+	width: 24px;
+	height: 24px;
+	flex: none;
+	margin: 0;
 }
 
 .menu {
@@ -249,7 +268,7 @@ p {
 
 @media (max-width: 960px) {
 	.menu-botao {
-		display: block;
+		display: flex;
 	}
 
 	.navegacao {
@@ -260,8 +279,10 @@ p {
 		top: 100%;
 		background: var(--fundo);
 		border-bottom: 1px solid var(--linha);
-		max-height: calc(100vh - 76px);
+		max-height: calc(100vh - 77px - env(safe-area-inset-bottom, 0px));
+		max-height: calc(100dvh - 77px - env(safe-area-inset-bottom, 0px));
 		overflow-y: auto;
+		overscroll-behavior: contain;
 	}
 
 	.navegacao.aberta {
@@ -279,6 +300,20 @@ p {
 		box-shadow: none;
 		padding: 0 0 0 1rem;
 	}
+
+	.menu a, .menu summary { min-height: 44px; touch-action: manipulation; }
+	.topo--lab .navegacao {
+		max-height: calc(100vh - 117px - env(safe-area-inset-bottom, 0px));
+		max-height: calc(100dvh - 117px - env(safe-area-inset-bottom, 0px));
+	}
+	.pessoa__links a, .abas__lista button {
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		touch-action: manipulation;
+	}
+	.pessoa { min-width: 0; }
 }
 
 /* --------------------------------------------------------------------------
@@ -1347,4 +1382,26 @@ h3 + .lista-simples {
 	white-space: nowrap;
 	font-size: 0.92rem;
 	padding: 0.5rem 1rem;
+}
+
+@media (max-width: 960px) {
+	.filtro__campo input, .filtro__campo select {
+		font-size: 1rem;
+		min-height: 44px;
+		max-width: 100%;
+	}
+	.botao { min-height: 44px; touch-action: manipulation; }
+	.campo-marcar { min-height: 44px; touch-action: manipulation; }
+	body .cont-nav a {
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		touch-action: manipulation;
+	}
+}
+
+@media (max-width: 560px) {
+	.filtro__campo { flex: 1 1 100%; min-width: 0; }
+	.filtro__campo input, .filtro__campo select { width: 100%; min-width: 0; }
 }

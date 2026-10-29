@@ -1,0 +1,22 @@
+/* Registros históricos: fotografias inteiras e miniaturas para o acervo. */
+.visitas-indice { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+.visitas-indice a { color: #174f3d; font-size: .85rem; font-weight: 550; text-underline-offset: .3em; padding-block: .4rem; }
+.visita-registro { scroll-margin-top: 96px; }
+.visita__galeria { margin: 0; width: 100%; max-width: 640px; min-width: 0; justify-self: center; }
+.visita__galeria > a, .visita__miniaturas a { display: block; }
+.visita__galeria > a > img { display: block; width: 100%; height: auto; border-radius: 0; }
+.visita__miniaturas { display: grid; grid-template-columns: repeat(var(--miniaturas), minmax(0, 1fr)); list-style: none; padding: 0; margin: .6rem 0 0; gap: .5rem; }
+.visita__miniaturas li { min-width: 0; }
+.visita__miniaturas img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 30%; border-radius: 0; }
+.visita__miniaturas--unica { max-width: 110px; }
+.visita__galeria a:focus-visible { outline: 3px solid #f2c200; outline-offset: 3px; }
+.visita__galeria figcaption { font-size: .7rem; line-height: 1.6; color: #53695c; margin-top: .65rem; }
+.visita__fontes { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; margin-top: 1.25rem; margin-bottom: 0; }
+.visita__fontes a { font-size: .87rem; font-weight: 550; text-underline-offset: .25em; }
+@media (max-width: 860px) {
+  .visita__galeria { justify-self: start; }
+  .visitas-indice { gap: .25rem 1.2rem; }
+}
+.visita__acervo { width: 100%; max-width: 640px; margin: 0; justify-self: center; }
+.visita__acervo .visita__fotos a { display: block; }
+.visita__restauro { margin-top: .75rem; font-size: .78rem; line-height: 1.5; color: var(--suave); }

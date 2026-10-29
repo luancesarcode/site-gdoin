@@ -21,6 +21,16 @@
 .pag-cabeca__foto { margin: 0; align-self: center; }
 .pag-cabeca__foto img { width: 100%; height: auto; display: block; }
 
+/* Aberturas com a foto preenchendo toda a coluna direita. */
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) { padding-block: 0; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__grade { max-width: none; padding-left: max(var(--gutter), calc((100% - var(--largura)) / 2)); padding-right: 0; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; min-height: 340px; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__texto { padding-block: 2rem; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__foto { position: relative; align-self: stretch; min-width: 0; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.pag-cabeca--ensino .pag-cabeca__grade { min-height: 380px; }
+.pag-cabeca--ensino .pag-cabeca__foto img { object-position: center 35%; }
+
 /* Abas com foto: imagem à direita do texto, sem quebrar as listas */
 .aba--foto > .aba__foto { float: right; width: min(34%, 320px); margin: 0 0 1.5rem 2.5rem; }
 .aba__foto img { width: 100%; height: auto; }
@@ -35,9 +45,13 @@
 .equipe__topo--sem-foto { grid-template-columns: 1fr; }
 
 @media (max-width: 760px) {
-  .pag-cabeca__grade, .pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: 1fr; gap: 1.2rem; }
+  .pag-cabeca__grade, .pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
   .pag-cabeca--foto .pag-cabeca__texto { padding-bottom: 0; }
   .pag-cabeca__logo { justify-self: start; }
+  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__grade { min-height: 0; padding: 0; }
+  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__texto { padding: 1.5rem var(--gutter) 0; }
+  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__foto { min-height: 200px; }
+  .pag-cabeca--ensino .pag-cabeca__foto { min-height: 280px; }
   .aba--foto > .aba__foto { float: none; width: 100%; max-width: 360px; margin: 0 0 1.2rem; }
   .patentes { grid-template-columns: 1fr; }
   .patentes__foto { display: none; }

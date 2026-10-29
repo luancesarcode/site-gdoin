@@ -6,8 +6,8 @@
 	<title>Notícias, GDOIN</title>
 	<meta name="description" content="Notícias do GDOIN, do Museu de Ciências Nucleares e dos laboratórios.">
 	<link rel="icon" type="image/svg+xml" href="img/marcas/icone-gdoin.svg?v=20261028-fundo-contido">
-	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="css/conteudos.css?v=20261027-proporcoes">
+	<link rel="stylesheet" href="css/estilo.css?v=20261028-mobile">
+	<link rel="stylesheet" href="css/conteudos.css?v=20261028-noticias">
 </head>
 <body>
 	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -15,12 +15,12 @@
 	<header class="topo">
 		<div class="container topo__barra">
 			<a class="topo__logo" href="index.html"><img src="img/logo_gdoin.png" width="300" height="81" alt="GDOIN, Grupo de Dosimetria e Instrumentação Nuclear, página inicial"></a>
-			<button class="menu-botao" type="button" aria-expanded="false" aria-controls="navegacao">Menu</button>
+			<button class="menu-botao" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navegacao"><svg class="menu-botao__icone" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 			<nav class="navegacao" id="navegacao" aria-label="Principal">
 				<ul class="menu">
 				<li><details><summary>O grupo</summary><ul class="submenu"><li><a href="equipe.html">Equipe</a></li><li><a href="ensino.html">Ensino</a></li><li><a href="pesquisa.html">Pesquisa</a></li><li><a href="publicacoes.html">Publicações</a></li></ul></details></li>
 				<li><details><summary>Laboratórios</summary><ul class="submenu"><li><a href="lmri/index.html">LMRI</a></li><li><a href="http://www.lpr.net.br/">LPR</a></li></ul></details></li>
-				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd/index.html">LDRD</a></li><li><a href="lpn.html">LPN</a></li><li><a href="gamalab.html">GAMALAB</a></li></ul></details></li>
+				<li><details><summary>CIDIN</summary><ul class="submenu"><li><a href="cidin.html">Sobre o CIDIN</a></li><li><a href="cidin-equipe.html">Equipe e governança</a></li><li><a href="multiusuario.html">Uso multiusuário</a></li><li><a href="ldrd/index.html">CIDIN / LDRD</a></li><li><a href="gamalab.html">CIDIN / GAMALAB</a></li><li><a href="lpn.html">CIDIN / LPN</a></li></ul></details></li>
 				<li><details><summary>Extensão</summary><ul class="submenu"><li><a href="extensao.html">Serviços e consultoria</a></li><li><a href="http://museunuclear.com/" rel="noopener">Museu de Ciências Nucleares</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></details></li>
 				<li><a href="noticias.html" aria-current="page">Notícias</a></li>
 				<li><a href="contato.html">Contato</a></li>
@@ -34,22 +34,14 @@
 			<div class="container">
 				<p class="cont-trilha"><a href="index.html">Início</a> / <a href="extensao.html">Extensão</a> / Notícias</p>
 				<div class="cont-cabeca__grade">
-					<div><h1 id="titulo-pagina">Notícias</h1><p>O que aconteceu no grupo, no Museu de Ciências Nucleares e nos laboratórios.</p></div>
+					<div><h1 id="titulo-pagina">Notícias</h1><p>Atividades do grupo, pesquisas do DEN/UFPE e ações do Museu de Ciências Nucleares.</p></div>
 					<nav class="cont-nav" aria-label="Notícias e eventos do grupo"><ul><li><a href="noticias.html" aria-current="page">Notícias</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="webinars.html">Webinars</a></li><li><a href="visitantes.html">Visitantes</a></li></ul></nav>
 				</div>
 			</div>
 		</section>
 		<section class="secao" aria-label="Notícia em destaque">
 			<div class="container">
-				<article class="destaque">
-					<a class="destaque__foto" href="visitantes.html#iaea"><img src="img/visita_iaea_3.jpg" alt="Diretor-geral da IAEA, Rafael Mariano Grossi, com a professora Helen Khoury, o reitor da UFPE e convidados em frente ao Museu de Ciências Nucleares" fetchpriority="high"></a>
-					<div class="destaque__texto">
-						<p class="data"><time datetime="2021-07-15">15 de julho de 2021</time></p>
-						<h2><a href="visitantes.html#iaea">Diretor-geral da IAEA visita o Museu de Ciências Nucleares</a></h2>
-						<p>Rafael Mariano Grossi, diretor-geral da Agência Internacional de Energia Atômica, foi recebido pela professora Helen Khoury <em>(em memória)</em>, coordenadora-geral do Museu, com o reitor Alfredo Gomes, o vice-reitor Moacyr Araújo, o embaixador do Brasil em Viena, Carlos Duarte, e o diretor do CRCN-NE, Carlos Alberto Brayner.</p>
-						<a class="link-forte" href="visitantes.html#iaea">Ver as fotos da visita</a>
-					</div>
-				</article>
+				<article class="destaque"><a class="destaque__foto" href="visitantes.html#ansn"><img src="img/visitas/ansn-2026-01.jpg" width="1170" height="776" alt="Servidores da ANSN e equipe em frente ao Museu de Ciências Nucleares após a visita ao DEN/UFPE" fetchpriority="high"></a><div class="destaque__texto"><p class="data"><time datetime="2026-03-13">13 de março de 2026</time></p><h2><a href="https://www.gov.br/ansn/pt-br/assuntos/noticias/2026/ansn-realiza-inspecao-regulatoria-de-protecao-fisica-no-departamento-de-energia-nuclear-da-ufpe" rel="noopener">ANSN realiza inspeção regulatória no DEN/UFPE</a></h2><p>O relato da Autoridade Nacional de Segurança Nuclear descreve a inspeção realizada em 11 de março nas instalações radiativas do departamento. Ao fim da atividade, os servidores conheceram o Museu de Ciências Nucleares.</p><a class="link-forte" href="visitantes.html#ansn">Ver o registro da visita</a><p class="item__fonte">Fonte e foto: ANSN · <a href="https://creativecommons.org/licenses/by-nd/3.0/" rel="noopener">CC BY-ND 3.0</a>.</p></div></article>
 			</div>
 		</section>
 
@@ -57,7 +49,11 @@
 			<div class="container">
 				<h2 id="t-arquivo" class="cont-titulo">Todas as notícias</h2>
 				<div class="arquivo">
-					<div class="arquivo__ano"><h3>2022</h3>
+<div class="arquivo__ano"><h3>2026</h3><article class="item" id="museu-ia-2026"><div class="item__texto"><p class="data"><time datetime="2026-01-07">7 de janeiro de 2026</time></p><h4><a href="https://museunuclear.com/interaja-e-descubra-um-novo-jeito-de-aprender-ciencia-nuclear-com-a-ia-dra-h-k/" rel="noopener">Museu apresenta inteligência artificial como apoio à educação científica</a></h4><p>O Museu de Ciências Nucleares apresentou uma iniciativa que integra a inteligência artificial da Meta às suas ações educativas. O recurso propõe uma interação digital com temas da ciência e da tecnologia nuclear.</p><p class="item__fonte">Fonte: Museu de Ciências Nucleares.</p></div></article><article class="item" id="pesquisas-2026"><div class="item__texto"><p class="data"><time datetime="2026">Projetos cadastrados em 2026</time></p><h4><a href="https://sigaa.ufpe.br/sigaa/public/docente/pesquisa.jsf?siape=2364069" rel="noopener">Projetos do DEN abordam arqueometria e filmes para dosimetria</a></h4><p>O cadastro público de pesquisas da professora Viviane Khoury Asfora registra estudos sobre cerâmicas de engenhos açucareiros de Pernambuco e sobre filmes radiocrômicos para dosimetria das radiações ionizantes.</p><p class="item__fonte">Fonte: SIGAA/UFPE.</p></div></article></div>
+<div class="arquivo__ano"><h3>2025</h3><article class="item item--midia" id="marinha-2025"><figure class="item__midia"><a href="https://museunuclear.com/museu-de-ciencias-nucleares-recebe-a-visita-do-diretor-geral-de-desenvolvimento-nuclear-e-tecnologico-da-marinha/" tabindex="-1" aria-hidden="true"><img src="img/visitas/marinha-2025-01.jpg" width="1600" height="904" alt="Representantes da Marinha e equipe em frente ao Museu de Ciências Nucleares" loading="lazy"></a></figure><div class="item__texto"><p class="data"><time datetime="2025-09-30">30 de setembro de 2025</time></p><h4><a href="https://museunuclear.com/museu-de-ciencias-nucleares-recebe-a-visita-do-diretor-geral-de-desenvolvimento-nuclear-e-tecnologico-da-marinha/" rel="noopener">Museu registra visita da comitiva da Marinha do Brasil</a></h4><p>O relato do Museu apresenta o encontro com representantes da Marinha, realizado em 11 de setembro de 2025. A visita ao DEN/UFPE incluiu a apresentação do acervo e das aplicações da ciência nuclear.</p><p><a class="link-forte" href="visitantes.html#marinha">Ver o registro da visita</a></p><p class="item__fonte">Fonte: Museu de Ciências Nucleares.</p></div></article><article class="item item--midia" id="museu-15anos-2025"><figure class="item__midia"><a href="https://www.ufpe.br/ascom/noticias/-/asset_publisher/O3Odar12gQTr/content/museu-de-ciencias-nucleares-da-ufpe-celebra-15-anos/40615" tabindex="-1" aria-hidden="true"><img src="img/noticias/museu-15-anos-2025.webp" width="337" height="337" alt="Arte da Ascom com representantes da UFPE na comemoração dos 15 anos do Museu" loading="lazy"></a><figcaption class="item__credito">Arte: Ascom/UFPE.</figcaption></figure><div class="item__texto"><p class="data"><time datetime="2025-05-22">22 de maio de 2025</time></p><h4><a href="https://www.ufpe.br/ascom/noticias/-/asset_publisher/O3Odar12gQTr/content/museu-de-ciencias-nucleares-da-ufpe-celebra-15-anos/40615" rel="noopener">Museu de Ciências Nucleares celebra 15 anos</a></h4><p>A comemoração ocorreu em 20 de maio de 2025, no auditório do DEN. A programação reuniu uma palestra de Antônio Carlos Pavão sobre museus científicos, uma placa comemorativa e homenagem à professora Helen Khoury <em>(em memória)</em>, idealizadora do espaço.</p><p class="item__fonte">Fonte: Ascom/UFPE.</p></div></article><article class="item item--midia" id="facepe-35anos-2025"><figure class="item__midia"><a href="https://www.ufpe.br/en/cultura/noticias/-/asset_publisher/lMITBsqjt7WR/content/professora-helen-khoury-recebe-homenagem-nos-35-anos-da-facepe/40615" tabindex="-1" aria-hidden="true"><img src="img/noticias/homenagem-facepe-2025.webp" width="337" height="337" alt="Arte da Ascom com retrato de Helen Khoury e anúncio da homenagem da Facepe" loading="lazy"></a><figcaption class="item__credito">Arte: Ascom/UFPE.</figcaption></figure><div class="item__texto"><p class="data"><time datetime="2025-02-25">25 de fevereiro de 2025</time></p><h4><a href="https://www.ufpe.br/en/cultura/noticias/-/asset_publisher/lMITBsqjt7WR/content/professora-helen-khoury-recebe-homenagem-nos-35-anos-da-facepe/40615" rel="noopener">Facepe anuncia homenagem a Helen Khoury <em>(em memória)</em> nos seus 35 anos</a></h4><p>A programação anunciada pela UFPE para 13 de março de 2025, no i-Litpeg, incluiu uma homenagem à pesquisadora do DEN. A participação da professora Viviane Khoury Asfora foi prevista para representar a família e relembrar sua trajetória.</p><p class="item__fonte">Fonte: Ascom/UFPE.</p></div></article></div>
+
+					<div class="arquivo__ano"><h3>2023</h3><article class="item item--midia" id="semana-museus-2023"><figure class="item__midia"><a href="https://museunuclear.com/21a-semana-nacional-de-museus/" tabindex="-1" aria-hidden="true"><img src="img/eventos/semana-museus-2023.webp" width="300" height="244" alt="Cartaz da 21ª Semana Nacional de Museus com a programação de 19 de maio de 2023" loading="lazy"></a></figure><div class="item__texto"><p class="data"><time datetime="2023-05-24">24 de maio de 2023</time></p><h4><a href="https://museunuclear.com/21a-semana-nacional-de-museus/" rel="noopener">Museu divulga registros da 21ª Semana Nacional de Museus</a></h4><p>A atividade de 19 de maio de 2023 reuniu palestras sobre radiação natural e o reaproveitamento de materiais naturalmente radioativos. A programação foi realizada no auditório do DEN, com divulgação pelo canal do Museu.</p><p class="item__fonte">Fonte: Museu de Ciências Nucleares.</p></div></article></div>
+<div class="arquivo__ano"><h3>2022</h3><article class="item" id="radiodiagnostico-2022"><div class="item__texto"><p class="data"><time datetime="2022-11-04">4 de novembro de 2022</time></p><h4><a href="webinars.html#webinar-radiodiagnostico" rel="noopener">Acervo do Museu reúne palestra sobre a evolução do radiodiagnóstico</a></h4><p>A gravação da palestra de Renato Dimenstein, realizada em 19 de setembro de 2022 durante a 16ª Primavera dos Museus, aborda a história e as perspectivas dos equipamentos de radiodiagnóstico.</p><p class="item__fonte">Fonte: Museu de Ciências Nucleares.</p></div></article>
 						<article class="item">
 							<div class="item__texto"><p class="data"><time datetime="2022-06-24">24 de junho de 2022</time></p><h4><a href="visitantes.html#cnen">Museu Nuclear recebe visita da CNEN</a></h4><p>O presidente e diretores de institutos da Comissão Nacional de Energia Nuclear foram recebidos pela professora Helen Khoury <em>(em memória)</em>, coordenadora-geral do Museu.</p></div>
 						</article>
@@ -66,7 +62,8 @@
 							<div class="item__texto"><p class="data"><time datetime="2022-04-12">12 de abril de 2022</time></p><h4><a href="https://youtu.be/OgmCQe688fA" rel="noopener">Professora Helen Khoury <em>(em memória)</em> recebe o Título de Cidadã de Pernambuco</a></h4><p>Vídeo da reunião solene de entrega do título à professora Helen Jamil Khoury <em>(em memória)</em>. Transmissão da Assembleia Legislativa de Pernambuco.</p></div>
 						</article>
 					</div>
-					<div class="arquivo__ano"><h3>2020</h3>
+					<div class="arquivo__ano"><h3>2021</h3><article class="item item--midia"><figure class="item__midia"><a href="visitantes.html#iaea" tabindex="-1" aria-hidden="true"><img src="img/acervo-restaurado/visita-iaea-2021-restaurada.webp" width="1448" height="1086" alt="" loading="lazy"></a><figcaption class="item__credito">Imagem restaurada com IA.</figcaption></figure><div class="item__texto"><p class="data"><time datetime="2021-07-15">15 de julho de 2021</time></p><h4><a href="visitantes.html#iaea">Diretor-geral da IAEA visita o Museu de Ciências Nucleares</a></h4><p>Rafael Mariano Grossi foi recebido pela professora Helen Khoury <em>(em memória)</em>, com representantes da UFPE e convidados. O registro reúne as fotos da visita e a comitiva presente.</p></div></article></div>
+<div class="arquivo__ano"><h3>2020</h3>
 						<article class="item item--midia">
 							<a class="item__midia" href="https://youtu.be/qx--WDUcbsY" rel="noopener" tabindex="-1" aria-hidden="true"><span class="video"><img src="https://i.ytimg.com/vi/qx--WDUcbsY/hqdefault.jpg" width="480" height="360" alt="" loading="lazy"><span class="video__play" aria-hidden="true"></span></span></a>
 							<div class="item__texto"><p class="data">Estreia do vídeo: <time datetime="2020-10-28">28 de outubro de 2020</time></p><h4><a href="https://youtu.be/qx--WDUcbsY" rel="noopener">Desvendando os segredos do patrimônio cultural com técnicas nucleares</a></h4><p>Palestra do professor Ricardo Tadeu Lopes, da UFRJ-COPPE/PEN e do PPGARQ/MN. Vídeo no YouTube.</p></div>
@@ -108,6 +105,6 @@
 		</div>
 	</footer>
 
-	<script src="js/site.js"></script>
+	<script src="js/site.js?v=20261028-mobile"></script>
 </body>
 </html>
