@@ -138,7 +138,7 @@
     canvas.width = Math.round(largura * escala); canvas.height = Math.round(altura * escala);
     ctx.setTransform(escala, 0, 0, escala, 0, 0);
     pontos.forEach((p) => { p.x *= largura / anteriorLargura; p.y *= altura / anteriorAltura; });
-    const quantidade = Math.max(70, Math.min(210, Math.round(largura * altura / 5600)));
+    const quantidade = Math.max(90, Math.min(250, Math.round(largura * altura / 3800)));
     pontos = pontos.slice(0, quantidade);
     while (pontos.length < quantidade) {
       const angulo = Math.random() * Math.PI * 2, velocidade = .12 + Math.random() * .18;

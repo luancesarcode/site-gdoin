@@ -1,0 +1,34 @@
+.gamalab-hero { padding-block: 0; }
+.gamalab-hero .pag-cabeca__grade {
+  max-width: none;
+  padding-left: max(var(--gutter), calc((100% - var(--largura)) / 2));
+  padding-right: 0;
+  min-height: 380px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+}
+.gamalab-hero .pag-cabeca__texto { padding-block: 2rem; }
+.gamalab-hero .pag-cabeca__foto { position: relative; align-self: stretch; min-width: 0; }
+.gamalab-hero .pag-cabeca__foto img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 55%;
+}
+.gamalab-conteudo .abas__lista { gap: .35rem; border-color: #d9e5de; margin-bottom: 2.5rem; }
+.gamalab-conteudo .abas__lista button { padding-inline: 1.15rem; }
+.gamalab-conteudo .aba > h2 { color: var(--verde-escuro); margin-bottom: 1.25rem; }
+.gamalab-conteudo .aba > h2::before {
+  content: ''; display: block; width: 2.5rem; height: 3px;
+  background: var(--amarelo); margin-bottom: 1rem;
+}
+.gamalab-conteudo .texto { max-width: 75ch; }
+.gamalab-conteudo .lista-servicos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-block: 1.5rem 2rem; }
+.gamalab-conteudo .lista-servicos li { border: 0; border-top: 2px solid var(--verde); border-radius: 0; padding: 1.1rem 0; }
+.gamalab-conteudo .lista-servicos strong { color: var(--verde-escuro); font-size: 1.05rem; margin-bottom: .45rem; }
+.gamalab-conteudo .passos li { border-radius: 0; border-top: 2px solid var(--verde); }
+.gamalab-conteudo .contato > div { border-top: 1px solid var(--linha); padding-top: 1rem; }
+@media (max-width: 760px) {
+  .gamalab-hero .pag-cabeca__grade { min-height: 0; grid-template-columns: minmax(0, 1fr); padding: 0; }
+  .gamalab-hero .pag-cabeca__texto { padding: 1.5rem var(--gutter) 0; }
+  .gamalab-hero .pag-cabeca__foto { min-height: 280px; }
+  .gamalab-conteudo .lista-servicos { grid-template-columns: 1fr; gap: .5rem; }
+}
