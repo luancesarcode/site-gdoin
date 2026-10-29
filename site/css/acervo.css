@@ -40,12 +40,6 @@
   width: 100%; height: auto; aspect-ratio: auto; background: transparent;
 }
 .cidin-hero__foto figcaption { position: static; }
-.cidin-lab { grid-template-rows: auto 1fr; align-content: start; }
-.cidin-lab > img:not(.cidin-lab__logo) {
-  width: 100%; height: auto; min-height: 0; aspect-ratio: auto;
-  align-self: start; background: transparent;
-}
-.cidin-lab > img[src*="gammacell"] { width: min(100%, 180px); justify-self: center; }
 .acervo-pares { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .acervo-pares figure { margin: 0; width: min(100%, 300px); justify-self: center; }
 .acervo-pares img { width: 100%; height: auto; }
@@ -56,9 +50,6 @@
 .acesso__foto img {
   height: auto; max-height: none; aspect-ratio: auto; border-radius: 0;
   border: 0;
-}
-@media (max-width: 900px) {
-  .cidin-lab { grid-template-rows: auto; }
 }
 @media (max-width: 860px) {
   .ext-formacao { grid-template-columns: minmax(0, 1fr); }

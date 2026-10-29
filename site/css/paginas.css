@@ -22,11 +22,13 @@
 .pag-cabeca__foto img { width: 100%; height: auto; display: block; }
 
 /* Aberturas com a foto preenchendo toda a coluna direita. */
-:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) { padding-block: 0; }
-:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__grade { max-width: none; padding-left: max(var(--gutter), calc((100% - var(--largura)) / 2)); padding-right: 0; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; min-height: 340px; }
-:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__texto { padding-block: 2rem; }
-:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__foto { position: relative; align-self: stretch; min-width: 0; }
-:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) { padding-block: 0; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__grade { max-width: none; padding-left: max(var(--gutter), calc((100% - var(--largura)) / 2)); padding-right: 0; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; min-height: 340px; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__texto { padding-block: 2rem; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__foto { position: relative; align-self: stretch; min-width: 0; }
+:is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.pag-cabeca--pesquisa .pag-cabeca__foto img { object-position: center top; }
 
 .pag-cabeca--ensino .pag-cabeca__grade { min-height: 380px; }
 .pag-cabeca--ensino .pag-cabeca__foto img { object-position: center 35%; }
@@ -48,9 +50,9 @@
   .pag-cabeca__grade, .pag-cabeca--foto .pag-cabeca__grade { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
   .pag-cabeca--foto .pag-cabeca__texto { padding-bottom: 0; }
   .pag-cabeca__logo { justify-self: start; }
-  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__grade { min-height: 0; padding: 0; }
-  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__texto { padding: 1.5rem var(--gutter) 0; }
-  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino) .pag-cabeca__foto { min-height: 200px; }
+  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__grade { min-height: 0; padding: 0; }
+  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__texto { padding: 1.5rem var(--gutter) 0; }
+  :is(.pag-cabeca--publicacoes, .pag-cabeca--ensino, .pag-cabeca--pesquisa) .pag-cabeca__foto { min-height: 200px; }
   .pag-cabeca--ensino .pag-cabeca__foto { min-height: 280px; }
   .aba--foto > .aba__foto { float: none; width: 100%; max-width: 360px; margin: 0 0 1.2rem; }
   .patentes { grid-template-columns: 1fr; }
